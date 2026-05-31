@@ -1,0 +1,136 @@
+.alien-grid-section {
+  min-height: 100vh;
+  padding: 120px 80px;
+  background: linear-gradient(180deg, #000 0%, #001a0a 50%, #000 100%);
+  position: relative;
+}
+
+.grid-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.grid-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.grid-title .highlight {
+  color: #00ff88;
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.grid-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.alien-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.alien-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 30px;
+}
+
+.alien-card.selected {
+  border-color: #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.15);
+}
+
+.alien-card:hover {
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0.05;
+  transition: opacity 0.4s ease;
+}
+
+.alien-card:hover .card-glow {
+  opacity: 0.1;
+}
+
+.card-image-wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card-image {
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.1));
+}
+
+.alien-card:hover .card-image {
+  transform: scale(1.15);
+}
+
+.card-info {
+  text-align: center;
+}
+
+.card-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.card-species {
+  font-size: 16px;
+  color: #00ff88;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card-universe {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+.card-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.15);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .alien-grid-section {
+    padding: 80px 20px;
+  }
+  .grid-title { font-size: 28px; }
+  .alien-cards { grid-template-columns: 1fr; }
+}

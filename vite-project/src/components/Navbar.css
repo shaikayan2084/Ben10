@@ -1,43 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 .navbar {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 15px 50px;
+  padding: 20px 60px;
   display: flex;
-  justify-content: center;
-  gap: 400px;
+  justify-content: space-between;
   align-items: center;
   background: transparent;
   z-index: 1000;
+  transition: all 0.4s ease;
 }
 
-.logo img {
-  width: 120px;
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(20px);
+  padding: 12px 60px;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.nav-logo img {
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.1);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px;
   font-family: 'Orbitron', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  color: white;
+  letter-spacing: 1px;
 }
 
-.nav-links li {
+.nav-links li,
+.nav-links li a {
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding: 4px 0;
 }
 
-.nav-links li:hover {
-  color: #00ff88; 
+.nav-links li::after,
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ff88;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after,
+.nav-links li a:hover::after,
+.nav-links li.active::after {
+  width: 100%;
+}
+
+.nav-links li:hover,
+.nav-links li a:hover {
+  color: #00ff88;
 }
 
 .nav-buttons {
@@ -47,32 +81,54 @@
 
 .btn {
   font-family: 'Orbitron', sans-serif;
-  padding: 8px 20px;
-  font-size: 14px;
-  font-weight: 600;
+  padding: 10px 24px;
+  font-size: 12px;
+  font-weight: 700;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 
 .btn-outline:hover {
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-fill {
   background: #00ff88;
   border: 2px solid #00ff88;
-  color: black;
+  color: #000;
+  font-weight: 800;
 }
 
 .btn-fill:hover {
   background: transparent;
   color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-buttons {
+    gap: 8px;
+  }
+  .btn {
+    padding: 6px 14px;
+    font-size: 10px;
+  }
 }

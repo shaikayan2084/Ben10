@@ -14,6 +14,20 @@ const alienThemes = {
   "Alien X": { vibe: "cosmic", icon: "🌌", pattern: "radial-gradient(circle at 20% 30%, rgba(170,221,255,0.08) 0%, transparent 30%), radial-gradient(circle at 80% 70%, rgba(170,221,255,0.05) 0%, transparent 30%)" },
   Upgrade: { vibe: "tech", icon: "🔧", pattern: "repeating-linear-gradient(45deg, transparent 0px, transparent 15px, rgba(0,255,0,0.04) 15px, rgba(0,255,0,0.04) 16px)" },
   "Way Big": { vibe: "heroic", icon: "🦸", pattern: "radial-gradient(circle at 50% 30%, rgba(255,51,51,0.12) 0%, transparent 50%)" },
+  Chromastone: { vibe: "crystal", icon: "💎", pattern: "linear-gradient(60deg, rgba(204,68,255,0.08) 0%, transparent 30%, transparent 70%, rgba(204,68,255,0.08) 100%)" },
+  Rath: { vibe: "warrior", icon: "🐯", pattern: "repeating-linear-gradient(45deg, rgba(255,102,0,0.05) 0px, rgba(255,102,0,0.05) 20px, transparent 20px, transparent 40px)" },
+  Cannonbolt: { vibe: "prehistoric", icon: "🌀", pattern: "radial-gradient(circle at 50% 50%, rgba(102,153,255,0.1) 0%, transparent 50%)" },
+  Ripjaws: { vibe: "ghost", icon: "🐟", pattern: "radial-gradient(ellipse at 50% 100%, rgba(0,136,68,0.1) 0%, transparent 60%)" },
+  Clockwork: { vibe: "tech", icon: "⏰", pattern: "repeating-linear-gradient(90deg, rgba(204,170,0,0.06) 0px, rgba(204,170,0,0.06) 2px, transparent 2px, transparent 10px)" },
+  Toepick: { vibe: "ghost", icon: "👹", pattern: "radial-gradient(circle at 30% 30%, rgba(136,68,0,0.12) 0%, transparent 50%)" },
+  Feedback: { vibe: "speed", icon: "⚡", pattern: "repeating-linear-gradient(0deg, rgba(0,255,102,0.06) 0px, rgba(0,255,102,0.06) 3px, transparent 3px, transparent 10px)" },
+  Buzzshock: { vibe: "speed", icon: "⚡", pattern: "repeating-linear-gradient(-45deg, rgba(34,204,0,0.06) 0px, rgba(34,204,0,0.06) 4px, transparent 4px, transparent 8px)" },
+  Armodrillo: { vibe: "warrior", icon: "🦾", pattern: "radial-gradient(circle at 70% 20%, rgba(255,136,0,0.1) 0%, transparent 40%)" },
+  "Water Hazard": { vibe: "ice", icon: "💧", pattern: "linear-gradient(180deg, rgba(0,102,204,0.1) 0%, transparent 40%, rgba(0,102,204,0.05) 100%)" },
+  "Grey Matter": { vibe: "tech", icon: "🧠", pattern: "repeating-linear-gradient(135deg, transparent 0px, transparent 10px, rgba(136,170,0,0.04) 10px, rgba(136,170,0,0.04) 11px)" },
+  Terraspin: { vibe: "nature", icon: "🌪️", pattern: "radial-gradient(circle at 50% 50%, rgba(136,204,255,0.08) 0%, transparent 60%)" },
+  NRG: { vibe: "fire", icon: "☢️", pattern: "radial-gradient(circle at 50% 50%, rgba(102,255,0,0.12) 0%, transparent 50%)" },
+  Upchuck: { vibe: "nature", icon: "🤮", pattern: "radial-gradient(circle at 30% 70%, rgba(0,204,102,0.1) 0%, transparent 50%)" },
 };
 
 const AlienDetail = ({ alien }) => {

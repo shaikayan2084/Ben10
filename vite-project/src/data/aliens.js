@@ -319,5 +319,411 @@ export const aliens = [
     color: "#0066ff",
     gradient: "linear-gradient(135deg, #000033, #0066ff)",
     universe: "Original Series (2005)"
+  },
+  {
+    id: 12,
+    name: "Chromastone",
+    species: "Crystalsapien",
+    homePlanet: "Petropia",
+    abilities: [
+      "Energy absorption - can absorb all forms of energy",
+      "Energy redirection - fires absorbed energy as powerful beams",
+      "Flight by levitation",
+      "Can create energy shields and constructs",
+      "Crystal body regeneration from damage"
+    ],
+    weakness: "Vulnerable to physical blunt force trauma. Can be overloaded by absorbing too much energy at once. Weak to anti-energy fields that disrupt his absorption capability.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 26: 'The Secret of Chromastone'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "Chromastone is a shimmering, crystal-like Crystalsapien with the ability to absorb, manipulate, and redirect virtually any form of energy. His body, composed of purple crystalline structures, glows brilliantly when channeling power. Chromastone serves as the spiritual guardian of the Crystalsapiens and is one of Ben's most powerful defensive aliens.",
+    interestingFacts: [
+      "Chromastone was revealed to be the last of the Crystalsapiens, making him an endangered species",
+      "He was created by the petrosapiens' sun god to protect them from the predator known as the 'Marauder'",
+      "Chromastone can absorb sunlight, laser blasts, mana energy, and even Alien X's cosmic energy",
+      "He shared a psychic connection with Diamondhead, as both are crystal-based beings from Petropia",
+      "Chromastone's energy beams are powerful enough to harm Vilgax"
+    ],
+    image: base + "images/wiki_chromastone.png",
+    cardImage: base + "images/wiki_chromastone.png",
+    color: "#cc44ff",
+    gradient: "linear-gradient(135deg, #1a0033, #cc44ff)",
+    universe: "Alien Force (2008)"
+  },
+  {
+    id: 13,
+    name: "Rath",
+    species: "Appoplexian",
+    homePlanet: "Appoplexia",
+    abilities: [
+      "Superhuman strength and combat prowess",
+      "Retractable tiger-like claws for slashing attacks",
+      "Enhanced agility and reflexes",
+      "Extremely durable and pain-resistant",
+      "Expert improvisational fighter using any object as a weapon"
+    ],
+    weakness: "His uncontrollable rage and overconfidence often cloud his judgment. Lacks ranged attacks. His impulsiveness leads him into traps and ambushes. Tends to monologue instead of acting.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 28: 'Above and Beyond'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "Rath is a hot-headed, tiger-like Appoplexian with a short temper and a long list of grievances. He is incredibly strong and durable, with razor-sharp retractable claws. Rath's most distinctive trait is his sarcastic, rage-filled personality and his tendency to refer to himself in the third person while threatening his enemies with creative violence.",
+    interestingFacts: [
+      "Rath speaks in a distinctive third-person voice, constantly threatening his opponents",
+      "Appoplexians have a cultural tradition of respecting those who can defeat them in combat",
+      "Rath once humorously threatened to 'break a planet in half' - which he later actually did",
+      "His catchphrase 'LEMME TELL YA SOMETHING...' became one of the most quoted lines in Ben 10",
+      "Despite his rage, Rath has shown moments of surprising wisdom and loyalty"
+    ],
+    image: base + "images/wiki_rath.png",
+    cardImage: base + "images/wiki_rath.png",
+    color: "#ff6600",
+    gradient: "linear-gradient(135deg, #1a0a00, #ff6600)",
+    universe: "Alien Force (2008)"
+  },
+  {
+    id: 14,
+    name: "Cannonbolt",
+    species: "Arburian Pelarota",
+    homePlanet: "Arburia",
+    abilities: [
+      "Can curl into an armored ball and roll at high speeds",
+      "Enhanced durability - shell can withstand extreme impacts",
+      "Can cause massive destruction by rolling through obstacles",
+      "Uses momentum as a weapon for devastating ramming attacks",
+      "Can flatten and shape his shell for various tactical uses"
+    ],
+    weakness: "Difficult to control direction at high speed. Vulnerable when uncurled and on his back. Tight spaces can restrict his rolling ability. Momentum-based attacks can be redirected by strong opponents.",
+    firstAppearance: "Ben 10 (2005) - Episode 42: 'The Big Tick'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Cannonbolt is a large, round Arburian Pelarota whose primary defense is his incredibly tough, armored shell that he curls into for high-speed rolling attacks. He resembles a giant pill bug with a thick, segmented carapace. When curled up, Cannonbolt becomes an unstoppable wrecking ball capable of leveling buildings and bouncing off surfaces like a pinball.",
+    interestingFacts: [
+      "Cannonbolt was the first alien Ben unlocked using the Omnitrix's randomizer function",
+      "Arburian Pelarotas use their rolling ability as their primary means of transportation on their homeworld",
+      "His shell is composed of a unique alloy that becomes harder with repeated impacts",
+      "Cannonbolt can uncurl instantly from his ball form, using the momentum to surprise enemies",
+      "He was one of the few aliens who could survive a direct hit from Vilgax"
+    ],
+    image: base + "images/wiki_cannonbolt.png",
+    cardImage: base + "images/wiki_cannonbolt.png",
+    color: "#6699ff",
+    gradient: "linear-gradient(135deg, #000033, #6699ff)",
+    universe: "Original Series (2005)"
+  },
+  {
+    id: 15,
+    name: "Ripjaws",
+    species: "Piscciss Volann",
+    homePlanet: "Piscciss",
+    abilities: [
+      "Aquatic adaptation - thrives underwater with natural gills",
+      "Jaw strength - can bite through steel with massive crushing force",
+      "Sharp teeth that can shred virtually any material",
+      "Prehensile tail for swimming and grabbing",
+      "Can extend his jaw to swallow large objects whole"
+    ],
+    weakness: "Cannot breathe outside of water for extended periods; must stay hydrated. Slow and clumsy on land. Vulnerable to dehydration. His fish-like body is easily damaged out of water.",
+    firstAppearance: "Ben 10 (2005) - Episode 9: 'The Tourist Trap'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Return of Vilgax'",
+    description: "Ripjaws is a fearsome, humanoid fish-like Piscciss Volann from the aquatic planet Piscciss. He resembles a cross between a shark and an angler fish, with razor-sharp teeth, a bioluminescent lure on his head, and powerful fins. Ripjaws is Ben's premier underwater alien, capable of swimming at incredible speeds and crushing nearly anything with his powerful jaws.",
+    interestingFacts: [
+      "Ripjaws was one of the original 10 aliens in the classic Omnitrix playlist",
+      "Piscciss Volanns are the dominant species on the water-covered planet Piscciss",
+      "His species comes in many varieties, including the electric eel-like 'Piscciss Premann'",
+      "Ripjaws' jaw can unhinge like a snake's to swallow prey larger than his head",
+      "The lure on his head can glow to attract prey in dark waters"
+    ],
+    image: base + "images/wiki_ripjaws.png",
+    cardImage: base + "images/wiki_ripjaws.png",
+    color: "#008844",
+    gradient: "linear-gradient(135deg, #001a0a, #008844)",
+    universe: "Original Series (2005)"
+  },
+  {
+    id: 16,
+    name: "Clockwork",
+    species: "Chronosapien",
+    homePlanet: "Unknown",
+    abilities: [
+      "Time manipulation - can slow, stop, or rewind time",
+      "Age manipulation - can age or de-age targets",
+      "Can generate time rays that affect temporal flow",
+      "Clockwork body is made of living clockwork machinery",
+      "Can open temporal portals and time travel"
+    ],
+    weakness: "His powers can be disrupted by other temporal beings. Overuse of time manipulation can cause temporal fatigue. His clockwork body can be jammed or damaged by physical force. Time paradoxes can render his powers ineffective.",
+    firstAppearance: "Ben 10: Ultimate Alien (2011) - Episode 33: 'The Ultimate Enemy: Part 1'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Clockwork is a mechanical Chronosapien with a body made entirely of intricate clockwork machinery. His head is a large clock face, and his chest houses a spinning gear mechanism. Clockwork possesses the incredible ability to manipulate time itself - slowing, stopping, or even reversing temporal flow within a localized area.",
+    interestingFacts: [
+      "Clockwork's species, the Chronosapiens, are among the most powerful beings in existence",
+      "His 'time rays' can de-age targets to nothingness or age them to dust",
+      "Clockwork was crucial in fixing the damage caused by the Chronosapien Time Bomb",
+      "His internal gears must be perfectly synchronized to maintain his powers",
+      "There is a 'Chronosapien Time Bomb' that can erase entire timelines from existence"
+    ],
+    image: base + "images/wiki_clockwork.png",
+    cardImage: base + "images/wiki_clockwork.png",
+    color: "#ccaa00",
+    gradient: "linear-gradient(135deg, #1a1a00, #ccaa00)",
+    universe: "Ultimate Alien (2011)"
+  },
+  {
+    id: 17,
+    name: "Toepick",
+    species: "Atrocian",
+    homePlanet: "Atrocia 0",
+    abilities: [
+      "Grotesque face that induces paralyzing fear in anyone who sees it",
+      "Can make enemies faint, flee, or become completely paralyzed",
+      "Chemical-based fear generation from specialized glands",
+      "Enhanced durability and resistance to damage",
+      "Can control the intensity of his fear-inducing effects"
+    ],
+    weakness: "Fear powers are useless against blind opponents or those without eyes. His abilities can be resisted by beings with strong willpower or no concept of fear. Limited combat capability beyond his fear factor. His face can be covered to neutralize the effect.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 52: 'Something Zombozo This Way Comes'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "Toepick is a horrifying Atrocian whose face is so grotesque and terrifying that it can induce madness, paralysis, and unconsciousness in anyone who gazes upon it. Ben keeps Toepick's face covered with a metal muzzle, only revealing it when absolutely necessary. Toepick is considered one of the most disturbing and dangerous aliens in the Omnitrix.",
+    interestingFacts: [
+      "Toepick's face is so terrifying that even Ben is afraid to look at it",
+      "His species, Atrocians, evolved on an abandoned prison planet",
+      "The muzzle on his face is necessary to prevent accidental fear exposure",
+      "Toepick's true face is never fully shown on screen, only its effects",
+      "He was created by combining DNA samples from five different alien species"
+    ],
+    image: base + "images/wiki_toepick.png",
+    cardImage: base + "images/wiki_toepick.png",
+    color: "#884400",
+    gradient: "linear-gradient(135deg, #1a0a00, #884400)",
+    universe: "Omniverse (2012)"
+  },
+  {
+    id: 18,
+    name: "Feedback",
+    species: "Conductoid",
+    homePlanet: "Teslavorr Nebula",
+    abilities: [
+      "Electricity absorption - can absorb any form of electrical energy",
+      "Electric blasts - discharges stored electricity as powerful attacks",
+      "Can control and manipulate nearby electrical systems",
+      "Electrokinetic flight",
+      "Plug-like tail can interface with power sources for maximum absorption"
+    ],
+    weakness: "Can be overloaded by absorbing too much electricity. Vulnerable to rubber and electrical insulators. Non-electrical enemies require him to use stored energy. His powers depend on an available electrical source nearby.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 1: 'The More Things Change: Part 1'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Feedback is a sleek, black-and-green Conductoid from the Teslavorr Nebula with the ability to absorb, store, and redirect massive amounts of electricity. He has a distinctive plug-like tail that he uses to interface with power sources. Feedback was Ben's favorite alien during his early Omniverse adventures and one of the most visually striking aliens in the roster.",
+    interestingFacts: [
+      "Feedback was Ben's favorite alien during his childhood Omniverse adventures",
+      "He was the alien Ben used when he first met his future partner, Rook Blonko",
+      "Conductoids evolved in the electrically charged environment of the Teslavorr Nebula",
+      "Feedback's tail can plug into any electrical outlet or generator for maximum power",
+      "He absorbed enough energy to briefly fight Malware, a powerful technological enemy"
+    ],
+    image: base + "images/wiki_feedback.png",
+    cardImage: base + "images/wiki_feedback.png",
+    color: "#00ff66",
+    gradient: "linear-gradient(135deg, #001a00, #00ff66)",
+    universe: "Omniverse (2012)"
+  },
+  {
+    id: 19,
+    name: "Buzzshock",
+    species: "Nosedeenian",
+    homePlanet: "Nosedeen's Quasar 387",
+    abilities: [
+      "Electricity generation and manipulation",
+      "Can split into multiple smaller copies of himself",
+      "Can transform into pure electrical energy and travel through wires",
+      "Can possess and animate electrical devices",
+      "Flight and levitation"
+    ],
+    weakness: "Can be absorbed by stronger electrical beings. Water grounds and disperses his electrical form. His small size makes him vulnerable to being swatted or captured. Copying himself reduces the power of each individual.",
+    firstAppearance: "Ben 10 (2005) - Episode 19: 'The Unnaturals'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Something Zombozo This Way Comes'",
+    description: "Buzzshock is a small, mischievous Nosedeenian composed of pure electrical energy. He resembles a tiny, black creature with glowing green eyes and jagged, electricity-like appendages. Despite his small stature, Buzzshock packs an incredible punch, capable of generating massive electrical shocks, multiplying into an army, and even traveling through power lines.",
+    interestingFacts: [
+      "Buzzshock was created when a Nosedeenian's species was exposed to the Omnitrix's energy signature",
+      "He can clone himself infinitely when exposed to electrical energy, creating an army of copies",
+      "Nosedeenians reproduce by splitting when they have excess electrical energy",
+      "Buzzshock's high-pitched voice and playful personality make him unique among Ben's aliens",
+      "He can inhabit any device connected to an electrical circuit"
+    ],
+    image: base + "images/wiki_buzzshock.png",
+    cardImage: base + "images/wiki_buzzshock.png",
+    color: "#22cc00",
+    gradient: "linear-gradient(135deg, #001a00, #22cc00)",
+    universe: "Original Series (2005)"
+  },
+  {
+    id: 20,
+    name: "Armodrillo",
+    species: "Talpaedan",
+    homePlanet: "Terraexcava",
+    abilities: [
+      "Jackhammer arms - can drill through solid rock at incredible speeds",
+      "Can create powerful seismic shockwaves and earthquakes",
+      "Enhanced strength for heavy lifting and demolition",
+      "Armored plating provides excellent defense",
+      "Can tunnel underground at high speed"
+    ],
+    weakness: "Jointed armor can be penetrated at weak points. His seismic powers can cause collateral damage in populated areas. Water and mud can clog his drilling mechanisms. Slower movement speed compared to other aliens.",
+    firstAppearance: "Ben 10: Ultimate Alien (2010) - Episode 21: 'Hero Time'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "Armodrillo is a massive, mechanical-looking Talpaedan with powerful hydraulic jackhammer arms capable of drilling through solid rock and generating devastating seismic shockwaves. He resembles a bipedal armored mole with his entire body covered in dark gray and orange plating. Armodrillo is Ben's specialist for underground operations and demolition.",
+    interestingFacts: [
+      "Armodrillo was the first new alien Ben unlocked after the Omnitrix recalibrated into the Ultimatrix",
+      "Talpaedans evolved on Terraexcava, a planet where natural disasters are a daily occurrence",
+      "His jackhammer arms can strike 1000 times per minute",
+      "Armodrillo's shockwaves can trigger controlled earthquakes visible from miles away",
+      "He was one of the few aliens strong enough to fight against the Ultimatrix's evil copies"
+    ],
+    image: base + "images/wiki_armodrillo.png",
+    cardImage: base + "images/wiki_armodrillo.png",
+    color: "#ff8800",
+    gradient: "linear-gradient(135deg, #1a0a00, #ff8800)",
+    universe: "Ultimate Alien (2010)"
+  },
+  {
+    id: 21,
+    name: "Water Hazard",
+    species: "Orishan",
+    homePlanet: "Unknown ocean world",
+    abilities: [
+      "Water manipulation - can control and shape water at will",
+      "Can absorb water from the atmosphere and surroundings",
+      "Pressurized water blasts powerful enough to cut steel",
+      "Can create water shields and barriers",
+      "Can survive underwater indefinitely"
+    ],
+    weakness: "Needs a source of water to be fully effective. His powers weaken in arid environments. Can be frozen by ice-based attacks. High-pressure blasts require concentration to aim accurately.",
+    firstAppearance: "Ben 10: Ultimate Alien (2010) - Episode 22: 'The Purge'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Ballad of Mr. Baumann'",
+    description: "Water Hazard is a crustacean-like Orishan with the ability to manipulate water in all its forms. He has a blue and silver armored body with a crab-like appearance and a tank on his back that stores pressurized water. Water Hazard can fire devastating high-pressure water jets, create defensive water barriers, and absorb moisture from the air.",
+    interestingFacts: [
+      "Water Hazard's species evolved on a planet completely covered in water",
+      "The tank on his back stores water at pressures exceeding 50,000 PSI",
+      "His water jets can cut through solid rock and metal",
+      "Water Hazard was part of the 'Amalgam Kids' group in an alternate timeline",
+      "His armor is made from crushed coral and minerals from his homeworld"
+    ],
+    image: base + "images/wiki_waterhazard.png",
+    cardImage: base + "images/wiki_waterhazard.png",
+    color: "#0066cc",
+    gradient: "linear-gradient(135deg, #000a1a, #0066cc)",
+    universe: "Ultimate Alien (2010)"
+  },
+  {
+    id: 22,
+    name: "Grey Matter",
+    species: "Galvan",
+    homePlanet: "Galvan Prime",
+    abilities: [
+      "Superhuman intelligence - IQ of several thousand",
+      "Expert in engineering, physics, chemistry, and alien technology",
+      "Can build advanced devices from scrap materials",
+      "Ability to interface with and reprogram any technology",
+      "Small size allows for stealth and infiltration"
+    ],
+    weakness: "Extremely small and physically weak. Can be easily crushed, stepped on, or captured. Useless in direct physical confrontations. His intelligence is useless without time and resources to build solutions.",
+    firstAppearance: "Ben 10 (2005) - Episode 2: 'Washington B.C.'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Grey Matter is a small, frog-like Galvan with the most advanced intellect of any species in the galaxy. Despite standing only a few inches tall, Grey Matter possesses an IQ in the thousands, capable of solving complex equations, hacking alien technology, and building incredible devices from spare parts. He is Ben's brain over brawn alien.",
+    interestingFacts: [
+      "Grey Matter was the third alien Ben ever unlocked in the original series",
+      "Galvans are widely considered the smartest species in the entire universe",
+      "The Omnitrix's creator, Azmuth, is himself a Galvan - the smartest of his kind",
+      "Grey Matter once jury-rigged a spaceship engine from junk parts",
+      "Galvans have photographic memory and can process information faster than supercomputers"
+    ],
+    image: base + "images/wiki_greymatter.png",
+    cardImage: base + "images/wiki_greymatter.png",
+    color: "#88aa00",
+    gradient: "linear-gradient(135deg, #1a1a00, #88aa00)",
+    universe: "Original Series (2005)"
+  },
+  {
+    id: 23,
+    name: "Terraspin",
+    species: "Geochelone Aerio",
+    homePlanet: "Unknown",
+    abilities: [
+      "Aerokinesis - can manipulate wind and create powerful gusts",
+      "Can create tornadoes and hurricane-force winds",
+      "Flight by spinning his shell and using wind propulsion",
+      "Wind shields that deflect projectiles and energy attacks",
+      "Immune to mana-based magic due to his species' natural resistance"
+    ],
+    weakness: "Slow movement despite flight capability. His shell can be cracked by powerful blunt force. His wind powers are less effective in enclosed spaces. Cannot create wind in a complete vacuum.",
+    firstAppearance: "Ben 10: Ultimate Alien (2010) - Episode 31: 'The Ultimate Enemy: Part 1'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Ballad of Mr. Baumann'",
+    description: "Terraspin is a turtle-like Geochelone Aerio with the ability to manipulate wind and air currents. He spins inside his shell to generate massive tornadoes and hurricane-force winds. Terraspin is notably one of the few beings in the universe completely immune to magic, making him Ben's go-to alien for fighting magical threats.",
+    interestingFacts: [
+      "Terraspin is one of the few aliens immune to magic - he even resisted Dagon's possession",
+      "His spinning shell can generate Category 5 hurricane-force winds",
+      "Geochelone Aerios use their wind powers as their primary means of transportation",
+      "Terraspin's species is herbivorous, feeding on airborne nutrients",
+      "He was instrumental in defeating the magical entities known as the 'Esoterica'"
+    ],
+    image: base + "images/wiki_terraspin.png",
+    cardImage: base + "images/wiki_terraspin.png",
+    color: "#88ccff",
+    gradient: "linear-gradient(135deg, #001a33, #88ccff)",
+    universe: "Ultimate Alien (2010)"
+  },
+  {
+    id: 24,
+    name: "NRG",
+    species: "Prypiatosian-B",
+    homePlanet: "Prypiatos",
+    abilities: [
+      "Extreme heat generation - can melt through solid metal",
+      "Radiation emission - can emit deadly levels of radiation",
+      "Can phase through his containment suit as pure energy",
+      "Energy blasts of concentrated thermal power",
+      "Can absorb heat from the environment to grow stronger"
+    ],
+    weakness: "Must wear a protective containment suit; without it, he emits lethal radiation that harms allies. His radiation can be contained by lead shielding. Water can absorb his heat and weaken his attacks. Cannot be used around civilians without risking their safety.",
+    firstAppearance: "Ben 10: Ultimate Alien (2011) - Episode 42: 'The Night That Creatures Came'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "NRG is a being of pure nuclear energy contained within a heavily reinforced suit. His true form is a glowing, creature-like ball of green radioactive energy. Inside his containment suit, NRG is a massive, hulking figure. Outside of it, he becomes a blazing inferno of nuclear fire capable of melting anything nearby. NRG is Ben's most dangerous alien to use near allies.",
+    interestingFacts: [
+      "NRG's suit is made from a special alloy that can contain nuclear-level radiation",
+      "In his true energy form, NRG can phase through walls and solid objects",
+      "Prypiatosian-Bs evolved in the radioactive wastelands of Prypiatos",
+      "NRG's radiation levels can cause severe illness in unprotected organics",
+      "He was one of the few aliens who could damage the DNAliens' organic armor"
+    ],
+    image: base + "images/wiki_nrg.png",
+    cardImage: base + "images/wiki_nrg.png",
+    color: "#66ff00",
+    gradient: "linear-gradient(135deg, #001a00, #66ff00)",
+    universe: "Ultimate Alien (2011)"
+  },
+  {
+    id: 25,
+    name: "Upchuck",
+    species: "Gourmand",
+    homePlanet: "Peptos XI",
+    abilities: [
+      "Can eat and consume virtually any substance or material",
+      "Digests matter and regurgitates it as explosive projectiles",
+      "Four prehensile tongues for grabbing food and enemies",
+      "Stomach can store massive amounts of matter relative to body size",
+      "Can eat through solid metal, energy blasts, and even magic"
+    ],
+    weakness: "Vulnerable while eating - his mouth/tongues are exposed. Can be force-fed things that cause indigestion. His small size makes him physically vulnerable to direct attacks. Stomach capacity is not infinite.",
+    firstAppearance: "Ben 10 (2005) - Episode 20: 'Monster Weather'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Upchuck is a small, three-legged Gourmand with four long, prehensile tongues and an incredible appetite. He can consume anything - metal, concrete, energy blasts, even magical attacks - and then regurgitate the digested matter as powerful explosive projectiles. Despite his cute appearance, Upchuck is one of Ben's most versatile and dangerous aliens.",
+    interestingFacts: [
+      "Upchuck's species comes in two subtypes: Perk Gourmands (green) and Murk Gourmands (purple)",
+      "Ben's version of Upchuck is a Perk Gourmand, the green variety",
+      "Gourmands can eat up to 100 times their body weight in a single sitting",
+      "Upchuck's stomach has multiple chambers for processing different types of matter",
+      "He once ate and later regurgitated Vilgax's ship's laser cannon blast"
+    ],
+    image: base + "images/wiki_upchuck.png",
+    cardImage: base + "images/wiki_upchuck.png",
+    color: "#00cc66",
+    gradient: "linear-gradient(135deg, #001a0a, #00cc66)",
+    universe: "Original Series (2005)"
   }
 ];

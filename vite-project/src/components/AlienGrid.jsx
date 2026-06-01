@@ -13,8 +13,8 @@ const AlienGrid = ({ onSelectAlien, selectedAlien }) => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="grid-title">THE <span className="highlight">OMNITRIX</span> ALIENS</h2>
-        <p className="grid-subtitle">Click on any alien to discover their powers, species, and secrets</p>
+        <h2 className="grid-title"><span className="highlight">ALIEN</span> DATABASE</h2>
+        <p className="grid-subtitle">Click any alien to view its complete wiki entry — species, abilities, weaknesses, and more</p>
       </motion.div>
 
       <div className="alien-cards">

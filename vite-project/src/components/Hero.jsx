@@ -31,7 +31,7 @@ const Hero = ({ onSelectAlien }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            ⚡ It's Hero Time!
+            📖 The Complete Alien Encyclopedia
           </motion.p>
           <motion.h1
             className="hero-title"
@@ -47,7 +47,7 @@ const Hero = ({ onSelectAlien }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            Explore the complete Omnitrix alien database. Discover their powers, weaknesses, and epic journeys across the Ben 10 universe.
+            Welcome to the ultimate Ben 10 Wikipedia — a complete guide to every Omnitrix alien. Explore species, home planets, abilities, weaknesses, and epic stories from the Ben 10 universe.
           </motion.p>
           <motion.div
             className="hero-cta"
@@ -59,7 +59,7 @@ const Hero = ({ onSelectAlien }) => {
               Explore Aliens
             </button>
             <button className="cta-secondary" onClick={() => document.getElementById("details")?.scrollIntoView({ behavior: "smooth" })}>
-              Learn More
+              Alien Wiki
             </button>
           </motion.div>
         </motion.div>

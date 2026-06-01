@@ -13,7 +13,7 @@ const Navbar = ({ onSelectAlien, activeAlien }) => {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        <img src="/images/logo.png" alt="Ben 10 Logo" />
+        <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Ben 10 Logo" />
       </div>
 
       <ul className="nav-links">

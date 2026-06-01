@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL || '/';
+
 export const aliens = [
   {
     id: 1,
@@ -22,8 +24,8 @@ export const aliens = [
       "In Alien Force, Heatblast's design was updated with more prominent lava cracks and a taller, more muscular build",
       "Heatblast's fire can burn even underwater with enough concentration"
     ],
-    image: "/images/wiki_heatblast.png",
-    cardImage: "/images/wiki_heatblast.png",
+    image: base + "images/wiki_heatblast.png",
+    cardImage: base + "images/wiki_heatblast.png",
     color: "#ff4500",
     gradient: "linear-gradient(135deg, #1a0a00, #ff4500)",
     universe: "Original Series (2005)"
@@ -51,8 +53,8 @@ export const aliens = [
       "Four Arms has appeared in every Ben 10 series, making him one of the most recurring aliens",
       "His impressive mustache is a cultural symbol of maturity among Tetramands"
     ],
-    image: "/images/wiki_fourarms.png",
-    cardImage: "/images/wiki_fourarms.png",
+    image: base + "images/wiki_fourarms.png",
+    cardImage: base + "images/wiki_fourarms.png",
     color: "#cc0000",
     gradient: "linear-gradient(135deg, #1a0000, #cc0000)",
     universe: "Original Series (2005)"
@@ -80,8 +82,8 @@ export const aliens = [
       "He can survive in the vacuum of space and has no need for oxygen",
       "Diamondhead's crystals are harder than any known material on Earth"
     ],
-    image: "/images/wiki_diamondhead.png",
-    cardImage: "/images/wiki_diamondhead.png",
+    image: base + "images/wiki_diamondhead.png",
+    cardImage: base + "images/wiki_diamondhead.png",
     color: "#00ff88",
     gradient: "linear-gradient(135deg, #002211, #00ff88)",
     universe: "Original Series (2005)"
@@ -109,8 +111,8 @@ export const aliens = [
       "His true form is even more terrifying - a skeletal, one-eyed monster called 'Z'Skayr'",
       "Ghostfreak was trapped in the Omnitrix's sun-shaped core after being defeated"
     ],
-    image: "/images/wiki_ghostfreak.png",
-    cardImage: "/images/wiki_ghostfreak.png",
+    image: base + "images/wiki_ghostfreak.png",
+    cardImage: base + "images/wiki_ghostfreak.png",
     color: "#9933ff",
     gradient: "linear-gradient(135deg, #1a0033, #9933ff)",
     universe: "Original Series (2005)"
@@ -138,8 +140,8 @@ export const aliens = [
       "Swampfire's flowers bloom when he's fully charged with methane",
       "In Omniverse, Swampfire gained a more insect-like design with wings"
     ],
-    image: "/images/wiki_swampfire.png",
-    cardImage: "/images/wiki_swampfire.png",
+    image: base + "images/wiki_swampfire.png",
+    cardImage: base + "images/wiki_swampfire.png",
     color: "#00cc44",
     gradient: "linear-gradient(135deg, #002200, #00cc44)",
     universe: "Alien Force (2008)"
@@ -167,8 +169,8 @@ export const aliens = [
       "Humungousaur's species was nearly hunted to extinction by the predatory Tyrannopede",
       "Despite his size, Humungousaur is surprisingly gentle and often tries not to harm innocents"
     ],
-    image: "/images/wiki_humungousaur.png",
-    cardImage: "/images/wiki_humungousaur.png",
+    image: base + "images/wiki_humungousaur.png",
+    cardImage: base + "images/wiki_humungousaur.png",
     color: "#8b4513",
     gradient: "linear-gradient(135deg, #1a0a00, #8b4513)",
     universe: "Alien Force (2008)"
@@ -196,8 +198,8 @@ export const aliens = [
       "Big Chill can enter a 'ghost mode' that makes him completely intangible and invisible",
       "He was one of the few aliens Ben used against the Highbreed invasion"
     ],
-    image: "/images/wiki_bigchill.png",
-    cardImage: "/images/wiki_bigchill.png",
+    image: base + "images/wiki_bigchill.png",
+    cardImage: base + "images/wiki_bigchill.png",
     color: "#00aaff",
     gradient: "linear-gradient(135deg, #000033, #00aaff)",
     universe: "Alien Force (2008)"
@@ -225,8 +227,8 @@ export const aliens = [
       "Celestialsapiens exist in the Forge of Creation, a realm beyond space and time",
       "Professor Paradox once stated that Alien X is one of the most dangerous beings he's ever encountered"
     ],
-    image: "/images/wiki_alienx.png",
-    cardImage: "/images/wiki_alienx.png",
+    image: base + "images/wiki_alienx.png",
+    cardImage: base + "images/wiki_alienx.png",
     color: "#aaddff",
     gradient: "linear-gradient(135deg, #000011, #0a0a2e)",
     universe: "Alien Force (2008)"
@@ -254,8 +256,8 @@ export const aliens = [
       "He once upgraded a Rustbucket into a high-tech battle vehicle",
       "Galvanic Mechamorphs can communicate with each other through their circuitry patterns"
     ],
-    image: "/images/wiki_upgrade.png",
-    cardImage: "/images/wiki_upgrade.png",
+    image: base + "images/wiki_upgrade.png",
+    cardImage: base + "images/wiki_upgrade.png",
     color: "#00ff00",
     gradient: "linear-gradient(135deg, #001a00, #00ff00)",
     universe: "Original Series (2005)"
@@ -283,8 +285,8 @@ export const aliens = [
       "Way Big's design was inspired by the Japanese superhero Ultraman",
       "In Omniverse, Way Big could grow even larger than his original 100-foot height"
     ],
-    image: "/images/wiki_waybig.png",
-    cardImage: "/images/wiki_waybig.png",
+    image: base + "images/wiki_waybig.png",
+    cardImage: base + "images/wiki_waybig.png",
     color: "#ff3333",
     gradient: "linear-gradient(135deg, #1a0000, #ff3333)",
     universe: "Original Series (2005)"
@@ -312,8 +314,8 @@ export const aliens = [
       "XLR8 can create tornado-level winds just by running in circles",
       "He was Ben's first super-speed alien and remains the fastest recurring transformation"
     ],
-    image: "/images/wiki_xlr8.png",
-    cardImage: "/images/wiki_xlr8.png",
+    image: base + "images/wiki_xlr8.png",
+    cardImage: base + "images/wiki_xlr8.png",
     color: "#0066ff",
     gradient: "linear-gradient(135deg, #000033, #0066ff)",
     universe: "Original Series (2005)"

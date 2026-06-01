@@ -22,10 +22,7 @@ const Navbar = ({ onSelectAlien, activeAlien }) => {
         <li><a href="#details">Details</a></li>
       </ul>
 
-      <div className="nav-buttons">
-        <button className="btn btn-outline">Login</button>
-        <button className="btn btn-fill">Sign Up</button>
-      </div>
+
     </nav>
   );
 };

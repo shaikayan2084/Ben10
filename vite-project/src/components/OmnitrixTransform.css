@@ -1,0 +1,146 @@
+.transform-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+}
+
+.transform-flash {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ff88, transparent);
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+}
+
+.transform-ring-outer {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transform-ring {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 255, 136, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.2), inset 0 0 40px rgba(0, 255, 136, 0.1);
+}
+
+.transform-ring-inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.15), inset 0 0 30px rgba(0, 255, 136, 0.08);
+}
+
+.transform-core {
+  position: absolute;
+  z-index: 2;
+}
+
+.transform-omnitrix-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.omnitrix-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.5));
+  animation: omnitrixPulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes omnitrixPulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.5)); }
+  100% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(0, 255, 136, 0.8)); }
+}
+
+.transform-silhouette {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.silhouette-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 0 30px rgba(255, 255, 255, 0.3));
+  animation: silhouetteAppear 0.8s ease-out;
+}
+
+@keyframes silhouetteAppear {
+  0% { filter: brightness(0) invert(1) drop-shadow(0 0 0px rgba(255,255,255,0)); transform: scale(0.5); opacity: 0; }
+  50% { filter: brightness(0) invert(1) drop-shadow(0 0 50px rgba(255,255,255,0.5)); transform: scale(1.1); opacity: 1; }
+  100% { filter: brightness(0) invert(1) drop-shadow(0 0 30px rgba(255,255,255,0.3)); transform: scale(1); opacity: 1; }
+}
+
+.silhouette-glow {
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(40px);
+  animation: glowPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% { opacity: 0.1; transform: scale(0.9); }
+  100% { opacity: 0.25; transform: scale(1.1); }
+}
+
+.transform-name {
+  position: absolute;
+  bottom: 30%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.transform-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 136, 0.05) 2px,
+    rgba(0, 255, 136, 0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 4;
+}
+
+@media (max-width: 768px) {
+  .transform-ring-outer { width: 200px; height: 200px; }
+  .transform-ring { width: 170px; height: 170px; }
+  .transform-ring-inner { width: 130px; height: 130px; }
+  .transform-omnitrix-icon { width: 80px; height: 80px; }
+  .transform-silhouette { width: 120px; height: 120px; }
+  .transform-name { font-size: 20px; bottom: 25%; }
+}

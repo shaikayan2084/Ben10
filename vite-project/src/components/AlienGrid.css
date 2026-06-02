@@ -29,7 +29,6 @@
   font-weight: 400;
 }
 
-/* Series Sections */
 .series-section {
   max-width: 1400px;
   margin: 0 auto 80px;
@@ -103,7 +102,6 @@
   flex-shrink: 0;
 }
 
-/* Cards Grid */
 .alien-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -216,6 +214,7 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.12);
   font-weight: 700;
+  z-index: 2;
 }
 
 .card-click-ripple {
@@ -235,6 +234,716 @@
   to { opacity: 0; transform: scale(2); }
 }
 
+/* =============================================
+   EFFECT OVERLAY CONTAINER
+   ============================================= */
+.effect-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.effect-overlay > * {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.entered .effect-overlay > * {
+  opacity: 1;
+}
+
+.alien-card:hover .effect-overlay > * {
+  opacity: 1;
+}
+
+.clicked .effect-overlay > * {
+  animation-duration: 0.5s !important;
+  animation-iteration-count: 1 !important;
+}
+
+/* =============================================
+   1. HEATBLAST — Fire particles rising
+   ============================================= */
+.effect-fire .fp {
+  width: 6px; height: 6px;
+  background: #ff4500;
+  border-radius: 50%;
+  bottom: -10px;
+  animation: fpRise 2s ease-out infinite;
+  box-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
+}
+.effect-fire .f1 { left: 15%; animation-delay: 0s; }
+.effect-fire .f2 { left: 30%; animation-delay: 0.4s; width: 4px; height: 4px; }
+.effect-fire .f3 { left: 50%; animation-delay: 0.8s; width: 8px; height: 8px; }
+.effect-fire .f4 { left: 65%; animation-delay: 1.2s; width: 5px; height: 5px; }
+.effect-fire .f5 { left: 80%; animation-delay: 0.2s; }
+.effect-fire .f6 { left: 90%; animation-delay: 1s; width: 4px; height: 4px; }
+
+@keyframes fpRise {
+  0%   { transform: translateY(0) scale(1); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 0.6; }
+  100% { transform: translateY(-250px) scale(0); opacity: 0; }
+}
+
+.alien-card:not(.entered) .effect-fire .fp { animation: none; opacity: 0; }
+.clicked.effect-fire .fp { animation-duration: 0.5s !important; }
+
+.alien-card.anim-heatblast .card-glow { background: radial-gradient(circle, #ff4500, transparent); }
+.alien-card.anim-heatblast:hover .card-image { filter: drop-shadow(0 0 40px #ff4500) brightness(1.15); }
+.alien-card.anim-heatblast .card-name { color: #ff6b35; }
+
+/* =============================================
+   2. FOUR ARMS — Card shake like a punch
+   ============================================= */
+.alien-card.anim-fourarms:hover { animation: faShake 0.4s ease-in-out 2; }
+
+@keyframes faShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px) rotate(-1deg); }
+  40% { transform: translateX(6px) rotate(1deg); }
+  60% { transform: translateX(-4px) rotate(-0.5deg); }
+  80% { transform: translateX(4px) rotate(0.5deg); }
+}
+
+.clicked.anim-fourarms { animation: faPunch 0.5s ease-out; }
+
+@keyframes faPunch {
+  0% { transform: scale(1); }
+  20% { transform: scale(0.92) translateX(-8px); }
+  40% { transform: scale(1.03) translateX(4px); }
+  60% { transform: scale(0.98) translateX(-2px); }
+  100% { transform: scale(1) translateX(0); }
+}
+
+.alien-card.anim-fourarms .card-name { color: #ff3333; }
+.alien-card.anim-fourarms:hover { border-color: rgba(204,0,0,0.4); box-shadow: 0 0 30px rgba(204,0,0,0.12); }
+
+/* =============================================
+   3. DIAMONDHEAD — Crystal spikes + sparkle
+   ============================================= */
+.effect-crystal .cs {
+  width: 0; height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid #00ff88;
+  filter: drop-shadow(0 0 6px #00ff88);
+  animation: csSparkle 2s ease-in-out infinite;
+  opacity: 0;
+}
+.effect-crystal .s1 { top: -5px; left: 10%; animation-delay: 0s; transform: scale(0.8); }
+.effect-crystal .s2 { top: -5px; right: 20%; animation-delay: 0.5s; }
+.effect-crystal .s3 { bottom: 30%; left: -5px; animation-delay: 1s; transform: rotate(90deg) scale(0.7); }
+.effect-crystal .s4 { bottom: 20%; right: -5px; animation-delay: 1.5s; transform: rotate(-90deg) scale(0.9); }
+
+@keyframes csSparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  25% { opacity: 1; transform: scale(1.2); }
+  50% { opacity: 0.6; transform: scale(1); }
+  75% { opacity: 1; transform: scale(0.8); }
+}
+
+.alien-card.anim-diamondhead:hover .card-image { filter: drop-shadow(0 0 40px #00ff88) brightness(1.15); }
+.alien-card.anim-diamondhead .card-name { color: #00ff88; }
+.alien-card.anim-diamondhead { border-color: rgba(0,255,136,0.08); }
+.alien-card.anim-diamondhead:hover { border-color: rgba(0,255,136,0.4); box-shadow: 0 0 30px rgba(0,255,136,0.1); }
+
+/* =============================================
+   4. GHOSTFREAK — Opacity shift + ghost trails
+   ============================================= */
+.effect-ghost .gt {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(153,51,255,0.08), transparent);
+  animation: gtShift 3s ease-in-out infinite;
+}
+.effect-ghost .t1 { animation-delay: 0s; }
+.effect-ghost .t2 { animation-delay: 1s; transform: rotate(45deg); }
+.effect-ghost .t3 { animation-delay: 2s; transform: rotate(-45deg); }
+
+@keyframes gtShift {
+  0%, 100% { opacity: 0.1; transform: scale(1) translateX(0); }
+  50% { opacity: 0.5; transform: scale(1.05) translateX(10px); }
+}
+
+.alien-card.anim-ghostfreak { transition: opacity 1s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
+.alien-card.anim-ghostfreak:hover { opacity: 0.85; border-color: rgba(153,51,255,0.4); box-shadow: 0 0 40px rgba(153,51,255,0.15); }
+.alien-card.anim-ghostfreak .card-image { filter: drop-shadow(0 0 15px rgba(153,51,255,0.15)); }
+.alien-card.anim-ghostfreak .card-name { color: #bb77ff; }
+
+/* =============================================
+   5. UPGRADE — Green digital scanlines
+   ============================================= */
+.effect-scanlines .sl-line {
+  width: 100%; height: 2px;
+  background: rgba(0,255,0,0.15);
+  left: 0;
+  animation: slScan 2s linear infinite;
+  box-shadow: 0 0 8px rgba(0,255,0,0.1);
+}
+.effect-scanlines .sl-line:nth-child(1) { top: 10%; animation-delay: 0s; }
+.effect-scanlines .sl-line:nth-child(2) { top: 30%; animation-delay: 0.4s; }
+.effect-scanlines .sl-line:nth-child(3) { top: 50%; animation-delay: 0.8s; }
+.effect-scanlines .sl-line:nth-child(4) { top: 70%; animation-delay: 1.2s; }
+.effect-scanlines .sl-line:nth-child(5) { top: 90%; animation-delay: 1.6s; }
+
+@keyframes slScan {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.alien-card.anim-upgrade .card-glow { background: radial-gradient(circle, #00ff00, transparent); }
+.alien-card.anim-upgrade:hover .card-image { filter: drop-shadow(0 0 40px #00ff00) brightness(1.1); }
+.alien-card.anim-upgrade .card-name { color: #44ff44; }
+.alien-card.anim-upgrade:hover { border-color: rgba(0,255,0,0.4); box-shadow: 0 0 30px rgba(0,255,0,0.1); }
+
+/* =============================================
+   6. WAY BIG — Slow zoom-in growth
+   ============================================= */
+.effect-grow .gw-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse, rgba(255,51,51,0.1) 0%, transparent 70%);
+  animation: gwExpand 4s ease-in-out infinite;
+}
+@keyframes gwExpand {
+  0%, 100% { transform: scale(0.8); opacity: 0.3; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.alien-card.anim-waybig:hover .card-image {
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 50px rgba(255,51,51,0.3));
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+.alien-card.anim-waybig .card-name { color: #ff5555; }
+.alien-card.anim-waybig:hover { border-color: rgba(255,51,51,0.4); box-shadow: 0 0 40px rgba(255,51,51,0.15); }
+
+/* =============================================
+   7. XLR8 — Motion blur streaks left to right
+   ============================================= */
+.effect-speed .sb {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #0066ff, transparent);
+  left: -20%;
+  border-radius: 2px;
+  animation: sbStreak 1s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(0,102,255,0.3);
+}
+.effect-speed .s1 { top: 20%; animation-delay: 0s; width: 60px; }
+.effect-speed .s2 { top: 40%; animation-delay: 0.25s; width: 40px; }
+.effect-speed .s3 { top: 60%; animation-delay: 0.5s; width: 80px; }
+.effect-speed .s4 { top: 80%; animation-delay: 0.75s; width: 50px; }
+
+@keyframes sbStreak {
+  0% { transform: translateX(0); opacity: 0; }
+  30% { opacity: 0.8; }
+  100% { transform: translateX(150px); opacity: 0; }
+}
+
+.alien-card.anim-xlr8 .card-glow { background: radial-gradient(circle, #0066ff, transparent); }
+.alien-card.anim-xlr8 .card-name { color: #4488ff; }
+.alien-card.anim-xlr8:hover .card-image { filter: drop-shadow(0 0 30px #0066ff) brightness(1.1); }
+
+/* =============================================
+   8. CANNONBOLT — Card rotates + spins
+   ============================================= */
+.effect-spin .cb-spin {
+  position: absolute;
+  inset: 10px;
+  border: 2px solid rgba(102,153,255,0.1);
+  border-radius: 50%;
+  animation: cbSpin 2s ease-in-out infinite;
+}
+@keyframes cbSpin {
+  0% { transform: rotate(0deg) scale(0.8); opacity: 0; border-color: rgba(102,153,255,0.1); }
+  50% { transform: rotate(360deg) scale(1.1); opacity: 0.6; border-color: rgba(102,153,255,0.3); }
+  100% { transform: rotate(720deg) scale(0.8); opacity: 0; border-color: rgba(102,153,255,0.1); }
+}
+
+.alien-card.anim-cannonbolt:hover {
+  animation: cbHoverSpin 0.8s ease-in-out;
+}
+@keyframes cbHoverSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  30% { transform: rotate(180deg) scale(1.05); }
+  60% { transform: rotate(360deg) scale(0.97); }
+  100% { transform: rotate(360deg) scale(1.03); }
+}
+.alien-card.anim-cannonbolt .card-name { color: #6699ff; }
+
+/* =============================================
+   9. RIPJAWS — Water ripples from center
+   ============================================= */
+.effect-ripple .wr {
+  inset: 20%;
+  border-radius: 50%;
+  border: 2px solid rgba(0,136,68,0.15);
+  animation: wrPulse 2.5s ease-out infinite;
+}
+.effect-ripple .r1 { animation-delay: 0s; }
+.effect-ripple .r2 { animation-delay: 0.8s; }
+.effect-ripple .r3 { animation-delay: 1.6s; }
+
+@keyframes wrPulse {
+  0% { transform: scale(0.3); opacity: 0.8; border-width: 3px; }
+  100% { transform: scale(2.5); opacity: 0; border-width: 1px; }
+}
+
+.alien-card.anim-ripjaws .card-name { color: #008844; }
+.alien-card.anim-ripjaws:hover .card-image { filter: drop-shadow(0 0 30px rgba(0,136,68,0.3)); }
+.alien-card.anim-ripjaws:hover { border-color: rgba(0,136,68,0.3); }
+
+/* =============================================
+   10. BUZZSHOCK — Electric arcs between corners
+   ============================================= */
+.effect-arcs .ea {
+  width: 3px; height: 3px;
+  background: #22cc00;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22cc00, 0 0 20px #22cc00;
+  animation: eaArc 1.5s ease-in-out infinite;
+}
+.effect-arcs .a1 { top: 5%; left: 5%; animation-delay: 0s; }
+.effect-arcs .a2 { top: 5%; right: 5%; animation-delay: 0.4s; }
+.effect-arcs .a3 { bottom: 5%; left: 5%; animation-delay: 0.8s; }
+.effect-arcs .a4 { bottom: 5%; right: 5%; animation-delay: 1.2s; }
+
+@keyframes eaArc {
+  0% { transform: scale(0.5); opacity: 0; }
+  20% { opacity: 1; }
+  40% { transform: scale(3); box-shadow: 0 0 20px #22cc00, 0 0 40px #22cc00; }
+  60% { opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.alien-card.anim-buzzshock:hover .card-image { filter: drop-shadow(0 0 30px #22cc00) brightness(1.1); }
+.alien-card.anim-buzzshock .card-name { color: #22cc00; }
+
+/* =============================================
+   11. GREY MATTER — Holographic equations
+   ============================================= */
+.effect-hologram .he {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  color: rgba(136,170,0,0.3);
+  animation: heFloat 3s ease-in-out infinite;
+  text-shadow: 0 0 8px rgba(136,170,0,0.1);
+  white-space: nowrap;
+}
+.effect-hologram .e1 { top: 15%; left: 8%; animation-delay: 0s; }
+.effect-hologram .e2 { top: 40%; right: 10%; animation-delay: 0.8s; }
+.effect-hologram .e3 { bottom: 25%; left: 12%; animation-delay: 1.6s; }
+.effect-hologram .e4 { bottom: 10%; right: 15%; animation-delay: 2.4s; }
+.effect-hologram .e1::after { content: 'E=mc²'; }
+.effect-hologram .e2::after { content: '∑(n)'; }
+.effect-hologram .e3::after { content: '∫ f(x)'; }
+.effect-hologram .e4::after { content: 'π×r²'; }
+
+@keyframes heFloat {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
+  50% { transform: translateY(-20px) scale(1.2); opacity: 0.6; }
+}
+
+.alien-card.anim-greymatter .card-name { color: #88aa00; }
+.alien-card.anim-greymatter:hover .card-image { filter: drop-shadow(0 0 20px rgba(136,170,0,0.2)); }
+
+/* =============================================
+   12. UPCHUCK — Energy orb absorption
+   ============================================= */
+.effect-absorb .uo-orb {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(0,204,102,0.2), transparent);
+  border: 2px solid rgba(0,204,102,0.1);
+  animation: uoAbsorb 2s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(0,204,102,0.1);
+}
+@keyframes uoAbsorb {
+  0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; }
+  30% { opacity: 0.6; }
+  70% { transform: translate(-50%, -50%) scale(1.8); opacity: 0.3; border-color: rgba(0,204,102,0.3); }
+  100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+}
+
+.alien-card.anim-upchuck .card-name { color: #00cc66; }
+
+/* =============================================
+   13. SWAMPFIRE — Vines grow + embers float
+   ============================================= */
+.effect-vines .sv {
+  height: 100%;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(to top, rgba(0,204,68,0), rgba(0,204,68,0.25));
+  animation: svGrow 3s ease-in-out infinite;
+}
+.effect-vines .v1 { left: 5%; top: 100%; animation-delay: 0s; }
+.effect-vines .v2 { left: 25%; top: 100%; animation-delay: 0.7s; height: 60%; }
+.effect-vines .v3 { right: 20%; top: 100%; animation-delay: 1.4s; height: 80%; }
+.effect-vines .v4 { right: 5%; top: 100%; animation-delay: 2.1s; }
+@keyframes svGrow {
+  0% { transform: translateY(0) scaleY(0); opacity: 0; }
+  30% { opacity: 1; }
+  60% { transform: translateY(-60%) scaleY(1); opacity: 1; }
+  100% { transform: translateY(-100%) scaleY(0.5); opacity: 0; }
+}
+
+.alien-card.anim-swampfire .card-name { color: #00dd55; }
+.alien-card.anim-swampfire:hover .card-image { filter: drop-shadow(0 0 30px rgba(0,204,68,0.2)); }
+
+/* =============================================
+   14. HUMUNGOUSAUR — Ground crack at bottom
+   ============================================= */
+.effect-quake .hc-crack {
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8b4513, transparent);
+  animation: hcCrack 3s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(139,69,19,0.2);
+}
+.effect-quake .hc-crack:nth-child(1) { bottom: 0; animation-delay: 0s; }
+.effect-quake .hc-crack:nth-child(2) { bottom: 8px; animation-delay: 0.5s; height: 2px; opacity: 0.6; }
+.effect-quake .hc-crack:nth-child(3) { bottom: 16px; animation-delay: 1s; height: 1px; opacity: 0.3; }
+
+@keyframes hcCrack {
+  0% { transform: scaleX(0); opacity: 0; }
+  30% { opacity: 1; }
+  70% { transform: scaleX(1); opacity: 0.8; }
+  100% { transform: scaleX(0.5); opacity: 0; }
+}
+
+.alien-card.anim-humungousaur .card-name { color: #cc8844; }
+.alien-card.anim-humungousaur:hover .card-image { filter: drop-shadow(0 0 30px rgba(139,69,19,0.25)); }
+.alien-card.anim-humungousaur:hover { animation: hcShake 0.3s ease-in-out 3; }
+
+@keyframes hcShake {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-2px); }
+  75% { transform: translateY(2px); }
+}
+
+/* =============================================
+   15. BIG CHILL — Frost spreading across edges
+   ============================================= */
+.effect-frost .bf {
+  background: linear-gradient(135deg, rgba(0,170,255,0.12), transparent);
+  animation: bfSpread 3s ease-in-out infinite;
+  border-radius: 50%;
+}
+.effect-frost .f1 { top: -10px; left: -10px; width: 60px; height: 60px; animation-delay: 0s; }
+.effect-frost .f2 { top: -10px; right: -10px; width: 50px; height: 50px; animation-delay: 1s; }
+.effect-frost .f3 { bottom: -10px; left: -10px; width: 50px; height: 50px; animation-delay: 2s; }
+
+@keyframes bfSpread {
+  0% { transform: scale(0.3); opacity: 0; }
+  30% { opacity: 0.8; }
+  70% { transform: scale(1.5); opacity: 0.4; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.alien-card.anim-bigchill .card-image { filter: drop-shadow(0 0 15px rgba(0,170,255,0.15)); }
+.alien-card.anim-bigchill .card-name { color: #44ccff; }
+.alien-card.anim-bigchill:hover { border-color: rgba(0,170,255,0.4); box-shadow: 0 0 30px rgba(0,170,255,0.1); }
+
+/* =============================================
+   16. ALIEN X — Galaxy with stars + nebula
+   ============================================= */
+.effect-galaxy .ax-star {
+  width: 2px; height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation: axTwinkle 2s ease-in-out infinite;
+  box-shadow: 0 0 4px #fff;
+}
+.effect-galaxy .ax-star:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; }
+.effect-galaxy .ax-star:nth-child(2) { top: 30%; right: 25%; animation-delay: 0.4s; width: 3px; height: 3px; }
+.effect-galaxy .ax-star:nth-child(3) { bottom: 35%; left: 30%; animation-delay: 0.8s; }
+.effect-galaxy .ax-star:nth-child(4) { bottom: 20%; right: 15%; animation-delay: 1.2s; width: 1px; height: 1px; }
+.effect-galaxy .ax-star:nth-child(5) { top: 50%; left: 50%; animation-delay: 1.6s; width: 4px; height: 4px; }
+.effect-galaxy .ax-star:nth-child(6) { top: 10%; right: 40%; animation-delay: 2s; }
+
+.effect-galaxy .ax-nebula {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 40%, rgba(100,50,200,0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 60%, rgba(50,100,200,0.04) 0%, transparent 50%);
+  animation: axNebula 6s ease-in-out infinite;
+}
+@keyframes axNebula {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+@keyframes axTwinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+.alien-card.anim-alienx { background: rgba(0,0,17,0.6); }
+.alien-card.anim-alienx .card-name { color: #aaddff; }
+.alien-card.anim-alienx:hover { border-color: rgba(170,221,255,0.4); box-shadow: 0 0 50px rgba(170,221,255,0.1); }
+
+/* =============================================
+   17. CHROMASTONE — Rainbow crystal refraction
+   ============================================= */
+.effect-rainbow .cc-prism {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(255,0,0,0.04), rgba(255,165,0,0.04), rgba(255,255,0,0.04),
+    rgba(0,255,0,0.04), rgba(0,0,255,0.04), rgba(75,0,130,0.04), rgba(238,130,238,0.04));
+  background-size: 200% 200%;
+  animation: ccPrism 3s ease-in-out infinite;
+  mix-blend-mode: overlay;
+}
+@keyframes ccPrism {
+  0% { background-position: 0% 50%; opacity: 0.3; }
+  50% { background-position: 100% 50%; opacity: 0.8; }
+  100% { background-position: 0% 50%; opacity: 0.3; }
+}
+
+.alien-card.anim-chromastone .card-image { filter: drop-shadow(0 0 20px rgba(204,68,255,0.2)); }
+.alien-card.anim-chromastone .card-name { color: #cc44ff; }
+.alien-card.anim-chromastone:hover .card-image { filter: drop-shadow(0 0 40px rgba(204,68,255,0.3)) hue-rotate(30deg); }
+
+/* =============================================
+   18. RATH — Roar shake + claw slash marks
+   ============================================= */
+.alien-card.anim-rath:hover { animation: rrRoar 0.3s ease-in-out 3; }
+
+@keyframes rrRoar {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-3px) rotate(-0.5deg); }
+  75% { transform: translateX(3px) rotate(0.5deg); }
+}
+
+.effect-roar .rr-slash {
+  width: 60px; height: 30px;
+  border-radius: 50%;
+  border-bottom: 2px solid rgba(255,102,0,0.15);
+  animation: rrSlash 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+.effect-roar .rr-slash:nth-child(1) { top: 20%; left: 0; transform: rotate(-20deg); animation-delay: 0s; }
+.effect-roar .rr-slash:nth-child(2) { top: 50%; right: 0; transform: rotate(160deg); animation-delay: 0.5s; }
+.effect-roar .rr-slash:nth-child(3) { bottom: 20%; left: 10%; transform: rotate(-40deg); animation-delay: 1s; }
+
+@keyframes rrSlash {
+  0% { opacity: 0; transform: scaleX(0.3); }
+  30% { opacity: 0.8; }
+  70% { opacity: 0.5; transform: scaleX(1.5); }
+  100% { opacity: 0; transform: scaleX(0.5); }
+}
+
+.alien-card.anim-rath .card-name { color: #ff6600; }
+.alien-card.anim-rath:hover { border-color: rgba(255,102,0,0.4); box-shadow: 0 0 30px rgba(255,102,0,0.1); }
+.alien-card.anim-rath .card-name::after { content: ' 💢'; }
+
+/* =============================================
+   19. CLOCKWORK — Rotating gears behind image
+   ============================================= */
+.effect-gears .cg {
+  border-radius: 50%;
+  border: 2px solid rgba(204,170,0,0.12);
+  animation: cgSpin 3s linear infinite;
+}
+.effect-gears .g1 {
+  width: 50px; height: 50px;
+  top: 30%; left: 10%;
+  border-style: dashed;
+  animation-duration: 3s;
+}
+.effect-gears .g2 {
+  width: 70px; height: 70px;
+  top: 40%; right: 5%;
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
+@keyframes cgSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.alien-card.anim-clockwork .card-name { color: #ccaa00; }
+.alien-card.anim-clockwork:hover .card-image { filter: drop-shadow(0 0 30px rgba(204,170,0,0.2)); }
+.alien-card.anim-clockwork:hover { border-color: rgba(204,170,0,0.3); }
+
+/* =============================================
+   20. ARMORILLO — Earthquake vibration + dust
+   ============================================= */
+.alien-card.anim-armodrillo:hover { animation: adQuake 0.15s ease-in-out 6; }
+
+@keyframes adQuake {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 1px); }
+  75% { transform: translate(1px, -1px); }
+}
+
+.effect-drill .ad-dust {
+  width: 4px; height: 4px;
+  background: rgba(255,136,0,0.15);
+  border-radius: 50%;
+  bottom: -5px;
+  animation: adDust 2s ease-out infinite;
+}
+.effect-drill .ad-dust:nth-child(1) { left: 20%; animation-delay: 0s; }
+.effect-drill .ad-dust:nth-child(2) { left: 50%; animation-delay: 0.6s; width: 6px; height: 6px; }
+.effect-drill .ad-dust:nth-child(3) { left: 75%; animation-delay: 1.2s; width: 3px; height: 3px; }
+
+@keyframes adDust {
+  0% { transform: translateY(0) scale(0.5); opacity: 0; }
+  30% { opacity: 0.6; }
+  100% { transform: translateY(-150px) scale(1.5); opacity: 0; }
+}
+
+.alien-card.anim-armodrillo .card-name { color: #ff8800; }
+
+/* =============================================
+   21. WATER HAZARD — Water jets shooting upward
+   ============================================= */
+.effect-jets .wj {
+  width: 4px;
+  background: linear-gradient(to top, rgba(0,102,204,0.2), transparent);
+  bottom: 0;
+  border-radius: 2px;
+  animation: wjJet 1.5s ease-out infinite;
+}
+.effect-jets .j1 { left: 20%; animation-delay: 0s; height: 60px; }
+.effect-jets .j2 { right: 20%; animation-delay: 0.5s; height: 50px; }
+
+@keyframes wjJet {
+  0% { transform: scaleY(0); opacity: 0; }
+  30% { opacity: 0.6; }
+  70% { transform: scaleY(1); opacity: 0.4; }
+  100% { transform: scaleY(0.5); opacity: 0; }
+}
+
+.alien-card.anim-waterhazard .card-name { color: #0066cc; }
+.alien-card.anim-waterhazard:hover .card-image { filter: drop-shadow(0 0 30px rgba(0,102,204,0.3)); }
+.alien-card.anim-waterhazard:hover { border-color: rgba(0,102,204,0.3); }
+
+/* =============================================
+   22. TERRASPIN — Tornado wind swirl
+   ============================================= */
+.effect-tornado .ts-swirl {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(from 0deg, transparent, rgba(136,204,255,0.03), transparent, rgba(136,204,255,0.03), transparent);
+  animation: tsSwirl 2s linear infinite;
+  border-radius: 20px;
+}
+@keyframes tsSwirl {
+  from { transform: rotate(0deg); opacity: 0.3; }
+  to { transform: rotate(360deg); opacity: 0.6; }
+}
+
+.alien-card.anim-terraspin .card-name { color: #88ccff; }
+.alien-card.anim-terraspin:hover .card-image { filter: drop-shadow(0 0 30px rgba(136,204,255,0.2)); }
+.alien-card.anim-terraspin:hover { border-color: rgba(136,204,255,0.3); }
+
+/* =============================================
+   23. NRG — Nuclear pulse + radiation rings
+   ============================================= */
+.effect-nuclear .nr-ring {
+  border-radius: 50%;
+  border: 2px solid rgba(102,255,0,0.08);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: nrRing 2s ease-out infinite;
+}
+.effect-nuclear .nr-ring:nth-child(1) { width: 60px; height: 60px; animation-delay: 0s; }
+.effect-nuclear .nr-ring:nth-child(2) { width: 40px; height: 40px; animation-delay: 0.7s; }
+
+.effect-nuclear .nr-pulse {
+  position: absolute;
+  inset: 25%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(102,255,0,0.08), transparent);
+  animation: nrPulse 1.5s ease-in-out infinite;
+}
+@keyframes nrRing {
+  0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; border-color: rgba(102,255,0,0.15); }
+  40% { opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(3); opacity: 0; border-color: rgba(102,255,0,0); }
+}
+@keyframes nrPulse {
+  0%, 100% { transform: scale(0.5); opacity: 0.2; }
+  50% { transform: scale(1.5); opacity: 0.6; }
+}
+
+.alien-card.anim-nrg .card-name { color: #66ff00; }
+.alien-card.anim-nrg:hover .card-image { filter: drop-shadow(0 0 40px rgba(102,255,0,0.3)) brightness(1.1); }
+.alien-card.anim-nrg:hover { border-color: rgba(102,255,0,0.4); box-shadow: 0 0 30px rgba(102,255,0,0.1); }
+
+/* =============================================
+   24. TOEPICK — Dark smoke + card flicker
+   ============================================= */
+.effect-smoke .td-smoke {
+  width: 40px; height: 40px;
+  background: radial-gradient(circle, rgba(136,68,0,0.08), transparent);
+  border-radius: 50%;
+  filter: blur(4px);
+  animation: tdSmoke 3s ease-in-out infinite;
+}
+.effect-smoke .td-smoke:nth-child(1) { bottom: 10%; left: 15%; animation-delay: 0s; }
+.effect-smoke .td-smoke:nth-child(2) { bottom: 20%; right: 20%; animation-delay: 1.5s; }
+
+@keyframes tdSmoke {
+  0% { transform: scale(0.5) translateY(0); opacity: 0; }
+  30% { opacity: 0.5; }
+  70% { transform: scale(2) translateY(-80px); opacity: 0.2; }
+  100% { transform: scale(3) translateY(-120px); opacity: 0; }
+}
+
+.alien-card.anim-toepick .card-name { color: #884400; }
+.alien-card.anim-toepick:hover .card-image { filter: drop-shadow(0 0 20px rgba(136,68,0,0.2)) brightness(0.8); }
+.alien-card.anim-toepick { transition: filter 0.3s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
+.alien-card.anim-toepick:hover { filter: contrast(1.1); }
+.alien-card.anim-toepick:not(:hover) { animation: tdFlicker 4s ease-in-out infinite; }
+
+@keyframes tdFlicker {
+  0%, 92%, 100% { opacity: 1; }
+  94% { opacity: 0.7; }
+  96% { opacity: 1; }
+  98% { opacity: 0.8; }
+}
+
+/* =============================================
+   25. FEEDBACK — Lightning from hands to border
+   ============================================= */
+.effect-lightning .fb-bolt {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00ff66, transparent);
+  border-radius: 2px;
+  animation: fbBolt 1.2s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(0,255,102,0.2);
+}
+.effect-lightning .fb-bolt:nth-child(1) { top: 20%; left: -10%; width: 40px; transform: rotate(-30deg); animation-delay: 0s; }
+.effect-lightning .fb-bolt:nth-child(2) { top: 50%; right: -10%; width: 50px; transform: rotate(160deg); animation-delay: 0.4s; }
+.effect-lightning .fb-bolt:nth-child(3) { top: 70%; left: -10%; width: 35px; transform: rotate(-20deg); animation-delay: 0.8s; }
+
+@keyframes fbBolt {
+  0% { transform: scaleX(0); opacity: 0; }
+  30% { opacity: 1; }
+  60% { transform: scaleX(1.5); opacity: 0.8; }
+  100% { transform: scaleX(0.3); opacity: 0; }
+}
+
+.alien-card.anim-feedback .card-image { filter: drop-shadow(0 0 15px rgba(0,255,102,0.15)); }
+.alien-card.anim-feedback .card-name { color: #00ff66; }
+.alien-card.anim-feedback:hover { border-color: rgba(0,255,102,0.4); box-shadow: 0 0 30px rgba(0,255,102,0.12); }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
 @media (max-width: 768px) {
   .alien-grid-section {
     padding: 80px 20px;

@@ -53,7 +53,7 @@ const alienAnimations = {
   Feedback:     { effect: "lightning",  label: "Overcharge Blast" }
 };
 
-const AlienCard = React.memo(({ alien, onSelect, isSelected }) => {
+const AlienCard = React.memo(({ alien, onSelect, isSelected, sectionIndex }) => {
   const [clicked, setClicked] = useState(false);
   const [entered, setEntered] = useState(false);
   const cardRef = useRef(null);
@@ -107,7 +107,7 @@ const AlienCard = React.memo(({ alien, onSelect, isSelected }) => {
         <span className="card-universe">{alien.universe}</span>
       </div>
 
-      <div className="card-number">#{alien.id.toString().padStart(2, "0")}</div>
+      <div className="card-number">#{(sectionIndex + 1).toString().padStart(2, "0")}</div>
       <div className="card-click-ripple" />
 
       <div className={`effect-overlay effect-${anim.effect}`}>
@@ -230,12 +230,13 @@ const AlienGrid = ({ onSelectAlien, selectedAlien }) => {
             </motion.div>
 
             <div className="alien-cards">
-              {sectionAliens.map((alien) => (
+              {sectionAliens.map((alien, index) => (
                 <AlienCard
                   key={alien.id}
                   alien={alien}
                   onSelect={onSelectAlien}
                   isSelected={selectedAlien?.id === alien.id}
+                  sectionIndex={index}
                 />
               ))}
             </div>

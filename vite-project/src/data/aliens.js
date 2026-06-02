@@ -28,7 +28,7 @@ export const aliens = [
     cardImage: base + "images/wiki_heatblast.png",
     color: "#ff4500",
     gradient: "linear-gradient(135deg, #1a0a00, #ff4500)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ export const aliens = [
     cardImage: base + "images/wiki_fourarms.png",
     color: "#cc0000",
     gradient: "linear-gradient(135deg, #1a0000, #cc0000)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 3,
@@ -86,7 +86,7 @@ export const aliens = [
     cardImage: base + "images/wiki_diamondhead.png",
     color: "#00ff88",
     gradient: "linear-gradient(135deg, #002211, #00ff88)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 4,
@@ -115,7 +115,7 @@ export const aliens = [
     cardImage: base + "images/wiki_ghostfreak.png",
     color: "#9933ff",
     gradient: "linear-gradient(135deg, #1a0033, #9933ff)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 5,
@@ -144,7 +144,7 @@ export const aliens = [
     cardImage: base + "images/wiki_swampfire.png",
     color: "#00cc44",
     gradient: "linear-gradient(135deg, #002200, #00cc44)",
-    universe: "Alien Force (2008)"
+    universe: "Alien Force (2008–2010)"
   },
   {
     id: 6,
@@ -173,7 +173,7 @@ export const aliens = [
     cardImage: base + "images/wiki_humungousaur.png",
     color: "#8b4513",
     gradient: "linear-gradient(135deg, #1a0a00, #8b4513)",
-    universe: "Alien Force (2008)"
+    universe: "Alien Force (2008–2010)"
   },
   {
     id: 7,
@@ -202,7 +202,7 @@ export const aliens = [
     cardImage: base + "images/wiki_bigchill.png",
     color: "#00aaff",
     gradient: "linear-gradient(135deg, #000033, #00aaff)",
-    universe: "Alien Force (2008)"
+    universe: "Alien Force (2008–2010)"
   },
   {
     id: 9,
@@ -231,7 +231,7 @@ export const aliens = [
     cardImage: base + "images/wiki_alienx.png",
     color: "#aaddff",
     gradient: "linear-gradient(135deg, #000011, #0a0a2e)",
-    universe: "Alien Force (2008)"
+    universe: "Alien Force (2008–2010)"
   },
   {
     id: 10,
@@ -260,7 +260,7 @@ export const aliens = [
     cardImage: base + "images/wiki_upgrade.png",
     color: "#00ff00",
     gradient: "linear-gradient(135deg, #001a00, #00ff00)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 11,
@@ -289,7 +289,7 @@ export const aliens = [
     cardImage: base + "images/wiki_waybig.png",
     color: "#ff3333",
     gradient: "linear-gradient(135deg, #1a0000, #ff3333)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 8,
@@ -318,7 +318,7 @@ export const aliens = [
     cardImage: base + "images/wiki_xlr8.png",
     color: "#0066ff",
     gradient: "linear-gradient(135deg, #000033, #0066ff)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 12,
@@ -347,7 +347,7 @@ export const aliens = [
     cardImage: base + "images/wiki_chromastone.png",
     color: "#cc44ff",
     gradient: "linear-gradient(135deg, #1a0033, #cc44ff)",
-    universe: "Alien Force (2008)"
+    universe: "Alien Force (2008–2010)"
   },
   {
     id: 13,
@@ -376,7 +376,7 @@ export const aliens = [
     cardImage: base + "images/wiki_rath.png",
     color: "#ff6600",
     gradient: "linear-gradient(135deg, #1a0a00, #ff6600)",
-    universe: "Alien Force (2008)"
+    universe: "Alien Force (2008–2010)"
   },
   {
     id: 14,
@@ -405,7 +405,7 @@ export const aliens = [
     cardImage: base + "images/wiki_cannonbolt.png",
     color: "#6699ff",
     gradient: "linear-gradient(135deg, #000033, #6699ff)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 15,
@@ -434,7 +434,7 @@ export const aliens = [
     cardImage: base + "images/wiki_ripjaws.png",
     color: "#008844",
     gradient: "linear-gradient(135deg, #001a0a, #008844)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 16,
@@ -463,7 +463,7 @@ export const aliens = [
     cardImage: base + "images/wiki_clockwork.png",
     color: "#ccaa00",
     gradient: "linear-gradient(135deg, #1a1a00, #ccaa00)",
-    universe: "Ultimate Alien (2011)"
+    universe: "Ultimate Alien (2010–2012)"
   },
   {
     id: 17,
@@ -492,7 +492,7 @@ export const aliens = [
     cardImage: base + "images/wiki_toepick.png",
     color: "#884400",
     gradient: "linear-gradient(135deg, #1a0a00, #884400)",
-    universe: "Omniverse (2012)"
+    universe: "Omniverse (2012–2014)"
   },
   {
     id: 18,
@@ -521,7 +521,7 @@ export const aliens = [
     cardImage: base + "images/wiki_feedback.png",
     color: "#00ff66",
     gradient: "linear-gradient(135deg, #001a00, #00ff66)",
-    universe: "Omniverse (2012)"
+    universe: "Omniverse (2012–2014)"
   },
   {
     id: 19,
@@ -550,7 +550,7 @@ export const aliens = [
     cardImage: base + "images/wiki_buzzshock.png",
     color: "#22cc00",
     gradient: "linear-gradient(135deg, #001a00, #22cc00)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 20,
@@ -579,7 +579,7 @@ export const aliens = [
     cardImage: base + "images/wiki_armodrillo.png",
     color: "#ff8800",
     gradient: "linear-gradient(135deg, #1a0a00, #ff8800)",
-    universe: "Ultimate Alien (2010)"
+    universe: "Ultimate Alien (2010–2012)"
   },
   {
     id: 21,
@@ -608,7 +608,7 @@ export const aliens = [
     cardImage: base + "images/wiki_waterhazard.png",
     color: "#0066cc",
     gradient: "linear-gradient(135deg, #000a1a, #0066cc)",
-    universe: "Ultimate Alien (2010)"
+    universe: "Ultimate Alien (2010–2012)"
   },
   {
     id: 22,
@@ -637,7 +637,7 @@ export const aliens = [
     cardImage: base + "images/wiki_greymatter.png",
     color: "#88aa00",
     gradient: "linear-gradient(135deg, #1a1a00, #88aa00)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   },
   {
     id: 23,
@@ -666,7 +666,7 @@ export const aliens = [
     cardImage: base + "images/wiki_terraspin.png",
     color: "#88ccff",
     gradient: "linear-gradient(135deg, #001a33, #88ccff)",
-    universe: "Ultimate Alien (2010)"
+    universe: "Ultimate Alien (2010–2012)"
   },
   {
     id: 24,
@@ -695,7 +695,7 @@ export const aliens = [
     cardImage: base + "images/wiki_nrg.png",
     color: "#66ff00",
     gradient: "linear-gradient(135deg, #001a00, #66ff00)",
-    universe: "Ultimate Alien (2011)"
+    universe: "Ultimate Alien (2010–2012)"
   },
   {
     id: 25,
@@ -724,6 +724,6 @@ export const aliens = [
     cardImage: base + "images/wiki_upchuck.png",
     color: "#00cc66",
     gradient: "linear-gradient(135deg, #001a0a, #00cc66)",
-    universe: "Original Series (2005)"
+    universe: "Classic Series (2005–2008)"
   }
 ];

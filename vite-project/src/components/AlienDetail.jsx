@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./AlienDetail.css";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -30,9 +30,81 @@ const alienThemes = {
   Upchuck: { vibe: "nature", icon: "🤮", pattern: "radial-gradient(circle at 30% 70%, rgba(0,204,102,0.1) 0%, transparent 50%)" },
 };
 
+const alienAttacks = {
+  Heatblast: { name: "Inferno Blast", effect: "fire", color: "#ff4500" },
+  "Four Arms": { name: "Quad Smash", effect: "shockwave", color: "#cc0000" },
+  Diamondhead: { name: "Crystal Shatter", effect: "crystal", color: "#00ff88" },
+  Ghostfreak: { name: "Dark Possession", effect: "ghost", color: "#9933ff" },
+  Swampfire: { name: "Methane Burst", effect: "fire", color: "#00cc44" },
+  Humungousaur: { name: "Titan Stomp", effect: "shockwave", color: "#8b4513" },
+  "Big Chill": { name: "Absolute Zero", effect: "ice", color: "#00aaff" },
+  "Alien X": { name: "Reality Rewrite", effect: "cosmic", color: "#aaddff" },
+  Upgrade: { name: "Tech Merge", effect: "tech", color: "#00ff00" },
+  "Way Big": { name: "Cosonic Beam", effect: "cosmic", color: "#ff3333" },
+  XLR8: { name: "Velocity Dash", effect: "speed", color: "#0066ff" },
+  Chromastone: { name: "Prism Beam", effect: "crystal", color: "#cc44ff" },
+  Rath: { name: "Ravage Slash", effect: "shockwave", color: "#ff6600" },
+  Cannonbolt: { name: "Rolling Thunder", effect: "spin", color: "#6699ff" },
+  Ripjaws: { name: "Jaw Snap", effect: "bite", color: "#008844" },
+  Clockwork: { name: "Time Rewind", effect: "time", color: "#ccaa00" },
+  Toepick: { name: "Face of Fear", effect: "ghost", color: "#884400" },
+  Feedback: { name: "Overcharge Blast", effect: "electric", color: "#00ff66" },
+  Buzzshock: { name: "Chain Lightning", effect: "electric", color: "#22cc00" },
+  Armodrillo: { name: "Seismic Pound", effect: "drill", color: "#ff8800" },
+  "Water Hazard": { name: "Hydro Cannon", effect: "water", color: "#0066cc" },
+  "Grey Matter": { name: "Smart Hack", effect: "tech", color: "#88aa00" },
+  Terraspin: { name: "Hurricane Spin", effect: "wind", color: "#88ccff" },
+  NRG: { name: "Nuclear Meltdown", effect: "nuclear", color: "#66ff00" },
+  Upchuck: { name: "Vomit Volley", effect: "spit", color: "#00cc66" },
+};
+
+const AttackBurst = ({ effect, color }) => {
+  const [active, setActive] = useState(true);
+  useEffect(() => {
+    const t = setTimeout(() => setActive(false), 1500);
+    return () => clearTimeout(t);
+  }, []);
+
+  if (!active) return null;
+
+  const particles = Array.from({ length: 12 }, (_, i) => ({
+    id: i,
+    angle: (i / 12) * 360,
+    delay: i * 0.04,
+    dist: 60 + (i % 4) * 30,
+  }));
+
+  return (
+    <div className="attack-burst" style={{ "--attack-color": color }}>
+      <div className={`attack-core effect-${effect}`} />
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          className="attack-particle"
+          style={{
+            "--angle": `${p.angle}deg`,
+            "--dist": `${p.dist}px`,
+            "--delay": `${p.delay}s`,
+            background: color,
+          }}
+        />
+      ))}
+      <div className={`attack-ring effect-${effect}`} />
+    </div>
+  );
+};
+
 const AlienDetail = ({ alien }) => {
   if (!alien) return null;
   const theme = alienThemes[alien.name] || { vibe: "default", icon: "⭐", pattern: "none" };
+  const attack = alienAttacks[alien.name] || { name: "Attack", effect: "fire", color: "#00ff88" };
+  const [showAttack, setShowAttack] = useState(true);
+
+  useEffect(() => {
+    setShowAttack(true);
+    const t = setTimeout(() => setShowAttack(false), 1800);
+    return () => clearTimeout(t);
+  }, [alien.id]);
 
   return (
     <section className="detail-section" id="details">
@@ -58,6 +130,10 @@ const AlienDetail = ({ alien }) => {
             >
               <div className={`detail-image-wrapper glow-${theme.vibe}`}>
                 <img src={alien.image} alt={alien.name} className="detail-image" />
+                {showAttack && <AttackBurst effect={attack.effect} color={attack.color} />}
+              </div>
+              <div className="attack-name-tag" style={{ borderColor: attack.color, color: attack.color }}>
+                ⚔️ {attack.name}
               </div>
               <div className="vibe-icon">{theme.icon}</div>
               <div className="detail-image-badge">

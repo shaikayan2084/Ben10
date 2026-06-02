@@ -205,7 +205,7 @@ export const aliens = [
     universe: "Alien Force (2008–2010)"
   },
   {
-    id: 9,
+    id: 8,
     name: "Alien X",
     species: "Celestialsapien",
     homePlanet: "Forge of Creation",
@@ -234,7 +234,7 @@ export const aliens = [
     universe: "Alien Force (2008–2010)"
   },
   {
-    id: 10,
+    id: 9,
     name: "Upgrade",
     species: "Galvanic Mechamorph",
     homePlanet: "Galvan B",
@@ -263,7 +263,7 @@ export const aliens = [
     universe: "Classic Series (2005–2008)"
   },
   {
-    id: 11,
+    id: 10,
     name: "Way Big",
     species: "To'kustar",
     homePlanet: "Space (born from cosmic storms)",
@@ -292,7 +292,7 @@ export const aliens = [
     universe: "Classic Series (2005–2008)"
   },
   {
-    id: 8,
+    id: 11,
     name: "XLR8",
     species: "Kineceleran",
     homePlanet: "Kinet",

@@ -395,6 +395,312 @@
 .fact-tech::before { color: #44ff44; }
 .fact-heroic::before { color: #ff5555; }
 
+/* Attack Burst Styles */
+.attack-burst {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attack-core {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--attack-color);
+  animation: coreBurst 0.8s ease-out forwards;
+  box-shadow: 0 0 40px var(--attack-color), 0 0 80px var(--attack-color);
+}
+
+@keyframes coreBurst {
+  0% { transform: scale(0); opacity: 1; }
+  50% { transform: scale(3); opacity: 0.6; }
+  100% { transform: scale(5); opacity: 0; }
+}
+
+.attack-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: particleBurst 1s ease-out forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+  transform: rotate(var(--angle)) translateY(0);
+}
+
+@keyframes particleBurst {
+  0% { opacity: 1; transform: rotate(var(--angle)) translateY(0); }
+  100% { opacity: 0; transform: rotate(var(--angle)) translateY(calc(var(--dist) * -1)); }
+}
+
+.attack-ring {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--attack-color);
+  animation: ringExpand 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes ringExpand {
+  0% { transform: scale(0); opacity: 0.8; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+.effect-fire {
+  filter: blur(2px) brightness(1.3);
+}
+
+.effect-shockwave .attack-core {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 4px solid var(--attack-color);
+  box-shadow: none;
+  animation: shockBurst 0.8s ease-out forwards;
+}
+
+@keyframes shockBurst {
+  0% { transform: scale(0); opacity: 1; }
+  50% { transform: scale(2.5); opacity: 0.8; border-width: 2px; }
+  100% { transform: scale(5); opacity: 0; border-width: 1px; }
+}
+
+.effect-crystal .attack-core {
+  border-radius: 0;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: crystalBurst 1s ease-out forwards;
+}
+
+@keyframes crystalBurst {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  50% { transform: scale(2.5) rotate(180deg); opacity: 0.6; }
+  100% { transform: scale(4) rotate(360deg); opacity: 0; }
+}
+
+.effect-ghost .attack-core {
+  box-shadow: 0 0 60px var(--attack-color), 0 0 120px var(--attack-color);
+  animation: ghostBurst 1.2s ease-out forwards;
+}
+
+@keyframes ghostBurst {
+  0% { transform: scale(0.5); opacity: 0.8; }
+  30% { transform: scale(2); opacity: 0.6; filter: blur(0px); }
+  60% { transform: scale(3.5); opacity: 0.3; filter: blur(5px); }
+  100% { transform: scale(5); opacity: 0; filter: blur(15px); }
+}
+
+.effect-ice .attack-core {
+  box-shadow: 0 0 30px var(--attack-color), 0 0 60px rgba(0, 170, 255, 0.5);
+  animation: iceBurst 1s ease-out forwards;
+}
+
+@keyframes iceBurst {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  40% { transform: scale(2) rotate(120deg); opacity: 0.8; border-radius: 10%; }
+  100% { transform: scale(4) rotate(360deg); opacity: 0; border-radius: 30%; }
+}
+
+.effect-speed .attack-core {
+  width: 60px;
+  height: 6px;
+  border-radius: 3px;
+  box-shadow: 0 0 30px var(--attack-color);
+  animation: speedSlash 0.6s ease-out forwards;
+}
+
+@keyframes speedSlash {
+  0% { transform: scaleX(0) scaleY(1); opacity: 1; }
+  50% { transform: scaleX(3) scaleY(1.5); opacity: 0.8; }
+  100% { transform: scaleX(4) scaleY(0.5); opacity: 0; }
+}
+
+.effect-cosmic .attack-ring {
+  width: 40px;
+  height: 40px;
+  animation: cosmicRing 1.5s ease-out forwards;
+}
+
+.effect-cosmic .attack-core {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid var(--attack-color);
+  box-shadow: 0 0 50px var(--attack-color), 0 0 100px var(--attack-color);
+  animation: cosmicCore 1.2s ease-out forwards;
+}
+
+@keyframes cosmicCore {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  20% { opacity: 1; }
+  50% { transform: scale(1.5) rotate(180deg); opacity: 0.8; }
+  100% { transform: scale(3) rotate(360deg); opacity: 0; filter: blur(4px); }
+}
+
+@keyframes cosmicRing {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  30% { opacity: 0.8; }
+  100% { transform: scale(5) rotate(720deg); opacity: 0; border-color: transparent; }
+}
+
+.effect-tech .attack-core {
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 30px var(--attack-color);
+  animation: techBurst 0.9s ease-out forwards;
+}
+
+@keyframes techBurst {
+  0% { transform: scale(0); opacity: 1; }
+  40% { transform: scale(2) rotate(90deg); opacity: 0.8; border-radius: 2px; }
+  100% { transform: scale(4) rotate(180deg); opacity: 0; border-radius: 0; }
+}
+
+.effect-spin .attack-core {
+  background: transparent;
+  border: 4px solid var(--attack-color);
+  box-shadow: none;
+  animation: spinBurst 0.8s ease-out forwards;
+}
+
+@keyframes spinBurst {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  50% { transform: scale(3) rotate(360deg); opacity: 0.6; }
+  100% { transform: scale(5) rotate(720deg); opacity: 0; }
+}
+
+.effect-bite .attack-core {
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+  border-radius: 0;
+  width: 50px;
+  height: 50px;
+  animation: biteSnap 0.5s ease-out forwards;
+}
+
+@keyframes biteSnap {
+  0% { transform: scale(0); opacity: 0; }
+  30% { transform: scale(1.5); opacity: 1; }
+  60% { transform: scale(2) translateY(10px); opacity: 0.7; }
+  100% { transform: scale(2.5) translateY(30px); opacity: 0; }
+}
+
+.effect-time .attack-core {
+  background: transparent;
+  border: 3px solid var(--attack-color);
+  box-shadow: 0 0 40px var(--attack-color);
+  animation: timeWave 1.2s ease-out forwards;
+}
+
+@keyframes timeWave {
+  0% { transform: scale(0); opacity: 1; }
+  40% { transform: scale(2); opacity: 0.7; border-radius: 30%; }
+  100% { transform: scale(4); opacity: 0; border-radius: 50%; }
+}
+
+.effect-electric .attack-particle {
+  width: 3px;
+  height: 3px;
+  filter: blur(1px);
+}
+
+.effect-electric .attack-core {
+  animation: electricBurst 0.6s ease-out forwards;
+  box-shadow: 0 0 50px var(--attack-color), 0 0 100px var(--attack-color);
+}
+
+@keyframes electricBurst {
+  0% { transform: scale(0); opacity: 1; filter: blur(0px); }
+  30% { transform: scale(2.5); opacity: 0.9; }
+  60% { transform: scale(4); opacity: 0.5; filter: blur(3px); }
+  100% { transform: scale(5); opacity: 0; filter: blur(6px); }
+}
+
+.effect-drill .attack-core {
+  width: 20px;
+  height: 60px;
+  border-radius: 30%;
+  box-shadow: 0 0 30px var(--attack-color);
+  animation: drillBurst 0.7s ease-out forwards;
+}
+
+@keyframes drillBurst {
+  0% { transform: scaleY(0) rotate(0deg); opacity: 1; }
+  50% { transform: scaleY(3) rotate(720deg); opacity: 0.7; }
+  100% { transform: scaleY(4) rotate(1080deg); opacity: 0; }
+}
+
+.effect-water .attack-core {
+  border-radius: 40% 60% 30% 70%;
+  animation: waterBurst 0.9s ease-out forwards;
+}
+
+@keyframes waterBurst {
+  0% { transform: scale(0) rotate(0deg); opacity: 0.8; }
+  40% { transform: scale(2) rotate(20deg); opacity: 0.6; border-radius: 50% 30% 60% 40%; }
+  100% { transform: scale(3.5) rotate(40deg); opacity: 0; border-radius: 30% 70% 20% 80%; }
+}
+
+.effect-wind .attack-core {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 3px solid var(--attack-color);
+  box-shadow: 0 0 30px var(--attack-color), 0 0 60px var(--attack-color);
+  animation: windBurst 1s ease-out forwards;
+}
+
+@keyframes windBurst {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.5; }
+  50% { transform: scale(4) rotate(360deg); opacity: 0.3; }
+  100% { transform: scale(6) rotate(720deg); opacity: 0; }
+}
+
+.effect-nuclear .attack-core {
+  box-shadow: 0 0 60px var(--attack-color), 0 0 120px var(--attack-color), 0 0 200px var(--attack-color);
+  animation: nuclearBurst 1.2s ease-out forwards;
+}
+
+@keyframes nuclearBurst {
+  0% { transform: scale(0); opacity: 1; }
+  30% { transform: scale(3); opacity: 0.8; }
+  60% { transform: scale(5); opacity: 0.3; filter: blur(5px); }
+  100% { transform: scale(7); opacity: 0; filter: blur(15px); }
+}
+
+.effect-spit .attack-particle {
+  width: 6px;
+  height: 6px;
+  border-radius: 40% 60% 30% 50%;
+}
+
+.attack-name-tag {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 12px;
+  padding: 8px 20px;
+  border: 1px solid;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  animation: namePulse 2s ease-in-out infinite;
+}
+
+@keyframes namePulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
 @media (max-width: 1024px) {
   .detail-layout {
     gap: 40px;

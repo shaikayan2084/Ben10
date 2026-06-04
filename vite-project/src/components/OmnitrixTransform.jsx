@@ -19,7 +19,7 @@ const OmnitrixTransform = ({ alien, onComplete, onPlayTransform }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           onAnimationComplete={() => {
-            setTimeout(onComplete, 1200);
+            setTimeout(onComplete, 2200);
           }}
         >
           <motion.div
@@ -78,10 +78,19 @@ const OmnitrixTransform = ({ alien, onComplete, onPlayTransform }) => {
           </motion.div>
 
           <motion.p
+            className="transform-dna"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.4 }}
+          >
+            DNA SAMPLE ACQUIRED
+          </motion.p>
+
+          <motion.p
             className="transform-name"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 1.3, duration: 0.4 }}
           >
             {alien?.name}
           </motion.p>

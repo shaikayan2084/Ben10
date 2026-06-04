@@ -122,41 +122,7 @@
   z-index: 3;
 }
 
-.transform-name-burst {
-  position: absolute;
-  width: 200px;
-  height: 60px;
-  bottom: 27%;
-  background: radial-gradient(ellipse, rgba(0, 255, 136, 0.25) 0%, transparent 70%);
-  filter: blur(20px);
-  z-index: 2;
-  pointer-events: none;
-}
 
-.transform-name {
-  position: absolute;
-  bottom: 28%;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 32px;
-  font-weight: 900;
-  color: #fff;
-  text-shadow:
-    0 0 20px rgba(0, 255, 136, 0.6),
-    0 0 60px rgba(0, 255, 136, 0.3),
-    0 0 120px rgba(0, 255, 136, 0.15);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  z-index: 3;
-  animation: nameAdrenaline 0.6s ease-out;
-}
-
-@keyframes nameAdrenaline {
-  0% { transform: scale(0.3); opacity: 0; filter: blur(8px); }
-  40% { transform: scale(1.25); opacity: 1; filter: blur(0); }
-  60% { transform: scale(0.9); }
-  80% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
 
 .transform-scanlines {
   position: absolute;
@@ -179,6 +145,4 @@
   .transform-omnitrix-icon { width: 80px; height: 80px; }
   .transform-silhouette { width: 120px; height: 120px; }
   .transform-dna { font-size: 12px; bottom: 33%; }
-  .transform-name-burst { width: 140px; height: 40px; bottom: 23%; }
-  .transform-name { font-size: 20px; bottom: 25%; }
 }

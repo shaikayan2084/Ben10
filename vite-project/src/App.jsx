@@ -7,19 +7,27 @@ import AlienDetail from "./components/AlienDetail";
 import OmnitrixTransform from "./components/OmnitrixTransform";
 import Particles from "./components/Particles";
 import { aliens } from "./data/aliens";
+import { useSound } from "./hooks/useSound";
 
 function App() {
   const [selectedAlien, setSelectedAlien] = useState(null);
   const [transformingAlien, setTransformingAlien] = useState(null);
+  const { playOmnitrix, playTransform, speakAlien, playBeep } = useSound();
+
+  useEffect(() => {
+    const timer = setTimeout(() => playOmnitrix(), 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSelectAlien = useCallback((alien) => {
     if (alien) {
+      speakAlien(alien.name);
       setTransformingAlien(alien);
     } else {
       setSelectedAlien(null);
       setTransformingAlien(null);
     }
-  }, []);
+  }, [speakAlien]);
 
   const handleTransformComplete = useCallback(() => {
     setSelectedAlien(transformingAlien);
@@ -40,10 +48,10 @@ function App() {
       <div className="app-content">
         <Navbar onSelectAlien={handleSelectAlien} activeAlien={selectedAlien} />
         <Hero onSelectAlien={handleSelectAlien} />
-        <AlienGrid onSelectAlien={handleSelectAlien} selectedAlien={selectedAlien} />
+        <AlienGrid onSelectAlien={handleSelectAlien} selectedAlien={selectedAlien} onBeep={playBeep} />
         {selectedAlien && <AlienDetail alien={selectedAlien} />}
       </div>
-      <OmnitrixTransform alien={transformingAlien} onComplete={handleTransformComplete} />
+      <OmnitrixTransform alien={transformingAlien} onComplete={handleTransformComplete} onPlayTransform={playTransform} />
     </div>
   );
 }

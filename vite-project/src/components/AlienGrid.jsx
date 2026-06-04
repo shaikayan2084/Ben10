@@ -53,7 +53,7 @@ const alienAnimations = {
   Feedback:     { effect: "lightning",  label: "Overcharge Blast" }
 };
 
-const AlienCard = React.memo(({ alien, onSelect, isSelected, sectionIndex }) => {
+const AlienCard = React.memo(({ alien, onSelect, isSelected, sectionIndex, onBeep }) => {
   const [clicked, setClicked] = useState(false);
   const [entered, setEntered] = useState(false);
   const cardRef = useRef(null);
@@ -85,6 +85,7 @@ const AlienCard = React.memo(({ alien, onSelect, isSelected, sectionIndex }) => 
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -12, scale: 1.03, transition: { type: "spring", stiffness: 300 } }}
+      onHoverStart={() => onBeep?.()}
       onHoverEnd={() => setClicked(false)}
       onClick={handleClick}
       layout
@@ -187,7 +188,7 @@ const AlienCard = React.memo(({ alien, onSelect, isSelected, sectionIndex }) => 
   );
 });
 
-const AlienGrid = ({ onSelectAlien, selectedAlien }) => {
+const AlienGrid = ({ onSelectAlien, selectedAlien, onBeep }) => {
   const grouped = {};
   universeOrder.forEach(u => { grouped[u] = []; });
   aliens.forEach(a => {
@@ -231,12 +232,13 @@ const AlienGrid = ({ onSelectAlien, selectedAlien }) => {
 
             <div className="alien-cards">
               {sectionAliens.map((alien, index) => (
-                <AlienCard
+                  <AlienCard
                   key={alien.id}
                   alien={alien}
                   onSelect={onSelectAlien}
                   isSelected={selectedAlien?.id === alien.id}
                   sectionIndex={index}
+                  onBeep={onBeep}
                 />
               ))}
             </div>

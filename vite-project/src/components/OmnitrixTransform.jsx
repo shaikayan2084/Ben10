@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./OmnitrixTransform.css";
 
-const OmnitrixTransform = ({ alien, onComplete }) => {
+const OmnitrixTransform = ({ alien, onComplete, onPlayTransform }) => {
+  useEffect(() => {
+    if (alien) {
+      onPlayTransform?.();
+    }
+  }, [alien]);
+
   return (
     <AnimatePresence>
       {alien && (

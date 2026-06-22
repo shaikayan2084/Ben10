@@ -942,6 +942,200 @@
 .alien-card.anim-feedback:hover { border-color: rgba(0,255,102,0.4); box-shadow: 0 0 30px rgba(0,255,102,0.12); }
 
 /* =============================================
+   26. WILDMUTT
+   ============================================= */
+.alien-card.anim-wildmutt:hover .card-image { filter: drop-shadow(0 0 40px #ff6600) brightness(1.15); }
+.alien-card.anim-wildmutt .card-name { color: #ff6600; }
+.alien-card.anim-wildmutt:hover { border-color: rgba(255,102,0,0.4); box-shadow: 0 0 30px rgba(255,102,0,0.12); }
+
+/* =============================================
+   27. STINKFLY
+   ============================================= */
+.alien-card.anim-stinkfly:hover .card-image { filter: drop-shadow(0 0 40px #33cc33) brightness(1.15); }
+.alien-card.anim-stinkfly .card-name { color: #33cc33; }
+.alien-card.anim-stinkfly:hover { border-color: rgba(51,204,51,0.4); box-shadow: 0 0 30px rgba(51,204,51,0.12); }
+
+/* =============================================
+   28. ECHO ECHO
+   ============================================= */
+.alien-card.anim-echoecho:hover .card-image { filter: drop-shadow(0 0 40px #ffffff) brightness(1.2); }
+.alien-card.anim-echoecho .card-name { color: #ffffff; }
+.alien-card.anim-echoecho:hover { border-color: rgba(255,255,255,0.4); box-shadow: 0 0 30px rgba(255,255,255,0.1); }
+.alien-card.anim-echoecho:hover { animation: faShake 0.3s ease-in-out 2; }
+
+/* =============================================
+   29. JETRAY
+   ============================================= */
+.alien-card.anim-jetray:hover .card-image { filter: drop-shadow(0 0 40px #ffcc00) brightness(1.15); }
+.alien-card.anim-jetray .card-name { color: #ffcc00; }
+.alien-card.anim-jetray:hover { border-color: rgba(255,204,0,0.4); box-shadow: 0 0 30px rgba(255,204,0,0.12); }
+
+/* =============================================
+   30. BRAINSTORM
+   ============================================= */
+.alien-card.anim-brainstorm:hover .card-image { filter: drop-shadow(0 0 40px #0066ff) brightness(1.15); }
+.alien-card.anim-brainstorm .card-name { color: #0066ff; }
+.alien-card.anim-brainstorm:hover { border-color: rgba(0,102,255,0.4); box-shadow: 0 0 30px rgba(0,102,255,0.12); }
+.alien-card.anim-brainstorm:hover { animation: slScan 1.5s linear infinite; }
+
+/* =============================================
+   31. SPIDERMONKEY
+   ============================================= */
+.alien-card.anim-spidermonkey:hover .card-image { filter: drop-shadow(0 0 40px #3333cc) brightness(1.15); }
+.alien-card.anim-spidermonkey .card-name { color: #3333cc; }
+.alien-card.anim-spidermonkey:hover { border-color: rgba(51,51,204,0.4); box-shadow: 0 0 30px rgba(51,51,204,0.12); }
+
+/* =============================================
+   32. GOOP
+   ============================================= */
+.alien-card.anim-goop:hover .card-image { filter: drop-shadow(0 0 40px #00ff33) brightness(1.15); }
+.alien-card.anim-goop .card-name { color: #00ff33; }
+.alien-card.anim-goop:hover { border-color: rgba(0,255,51,0.4); box-shadow: 0 0 30px rgba(0,255,51,0.12); }
+.alien-card.anim-goop:hover { animation: uoAbsorb 1.5s ease-in-out infinite; }
+
+/* =============================================
+   33. AMPFIBIAN
+   ============================================= */
+.alien-card.anim-ampfibian:hover .card-image { filter: drop-shadow(0 0 40px #3366ff) brightness(1.15); }
+.alien-card.anim-ampfibian .card-name { color: #3366ff; }
+.alien-card.anim-ampfibian:hover { border-color: rgba(51,102,255,0.4); box-shadow: 0 0 30px rgba(51,102,255,0.12); }
+
+/* =============================================
+   34. FASTTRACK
+   ============================================= */
+.alien-card.anim-fasttrack:hover .card-image { filter: drop-shadow(0 0 40px #0033cc) brightness(1.15); }
+.alien-card.anim-fasttrack .card-name { color: #0033cc; }
+.alien-card.anim-fasttrack:hover { border-color: rgba(0,51,204,0.4); box-shadow: 0 0 30px rgba(0,51,204,0.12); }
+
+/* =============================================
+   35. CHAMALIEN
+   ============================================= */
+.alien-card.anim-chamalien:hover .card-image { filter: drop-shadow(0 0 40px #9933cc) brightness(1.15); }
+.alien-card.anim-chamalien .card-name { color: #9933cc; }
+.alien-card.anim-chamalien:hover { border-color: rgba(153,51,204,0.4); box-shadow: 0 0 30px rgba(153,51,204,0.12); }
+
+/* =============================================
+   36. EATLE
+   ============================================= */
+.alien-card.anim-eatle:hover .card-image { filter: drop-shadow(0 0 40px #cc6600) brightness(1.15); }
+.alien-card.anim-eatle .card-name { color: #cc6600; }
+.alien-card.anim-eatle:hover { border-color: rgba(204,102,0,0.4); box-shadow: 0 0 30px rgba(204,102,0,0.12); }
+
+/* =============================================
+   37. JURYRIGG
+   ============================================= */
+.alien-card.anim-juryrigg:hover .card-image { filter: drop-shadow(0 0 40px #ff6600) brightness(1.15); }
+.alien-card.anim-juryrigg .card-name { color: #ff6600; }
+.alien-card.anim-juryrigg:hover { border-color: rgba(255,102,0,0.4); box-shadow: 0 0 30px rgba(255,102,0,0.12); }
+.alien-card.anim-juryrigg:hover { animation: faShake 0.2s ease-in-out 3; }
+
+/* =============================================
+   38. BLOXX
+   ============================================= */
+.alien-card.anim-bloxx:hover .card-image { filter: drop-shadow(0 0 40px #cc0000) brightness(1.15); }
+.alien-card.anim-bloxx .card-name { color: #cc0000; }
+.alien-card.anim-bloxx:hover { border-color: rgba(204,0,0,0.4); box-shadow: 0 0 30px rgba(204,0,0,0.12); }
+
+/* =============================================
+   39. GRAVATTACK
+   ============================================= */
+.alien-card.anim-gravattack:hover .card-image { filter: drop-shadow(0 0 40px #66ccff) brightness(1.15); }
+.alien-card.anim-gravattack .card-name { color: #66ccff; }
+.alien-card.anim-gravattack:hover { border-color: rgba(102,204,255,0.4); box-shadow: 0 0 30px rgba(102,204,255,0.12); }
+
+/* =============================================
+   40. CRASHHOPPER
+   ============================================= */
+.alien-card.anim-crashhopper:hover .card-image { filter: drop-shadow(0 0 40px #66ff33) brightness(1.15); }
+.alien-card.anim-crashhopper .card-name { color: #66ff33; }
+.alien-card.anim-crashhopper:hover { border-color: rgba(102,255,51,0.4); box-shadow: 0 0 30px rgba(102,255,51,0.12); }
+
+/* =============================================
+   41. BALL WEEVIL
+   ============================================= */
+.alien-card.anim-ballweevil:hover .card-image { filter: drop-shadow(0 0 40px #66ff00) brightness(1.15); }
+.alien-card.anim-ballweevil .card-name { color: #66ff00; }
+.alien-card.anim-ballweevil:hover { border-color: rgba(102,255,0,0.4); box-shadow: 0 0 30px rgba(102,255,0,0.12); }
+
+/* =============================================
+   42. WALKATROUT
+   ============================================= */
+.alien-card.anim-walkatrout:hover .card-image { filter: drop-shadow(0 0 40px #3399ff) brightness(1.15); }
+.alien-card.anim-walkatrout .card-name { color: #3399ff; }
+.alien-card.anim-walkatrout:hover { border-color: rgba(51,153,255,0.4); box-shadow: 0 0 30px rgba(51,153,255,0.12); }
+
+/* =============================================
+   43. PESKY DUST
+   ============================================= */
+.alien-card.anim-peskydust:hover .card-image { filter: drop-shadow(0 0 40px #ff66cc) brightness(1.15); }
+.alien-card.anim-peskydust .card-name { color: #ff66cc; }
+.alien-card.anim-peskydust:hover { border-color: rgba(255,102,204,0.4); box-shadow: 0 0 30px rgba(255,102,204,0.12); }
+
+/* =============================================
+   44. MOLE-STACHE
+   ============================================= */
+.alien-card.anim-molestache:hover .card-image { filter: drop-shadow(0 0 40px #8b4513) brightness(1.15); }
+.alien-card.anim-molestache .card-name { color: #8b4513; }
+.alien-card.anim-molestache:hover { border-color: rgba(139,69,19,0.4); box-shadow: 0 0 30px rgba(139,69,19,0.12); }
+
+/* =============================================
+   45. THE WORST
+   ============================================= */
+.alien-card.anim-theworst:hover .card-image { filter: drop-shadow(0 0 40px #ffcc00) brightness(1.15); }
+.alien-card.anim-theworst .card-name { color: #ffcc00; }
+.alien-card.anim-theworst:hover { border-color: rgba(255,204,0,0.4); box-shadow: 0 0 30px rgba(255,204,0,0.12); }
+
+/* =============================================
+   46. KICKIN HAWK
+   ============================================= */
+.alien-card.anim-kickinhawk:hover .card-image { filter: drop-shadow(0 0 40px #cc6600) brightness(1.15); }
+.alien-card.anim-kickinhawk .card-name { color: #cc6600; }
+.alien-card.anim-kickinhawk:hover { border-color: rgba(204,102,0,0.4); box-shadow: 0 0 30px rgba(204,102,0,0.12); }
+
+/* =============================================
+   47. TOEPICK (already defined above — style update)
+   ============================================= */
+.alien-card.anim-toepick:hover .card-image { filter: drop-shadow(0 0 40px #884400) brightness(1.15); }
+.alien-card.anim-toepick .card-name { color: #884400; }
+.alien-card.anim-toepick:hover { border-color: rgba(136,68,0,0.4); box-shadow: 0 0 30px rgba(136,68,0,0.12); }
+
+/* =============================================
+   48. ASTRODACTYL
+   ============================================= */
+.alien-card.anim-astrodactyl:hover .card-image { filter: drop-shadow(0 0 40px #66cc00) brightness(1.15); }
+.alien-card.anim-astrodactyl .card-name { color: #66cc00; }
+.alien-card.anim-astrodactyl:hover { border-color: rgba(102,204,0,0.4); box-shadow: 0 0 30px rgba(102,204,0,0.12); }
+
+/* =============================================
+   49. BULLFRAG
+   ============================================= */
+.alien-card.anim-bullfrag:hover .card-image { filter: drop-shadow(0 0 40px #00cc44) brightness(1.15); }
+.alien-card.anim-bullfrag .card-name { color: #00cc44; }
+.alien-card.anim-bullfrag:hover { border-color: rgba(0,204,68,0.4); box-shadow: 0 0 30px rgba(0,204,68,0.12); }
+
+/* =============================================
+   50. ATOMIX
+   ============================================= */
+.alien-card.anim-atomix:hover .card-image { filter: drop-shadow(0 0 40px #ff3300) brightness(1.15); }
+.alien-card.anim-atomix .card-name { color: #ff3300; }
+.alien-card.anim-atomix:hover { border-color: rgba(255,51,0,0.4); box-shadow: 0 0 30px rgba(255,51,0,0.12); }
+
+/* =============================================
+   51. GUTROT
+   ============================================= */
+.alien-card.anim-gutrot:hover .card-image { filter: drop-shadow(0 0 40px #88cc00) brightness(1.15); }
+.alien-card.anim-gutrot .card-name { color: #88cc00; }
+.alien-card.anim-gutrot:hover { border-color: rgba(136,204,0,0.4); box-shadow: 0 0 30px rgba(136,204,0,0.12); }
+
+/* =============================================
+   52. WHAMPIRE
+   ============================================= */
+.alien-card.anim-whampire:hover .card-image { filter: drop-shadow(0 0 40px #660033) brightness(1.15); }
+.alien-card.anim-whampire .card-name { color: #660033; }
+.alien-card.anim-whampire:hover { border-color: rgba(102,0,51,0.4); box-shadow: 0 0 30px rgba(102,0,51,0.12); }
+.alien-card.anim-whampire:hover { opacity: 0.85; transition: opacity 0.3s; }
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 @media (max-width: 768px) {

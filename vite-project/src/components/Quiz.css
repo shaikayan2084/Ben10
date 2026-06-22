@@ -9,7 +9,48 @@
   margin: 0 auto;
 }
 
+.quiz-hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.level-badge { font-size: 13px; }
+.timer-badge svg { margin-right: 2px; }
+.lives-badge { font-size: 18px; }
+.life-full { color: #ff3333; }
+.life-empty { color: rgba(255,51,51,0.2); }
+
 .quiz-progress-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.timer-bar {
   height: 4px;
   background: rgba(255,255,255,0.06);
   border-radius: 2px;
@@ -17,24 +58,10 @@
   overflow: hidden;
 }
 
-.quiz-progress-fill {
+.timer-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #00ff88, #00ccff);
   border-radius: 2px;
-  transition: width 0.4s ease;
-}
-
-.quiz-stats {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-
-.quiz-stat {
-  font-size: 13px;
-  color: rgba(255,255,255,0.4);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: width 1s linear;
 }
 
 .quiz-card {
@@ -47,7 +74,6 @@
 
 .quiz-question-number {
   font-size: 12px;
-  color: rgba(0,255,136,0.5);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -198,29 +224,38 @@
   border-radius: 20px;
 }
 
-.result-grade {
-  font-size: 80px;
-  font-weight: 900;
-  line-height: 1;
+.result-level-label {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
   margin-bottom: 16px;
 }
 
-.result-score {
+.result-score-display {
   font-size: 48px;
   font-weight: 300;
   color: rgba(255,255,255,0.3);
   margin-bottom: 20px;
 }
 
-.score-number { color: #00ff88; font-weight: 700; }
-.score-divider { margin: 0 4px; }
-.score-total { color: rgba(255,255,255,0.5); }
+.result-message-main {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
 
-.result-text {
-  font-size: 18px;
-  color: rgba(255,255,255,0.6);
+.result-detail {
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
   line-height: 1.5;
   margin-bottom: 32px;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .quiz-restart-btn {
@@ -244,6 +279,7 @@
   .quiz-section { padding: 60px 20px; }
   .quiz-card { padding: 24px; }
   .quiz-question { font-size: 18px; }
-  .result-grade { font-size: 56px; }
-  .result-score { font-size: 36px; }
+  .quiz-hud { flex-wrap: wrap; gap: 8px; }
+  .result-message-main { font-size: 22px; }
+  .result-score-display { font-size: 36px; }
 }

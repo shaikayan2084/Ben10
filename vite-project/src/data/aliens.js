@@ -1,4 +1,4 @@
-const base = import.meta.env.BASE_URL || '/';
+﻿const base = import.meta.env.BASE_URL || '/';
 
 export const aliens = [
   {
@@ -24,11 +24,12 @@ export const aliens = [
       "In Alien Force, Heatblast's design was updated with more prominent lava cracks and a taller, more muscular build",
       "Heatblast's fire can burn even underwater with enough concentration"
     ],
-    image: base + "images/wiki_heatblast.png",
-    cardImage: base + "images/wiki_heatblast.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/c/cc/Heatblast_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/c/cc/Heatblast_classic_official.png",
     color: "#ff4500",
     gradient: "linear-gradient(135deg, #1a0a00, #ff4500)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "fire"
   },
   {
     id: 2,
@@ -57,7 +58,8 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/c/c5/Wildmutt_classic_official.png",
     color: "#ff6600",
     gradient: "linear-gradient(135deg, #1a0a00, #ff6600)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
   },
   {
     id: 3,
@@ -86,7 +88,8 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/f/fb/Stinkfly_classic_official.png",
     color: "#33cc33",
     gradient: "linear-gradient(135deg, #001a00, #33cc33)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
   },
   {
     id: 4,
@@ -111,11 +114,12 @@ export const aliens = [
       "He can survive in the vacuum of space and has no need for oxygen",
       "Diamondhead's crystals are harder than any known material on Earth"
     ],
-    image: base + "images/wiki_diamondhead.png",
-    cardImage: base + "images/wiki_diamondhead.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/9/93/Diamondhead_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/9/93/Diamondhead_classic_official.png",
     color: "#00ff88",
     gradient: "linear-gradient(135deg, #002211, #00ff88)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "crystal"
   },
   {
     id: 5,
@@ -140,11 +144,12 @@ export const aliens = [
       "XLR8 can create tornado-level winds just by running in circles",
       "He was Ben's first super-speed alien and remains the fastest recurring transformation"
     ],
-    image: base + "images/wiki_xlr8.png",
-    cardImage: base + "images/wiki_xlr8.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/0/00/Xlr8_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/0/00/Xlr8_classic_official.png",
     color: "#0066ff",
     gradient: "linear-gradient(135deg, #000033, #0066ff)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "speed"
   },
   {
     id: 6,
@@ -173,7 +178,8 @@ export const aliens = [
     cardImage: base + "images/wiki_greymatter.png",
     color: "#88aa00",
     gradient: "linear-gradient(135deg, #1a1a00, #88aa00)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "tech"
   },
   {
     id: 7,
@@ -202,7 +208,8 @@ export const aliens = [
     cardImage: base + "images/wiki_fourarms.png",
     color: "#cc0000",
     gradient: "linear-gradient(135deg, #1a0000, #cc0000)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
   },
   {
     id: 8,
@@ -231,7 +238,8 @@ export const aliens = [
     cardImage: base + "images/wiki_ripjaws.png",
     color: "#008844",
     gradient: "linear-gradient(135deg, #001a0a, #008844)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "fluid"
   },
   {
     id: 9,
@@ -256,11 +264,12 @@ export const aliens = [
       "He once upgraded a Rustbucket into a high-tech battle vehicle",
       "Galvanic Mechamorphs can communicate with each other through their circuitry patterns"
     ],
-    image: base + "images/wiki_upgrade.png",
-    cardImage: base + "images/wiki_upgrade.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/e/e4/Upgrade_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/e/e4/Upgrade_classic_official.png",
     color: "#00ff00",
     gradient: "linear-gradient(135deg, #001a00, #00ff00)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "tech"
   },
   {
     id: 10,
@@ -289,7 +298,8 @@ export const aliens = [
     cardImage: base + "images/wiki_ghostfreak.png",
     color: "#9933ff",
     gradient: "linear-gradient(135deg, #1a0033, #9933ff)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
   },
   {
     id: 11,
@@ -314,14 +324,255 @@ export const aliens = [
       "Cannonbolt can uncurl instantly from his ball form, using the momentum to surprise enemies",
       "He was one of the few aliens who could survive a direct hit from Vilgax"
     ],
-    image: base + "images/wiki_cannonbolt.png",
-    cardImage: base + "images/wiki_cannonbolt.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/2/22/Cannonbolt_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/2/22/Cannonbolt_classic_official.png",
     color: "#6699ff",
     gradient: "linear-gradient(135deg, #000033, #6699ff)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
   },
   {
     id: 12,
+    name: "Wildvine",
+    species: "Florauna",
+    homePlanet: "Flors Verdance",
+    abilities: [
+      "Plant manipulation - can control and animate vines, roots, and other flora",
+      "Underground movement - can burrow through soil and emerge anywhere",
+      "Regeneration - can regrow damaged plant matter from his body",
+      "Can release explosive seed pods and spore bombs",
+      "Can extend his vines to entangle enemies and swing between surfaces"
+    ],
+    weakness: "Extreme cold can freeze his plant matter and render him brittle. Fire is highly effective against his wooden body. Defoliation and dehydration can weaken his plant-based attacks. Cannot regenerate from total incineration.",
+    firstAppearance: "Ben 10 (2005) - Episode 34: 'Ben Wolf'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vengers'",
+    description: "Wildvine is a plant-like Florauna from the jungle planet Flors Verdance, with a green, vine-covered body, a single large red eye, and sharp teeth. He can manipulate plant life, extend his vines like tentacles, burrow underground, and launch explosive seed pods at enemies. Wildvine's regenerative abilities make him a persistent threat that can recover from most injuries.",
+    interestingFacts: [
+      "Wildvine was one of the aliens Ben unlocked after the Omnitrix's failsafe mode activated",
+      "Floraunas are a plant-based species whose bodies are composed of organic vines and wood",
+      "He can root himself into the ground to absorb nutrients and energy from the soil",
+      "Wildvine's seed pods explode on impact with enough force to damage stone",
+      "His species is closely related to the plant life on Flors Verdance"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/0/07/Wildvine_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/0/07/Wildvine_classic_official.png",
+    color: "#44aa00",
+    gradient: "linear-gradient(135deg, #001a00, #44aa00)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
+  },
+  {
+    id: 13,
+    name: "Blitzwolfer",
+    species: "Loboan",
+    homePlanet: "Anur Luna",
+    abilities: [
+      "Sonic howl - can emit a devastating hypersonic howl that damages and disorients enemies",
+      "Enhanced senses - superhuman hearing, smell, and night vision",
+      "Sharp claws and fangs for close-quarters combat",
+      "Enhanced strength, speed, and agility",
+      "Can track targets across vast distances by scent"
+    ],
+    weakness: "His sonic howl requires him to breathe, making it useless underwater or in a vacuum. Silver-based weapons are particularly effective against him. His howl can be nullified in soundproof environments. His wolf-like instincts can sometimes override rational thought.",
+    firstAppearance: "Ben 10 (2005) - Episode 33: 'Ben Wolf'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Blitzwolfer is a werewolf-like Loboan from the moon Anur Luna in the Anur system. He has a bipedal wolf-like form covered in gray and blue fur, with glowing yellow eyes, sharp claws, and large fangs. His primary weapon is his devastating sonic howl, which can shatter objects and incapacitate enemies with focused sound waves.",
+    interestingFacts: [
+      "Blitzwolfer was originally called 'Ben Wolf' by fans before receiving his official name",
+      "Loboans are native to the Anur system, specifically the moon Anur Luna",
+      "His sonic howl can reach frequencies that are painful and harmful to most organic beings",
+      "Blitzwolfer was one of the 'Anur trio' aliens along with Snare-oh and Frankenstrike",
+      "He can track scents across interplanetary distances using his enhanced senses"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/2/29/Blitzwolfer_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/2/29/Blitzwolfer_classic_official.png",
+    color: "#3366cc",
+    gradient: "linear-gradient(135deg, #000033, #3366cc)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "sonic"
+  },
+  {
+    id: 14,
+    name: "Snare-oh",
+    species: "Thep Khufan",
+    homePlanet: "Anur Khufos",
+    abilities: [
+      "Mummy-like bandages - can control and extend his body wrappings at will",
+      "Can unravel and re-form his body from bandages",
+      "Can trap and constrict enemies within his wrappings",
+      "Enhanced durability through layered bandage protection",
+      "Can stretch and reshape his body like a living bandage"
+    ],
+    weakness: "Fire can burn and destroy his bandages, reducing his body mass. His bandages can be cut, torn, or unraveled by sharp objects. Slick substances like oil or slime make his wrappings ineffective for gripping. Extreme water exposure can weigh down and weaken his bandages.",
+    firstAppearance: "Ben 10 (2005) - Episode 49: 'The Unnaturals'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Snare-oh is a mummy-like Thep Khufan from the planet Anur Khufos in the Anur system. His entire body is composed of living, self-wrapping bandages beneath which nothing exists but empty darkness. He can unravel and re-form his bandage body at will, extending his wrappings to grab and constrict enemies from a distance.",
+    interestingFacts: [
+      "Snare-oh's body is entirely made of bandages with no solid form underneath",
+      "Thep Khufans come from Anur Khufos, a planet in the mysterious Anur system",
+      "He was part of the 'Anur trio' alongside Blitzwolfer and Frankenstrike",
+      "Snare-oh can reform himself from a single remaining strip of bandage",
+      "His species is often mistaken for undead mummies, but they are living beings"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/f/fc/Snare-oh_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/f/fc/Snare-oh_classic_official.png",
+    color: "#ccaa66",
+    gradient: "linear-gradient(135deg, #1a1a00, #ccaa66)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
+  },
+  {
+    id: 15,
+    name: "Frankenstrike",
+    species: "Transylian",
+    homePlanet: "Anur Transyl",
+    abilities: [
+      "Electricity manipulation - can generate and control powerful electrical currents",
+      "Electrokinesis - can shoot lightning bolts and electrocute enemies",
+      "Enhanced strength and durability from his reinforced body",
+      "Can absorb and redirect electrical energy from external sources",
+      "Bolts on his neck can channel and release stored electricity"
+    ],
+    weakness: "Water and moisture can ground his electrical attacks harmlessly. His electricity-dependent powers are weaker in dry, non-conductive environments. Overuse of electrical attacks can drain his personal energy reserves. His large, heavy body makes him somewhat slow.",
+    firstAppearance: "Ben 10 (2005) - Episode 49: 'The Unnaturals'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Frankenstrike is a green-skinned, stitched-together Transylian from the planet Anur Transyl, resembling a classic Frankenstein monster. He has a large, powerful body with electrode bolts on his neck that generate and channel massive amounts of electricity. Frankenstrike combines brute strength with devastating electrokinetic attacks, making him a formidable close-quarters combatant.",
+    interestingFacts: [
+      "Frankenstrike is inspired by the classic Frankenstein monster from Mary Shelley's novel",
+      "Transylians from Anur Transyl are one of the few species with natural electrical generation",
+      "He was part of the 'Anur trio' along with Blitzwolfer and Snare-oh",
+      "Frankenstrike's bolts can absorb external electricity to supercharge his attacks",
+      "His stitched body is the result of Transylian biology rather than surgical reconstruction"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/a/a2/Frankenstrike_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/a/a2/Frankenstrike_classic_official.png",
+    color: "#33cc33",
+    gradient: "linear-gradient(135deg, #001a00, #33cc33)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
+  },
+  {
+    id: 16,
+    name: "Upchuck",
+    species: "Gourmand",
+    homePlanet: "Peptos XI",
+    abilities: [
+      "Can eat and consume virtually any substance or material",
+      "Digests matter and regurgitates it as explosive projectiles",
+      "Four prehensile tongues for grabbing food and enemies",
+      "Stomach can store massive amounts of matter relative to body size",
+      "Can eat through solid metal, energy blasts, and even magic"
+    ],
+    weakness: "Vulnerable while eating - his mouth/tongues are exposed. Can be force-fed things that cause indigestion. His small size makes him physically vulnerable to direct attacks. Stomach capacity is not infinite.",
+    firstAppearance: "Ben 10 (2005) - Episode 20: 'Monster Weather'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Upchuck is a small, three-legged Gourmand with four long, prehensile tongues and an incredible appetite. He can consume anything - metal, concrete, energy blasts, even magical attacks - and then regurgitate the digested matter as powerful explosive projectiles. Despite his cute appearance, Upchuck is one of Ben's most versatile and dangerous aliens.",
+    interestingFacts: [
+      "Upchuck's species comes in two subtypes: Perk Gourmands (green) and Murk Gourmands (purple)",
+      "Ben's version of Upchuck is a Perk Gourmand, the green variety",
+      "Gourmands can eat up to 100 times their body weight in a single sitting",
+      "Upchuck's stomach has multiple chambers for processing different types of matter",
+      "He once ate and later regurgitated Vilgax's ship's laser cannon blast"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/1/1b/Upchuck_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/1/1b/Upchuck_classic_official.png",
+    color: "#00cc66",
+    gradient: "linear-gradient(135deg, #001a0a, #00cc66)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
+  },
+  {
+    id: 17,
+    name: "Ditto",
+    species: "Splixson",
+    homePlanet: "Hathor",
+    abilities: [
+      "Self-duplication - can create up to dozens of identical copies of himself",
+      "Each clone shares memories, thoughts, and experiences with the original",
+      "Clones can reform back into a single being",
+      "Can coordinate complex strategies through shared consciousness",
+      "Can surround and overwhelm enemies with sheer numbers"
+    ],
+    weakness: "If one clone is hurt, all clones feel the pain equally. Damage to one clone can mentally overwhelm Ben through shared sensation. Clones can be individually captured or eliminated. His small stature makes him physically weak compared to larger aliens.",
+    firstAppearance: "Ben 10 (2005) - Episode 25: 'Divided We Stand'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Ditto is a short, pink, blob-like Splixson with three toes, three fingers, and a single large eye on top of his head. His primary ability is creating multiple identical copies of himself, all sharing a single consciousness. Ditto's duplication ability makes him excellent for swarm tactics, reconnaissance, and overwhelming enemies through coordinated attacks from every direction.",
+    interestingFacts: [
+      "Ditto was the first alien Ben unlocked with self-duplication capabilities",
+      "Splixsons from Hathor reproduce naturally through controlled duplication",
+      "All Ditto clones share the same mind - if one learns something, they all know it",
+      "The pain sharing across clones is Ditto's biggest drawback in combat",
+      "Ditto can create up to dozens of copies, but each copy reduces his individual strength"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/f/f9/Ditto_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/f/f9/Ditto_classic_official.png",
+    color: "#ff66aa",
+    gradient: "linear-gradient(135deg, #1a0033, #ff66aa)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
+  },
+  {
+    id: 18,
+    name: "Eye Guy",
+    species: "Opticoid",
+    homePlanet: "Sightra",
+    abilities: [
+      "Multiple eyes all over his body that each fire different types of energy beams",
+      "Can fire heat rays, ice blasts, lasers, and concussive beams from different eyes",
+      "Eyes can move independently for 360-degree awareness",
+      "Can combine multiple eye beams for compound attacks",
+      "Can use his chest eye for a powerful focused energy blast"
+    ],
+    weakness: "If all his eyes are covered or blinded, he becomes completely helpless. Each eye can only fire one type of beam. His multiple eyes make him vulnerable to bright flashes that can temporarily blind all of them. Energy beam overuse can exhaust him.",
+    firstAppearance: "Ben 10 (2005) - Episode 50: 'Ben 4 Good Buddy'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Eye Guy is a grotesque, multi-eyed Opticoid from the planet Sightra, covered in dozens of eyes of various sizes across his green body. His most prominent feature is a massive eye on his chest. Each eye can fire a different type of energy beam, from heat rays to ice beams to concussive blasts. Eye Guy can attack from multiple angles simultaneously using his various eye-mounted weapons.",
+    interestingFacts: [
+      "Eye Guy's eyes can each fire a different type of energy beam simultaneously",
+      "Opticoids evolved on Sightra, a planet bathed in constant, intense light",
+      "His chest eye is his most powerful weapon, capable of firing a devastating energy blast",
+      "Eye Guy's eyes provide him with near-360-degree vision at all times",
+      "He was one of the most unique alien designs from the original Ben 10 series"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/c/c5/Eyeguy_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/c/c5/Eyeguy_classic_official.png",
+    color: "#44cc00",
+    gradient: "linear-gradient(135deg, #001a00, #44cc00)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "tech"
+  },
+  {
+    id: 19,
+    name: "Way Big",
+    species: "To'kustar",
+    homePlanet: "Space (born from cosmic storms)",
+    abilities: [
+      "Colossal size - stands over 100 feet tall",
+      "Incredible strength proportional to his gigantic build",
+      "Cosmic rays - can fire powerful energy beams from his hands",
+      "Can survive and fly in the vacuum of space",
+      "Creates powerful shockwaves with his footsteps"
+    ],
+    weakness: "His massive size makes him a huge target. Less effective in enclosed spaces or against very fast opponents. Can cause collateral damage due to his enormous scale. His cosmic ray attack requires charging time.",
+    firstAppearance: "Ben 10 (2005) - Episode 49: 'The Secret of the Omnitrix'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Way Big is a colossal To'kustar standing over 100 feet tall, making him one of the largest aliens in the Omnitrix. With a silver and red body resembling a superhero, Way Big possesses immense strength proportional to his size and can fire devastating cosmic energy beams from his hands, making him Ben's ultimate heavy hitter.",
+    interestingFacts: [
+      "Way Big was the final alien unlocked in the original Ben 10 series during the 'Secret of the Omnitrix' movie",
+      "To'kustars are born from cosmic storms in the vastness of space",
+      "He was powerful enough to defeat Vilgax in single combat",
+      "Way Big's design was inspired by the Japanese superhero Ultraman",
+      "In Omniverse, Way Big could grow even larger than his original 100-foot height"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/4/41/Waybig_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/4/41/Waybig_classic_official.png",
+    color: "#ff3333",
+    gradient: "linear-gradient(135deg, #1a0000, #ff3333)",
+    universe: "Classic Series (2005–2008)",
+    powerType: "cosmic"
+  },
+  {
+    id: 20,
     name: "Buzzshock",
     species: "Nosedeenian",
     homePlanet: "Nosedeen's Quasar 387",
@@ -347,68 +598,11 @@ export const aliens = [
     cardImage: base + "images/wiki_buzzshock.png",
     color: "#22cc00",
     gradient: "linear-gradient(135deg, #001a00, #22cc00)",
-    universe: "Classic Series (2005–2008)"
+    universe: "Classic Series (2005–2008)",
+    powerType: "beast"
   },
   {
-    id: 13,
-    name: "Upchuck",
-    species: "Gourmand",
-    homePlanet: "Peptos XI",
-    abilities: [
-      "Can eat and consume virtually any substance or material",
-      "Digests matter and regurgitates it as explosive projectiles",
-      "Four prehensile tongues for grabbing food and enemies",
-      "Stomach can store massive amounts of matter relative to body size",
-      "Can eat through solid metal, energy blasts, and even magic"
-    ],
-    weakness: "Vulnerable while eating - his mouth/tongues are exposed. Can be force-fed things that cause indigestion. His small size makes him physically vulnerable to direct attacks. Stomach capacity is not infinite.",
-    firstAppearance: "Ben 10 (2005) - Episode 20: 'Monster Weather'",
-    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
-    description: "Upchuck is a small, three-legged Gourmand with four long, prehensile tongues and an incredible appetite. He can consume anything - metal, concrete, energy blasts, even magical attacks - and then regurgitate the digested matter as powerful explosive projectiles. Despite his cute appearance, Upchuck is one of Ben's most versatile and dangerous aliens.",
-    interestingFacts: [
-      "Upchuck's species comes in two subtypes: Perk Gourmands (green) and Murk Gourmands (purple)",
-      "Ben's version of Upchuck is a Perk Gourmand, the green variety",
-      "Gourmands can eat up to 100 times their body weight in a single sitting",
-      "Upchuck's stomach has multiple chambers for processing different types of matter",
-      "He once ate and later regurgitated Vilgax's ship's laser cannon blast"
-    ],
-    image: base + "images/wiki_upchuck.png",
-    cardImage: base + "images/wiki_upchuck.png",
-    color: "#00cc66",
-    gradient: "linear-gradient(135deg, #001a0a, #00cc66)",
-    universe: "Classic Series (2005–2008)"
-  },
-  {
-    id: 14,
-    name: "Way Big",
-    species: "To'kustar",
-    homePlanet: "Space (born from cosmic storms)",
-    abilities: [
-      "Colossal size - stands over 100 feet tall",
-      "Incredible strength proportional to his gigantic build",
-      "Cosmic rays - can fire powerful energy beams from his hands",
-      "Can survive and fly in the vacuum of space",
-      "Creates powerful shockwaves with his footsteps"
-    ],
-    weakness: "His massive size makes him a huge target. Less effective in enclosed spaces or against very fast opponents. Can cause collateral damage due to his enormous scale. His cosmic ray attack requires charging time.",
-    firstAppearance: "Ben 10 (2005) - Episode 49: 'The Secret of the Omnitrix'",
-    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
-    description: "Way Big is a colossal To'kustar standing over 100 feet tall, making him one of the largest aliens in the Omnitrix. With a silver and red body resembling a superhero, Way Big possesses immense strength proportional to his size and can fire devastating cosmic energy beams from his hands, making him Ben's ultimate heavy hitter.",
-    interestingFacts: [
-      "Way Big was the final alien unlocked in the original Ben 10 series during the 'Secret of the Omnitrix' movie",
-      "To'kustars are born from cosmic storms in the vastness of space",
-      "He was powerful enough to defeat Vilgax in single combat",
-      "Way Big's design was inspired by the Japanese superhero Ultraman",
-      "In Omniverse, Way Big could grow even larger than his original 100-foot height"
-    ],
-    image: base + "images/wiki_waybig.png",
-    cardImage: base + "images/wiki_waybig.png",
-    color: "#ff3333",
-    gradient: "linear-gradient(135deg, #1a0000, #ff3333)",
-    universe: "Classic Series (2005–2008)"
-  },
-  {
-    id: 15,
+    id: 21,
     name: "Swampfire",
     species: "Methanosian",
     homePlanet: "Methanos",
@@ -434,10 +628,11 @@ export const aliens = [
     cardImage: base + "images/wiki_swampfire.png",
     color: "#00cc44",
     gradient: "linear-gradient(135deg, #002200, #00cc44)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "fire"
   },
   {
-    id: 16,
+    id: 22,
     name: "Echo Echo",
     species: "Sonorosian",
     homePlanet: "Sonorosia",
@@ -463,10 +658,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/a/ae/Echo_echo_af_official.png",
     color: "#ffffff",
     gradient: "linear-gradient(135deg, #1a1a2e, #ffffff)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "sonic"
   },
   {
-    id: 17,
+    id: 23,
     name: "Humungousaur",
     species: "Vaxasaurian",
     homePlanet: "Terradino",
@@ -492,10 +688,11 @@ export const aliens = [
     cardImage: base + "images/wiki_humungousaur.png",
     color: "#8b4513",
     gradient: "linear-gradient(135deg, #1a0a00, #8b4513)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
   },
   {
-    id: 18,
+    id: 24,
     name: "Jetray",
     species: "Aerophibian",
     homePlanet: "Aeropela",
@@ -521,10 +718,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/c/cc/Jetray_af_official.png",
     color: "#ffcc00",
     gradient: "linear-gradient(135deg, #1a1a00, #ffcc00)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
   },
   {
-    id: 19,
+    id: 25,
     name: "Big Chill",
     species: "Necrofriggian",
     homePlanet: "Kylmyys",
@@ -550,10 +748,11 @@ export const aliens = [
     cardImage: base + "images/wiki_bigchill.png",
     color: "#00aaff",
     gradient: "linear-gradient(135deg, #000033, #00aaff)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
   },
   {
-    id: 20,
+    id: 26,
     name: "Chromastone",
     species: "Crystalsapien",
     homePlanet: "Petropia",
@@ -579,10 +778,11 @@ export const aliens = [
     cardImage: base + "images/wiki_chromastone.png",
     color: "#cc44ff",
     gradient: "linear-gradient(135deg, #1a0033, #cc44ff)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
   },
   {
-    id: 21,
+    id: 27,
     name: "Brainstorm",
     species: "Cerebrocrustacean",
     homePlanet: "Encephalonus IV",
@@ -608,10 +808,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/2/2c/Brainstorm_af_official.png",
     color: "#0066ff",
     gradient: "linear-gradient(135deg, #000033, #0066ff)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
   },
   {
-    id: 22,
+    id: 28,
     name: "Spidermonkey",
     species: "Arachnichimp",
     homePlanet: "Aranhaschimmia",
@@ -637,10 +838,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/f/f3/Spidermonkey_af_official.png",
     color: "#3333cc",
     gradient: "linear-gradient(135deg, #000011, #3333cc)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
   },
   {
-    id: 23,
+    id: 29,
     name: "Goop",
     species: "Polymorph",
     homePlanet: "Viscosia",
@@ -666,10 +868,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/1/17/Goop_af_official.png",
     color: "#00ff33",
     gradient: "linear-gradient(135deg, #001a00, #00ff33)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "fluid"
   },
   {
-    id: 24,
+    id: 30,
     name: "Alien X",
     species: "Celestialsapien",
     homePlanet: "Forge of Creation",
@@ -695,10 +898,11 @@ export const aliens = [
     cardImage: base + "images/wiki_alienx.png",
     color: "#aaddff",
     gradient: "linear-gradient(135deg, #000011, #0a0a2e)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "cosmic"
   },
   {
-    id: 25,
+    id: 31,
     name: "Rath",
     species: "Appoplexian",
     homePlanet: "Appoplexia",
@@ -720,14 +924,45 @@ export const aliens = [
       "His catchphrase 'LEMME TELL YA SOMETHING...' became one of the most quoted lines in Ben 10",
       "Despite his rage, Rath has shown moments of surprising wisdom and loyalty"
     ],
-    image: base + "images/wiki_rath.png",
-    cardImage: base + "images/wiki_rath.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/3/37/Rath_af_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/3/37/Rath_af_official.png",
     color: "#ff6600",
     gradient: "linear-gradient(135deg, #1a0a00, #ff6600)",
-    universe: "Alien Force (2008–2010)"
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
   },
   {
-    id: 26,
+    id: 32,
+    name: "Lodestar",
+    species: "Biosovortian",
+    homePlanet: "Unknown",
+    abilities: [
+      "Magnetism manipulation - can control and manipulate metal objects at will",
+      "Can generate powerful magnetic fields for defense and offense",
+      "Can attract or repel metallic objects with incredible force",
+      "Can create magnetic shields that deflect metal projectiles",
+      "Can manipulate the metallic components in enemy technology"
+    ],
+    weakness: "Completely useless against non-metallic opponents or in environments without metal. Strong opposing magnetic fields can disrupt his control. His powers weaken with distance from metallic objects. His magnetic abilities do not affect organic matter.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 32: 'Simple'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Lodestar is a metallic, magnet-themed Biosovortian with a sleek silver body, a large magnet-like horn on his head, and glowing blue eyes. He possesses complete control over magnetic fields, allowing him to manipulate metal objects, create magnetic shields, and pull weapons from enemies' hands. Lodestar is Ben's specialist for dealing with metallic threats and mechanical opponents.",
+    interestingFacts: [
+      "Lodestar was one of the later aliens unlocked in Ben's Alien Force Omnitrix",
+      "Biosovortians are a rare species with natural magnetic generation abilities",
+      "His magnet horn can attract metal objects from miles away",
+      "Lodestar can create magnetic fields strong enough to bend metal beams",
+      "He was crucial in battles against mechanical enemies like the Techadons"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/9/9f/Lodestar_af_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/9/9f/Lodestar_af_official.png",
+    color: "#8888aa",
+    gradient: "linear-gradient(135deg, #111122, #8888aa)",
+    universe: "Alien Force (2008–2010)",
+    powerType: "beast"
+  },
+  {
+    id: 33,
     name: "Water Hazard",
     species: "Orishan",
     homePlanet: "Unknown ocean world",
@@ -749,14 +984,15 @@ export const aliens = [
       "Water Hazard was part of the 'Amalgam Kids' group in an alternate timeline",
       "His armor is made from crushed coral and minerals from his homeworld"
     ],
-    image: base + "images/wiki_waterhazard.png",
-    cardImage: base + "images/wiki_waterhazard.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/d/df/Water_Hazard_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/d/df/Water_Hazard_ua_official.png",
     color: "#0066cc",
     gradient: "linear-gradient(135deg, #000a1a, #0066cc)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "fluid"
   },
   {
-    id: 27,
+    id: 34,
     name: "AmpFibian",
     species: "Amperi",
     homePlanet: "Tesslos",
@@ -782,10 +1018,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/0/07/Ampfibian_ua_official.png",
     color: "#3366ff",
     gradient: "linear-gradient(135deg, #000a1a, #3366ff)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "beast"
   },
   {
-    id: 28,
+    id: 35,
     name: "Armodrillo",
     species: "Talpaedan",
     homePlanet: "Terraexcava",
@@ -807,14 +1044,15 @@ export const aliens = [
       "Armodrillo's shockwaves can trigger controlled earthquakes visible from miles away",
       "He was one of the few aliens strong enough to fight against the Ultimatrix's evil copies"
     ],
-    image: base + "images/wiki_armodrillo.png",
-    cardImage: base + "images/wiki_armodrillo.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/5/52/Armodrillo_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/5/52/Armodrillo_ua_official.png",
     color: "#ff8800",
     gradient: "linear-gradient(135deg, #1a0a00, #ff8800)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "beast"
   },
   {
-    id: 29,
+    id: 36,
     name: "Terraspin",
     species: "Geochelone Aerio",
     homePlanet: "Unknown",
@@ -836,14 +1074,15 @@ export const aliens = [
       "Terraspin's species is herbivorous, feeding on airborne nutrients",
       "He was instrumental in defeating the magical entities known as the 'Esoterica'"
     ],
-    image: base + "images/wiki_terraspin.png",
-    cardImage: base + "images/wiki_terraspin.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/e/ec/Terraspin_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/e/ec/Terraspin_ua_official.png",
     color: "#88ccff",
     gradient: "linear-gradient(135deg, #001a33, #88ccff)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "beast"
   },
   {
-    id: 30,
+    id: 37,
     name: "NRG",
     species: "Prypiatosian-B",
     homePlanet: "Prypiatos",
@@ -865,14 +1104,15 @@ export const aliens = [
       "NRG's radiation levels can cause severe illness in unprotected organics",
       "He was one of the few aliens who could damage the DNAliens' organic armor"
     ],
-    image: base + "images/wiki_nrg.png",
-    cardImage: base + "images/wiki_nrg.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/a/a5/Nrg_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/a/a5/Nrg_ua_official.png",
     color: "#66ff00",
     gradient: "linear-gradient(135deg, #001a00, #66ff00)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "fire"
   },
   {
-    id: 31,
+    id: 38,
     name: "Fasttrack",
     species: "Citrakayah",
     homePlanet: "Unknown",
@@ -898,10 +1138,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/8/8e/Fasttrack_ua_official.png",
     color: "#0033cc",
     gradient: "linear-gradient(135deg, #000011, #0033cc)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "speed"
   },
   {
-    id: 32,
+    id: 39,
     name: "Clockwork",
     species: "Chronosapien",
     homePlanet: "Unknown",
@@ -923,14 +1164,15 @@ export const aliens = [
       "His internal gears must be perfectly synchronized to maintain his powers",
       "There is a 'Chronosapien Time Bomb' that can erase entire timelines from existence"
     ],
-    image: base + "images/wiki_clockwork.png",
-    cardImage: base + "images/wiki_clockwork.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/1/18/Clockwork_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/1/18/Clockwork_ua_official.png",
     color: "#ccaa00",
     gradient: "linear-gradient(135deg, #1a1a00, #ccaa00)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "tech"
   },
   {
-    id: 33,
+    id: 40,
     name: "ChamAlien",
     species: "Merlinisapien",
     homePlanet: "Unknown",
@@ -956,10 +1198,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/b/ba/Chamalien_ua_official.png",
     color: "#9933cc",
     gradient: "linear-gradient(135deg, #0a001a, #9933cc)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "beast"
   },
   {
-    id: 34,
+    id: 41,
     name: "Eatle",
     species: "Oryctini",
     homePlanet: "Unknown",
@@ -985,10 +1228,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/5/54/Eatle_ua_official.png",
     color: "#cc6600",
     gradient: "linear-gradient(135deg, #1a0a00, #cc6600)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "beast"
   },
   {
-    id: 35,
+    id: 42,
     name: "Juryrigg",
     species: "Planchaküle",
     homePlanet: "Unknown",
@@ -1014,10 +1258,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/b/b3/Juryrigg_ua_official.png",
     color: "#ff6600",
     gradient: "linear-gradient(135deg, #1a0a00, #ff6600)",
-    universe: "Ultimate Alien (2010–2012)"
+    universe: "Ultimate Alien (2010–2012)",
+    powerType: "tech"
   },
   {
-    id: 36,
+    id: 43,
     name: "Feedback",
     species: "Conductoid",
     homePlanet: "Teslavorr Nebula",
@@ -1039,14 +1284,15 @@ export const aliens = [
       "Feedback's tail can plug into any electrical outlet or generator for maximum power",
       "He absorbed enough energy to briefly fight Malware, a powerful technological enemy"
     ],
-    image: base + "images/wiki_feedback.png",
-    cardImage: base + "images/wiki_feedback.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/7/7f/Feedback_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/7/7f/Feedback_ov_official.png",
     color: "#00ff66",
     gradient: "linear-gradient(135deg, #001a00, #00ff66)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 37,
+    id: 44,
     name: "Bloxx",
     species: "Segmentasapien",
     homePlanet: "Unknown",
@@ -1072,10 +1318,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/a/a5/Bloxx_ov_official.png",
     color: "#cc0000",
     gradient: "linear-gradient(135deg, #1a0000, #cc0000)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "crystal"
   },
   {
-    id: 38,
+    id: 45,
     name: "Gravattack",
     species: "Galilean",
     homePlanet: "Unknown",
@@ -1101,10 +1348,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/b/bd/Gravattack_ov_official.png",
     color: "#66ccff",
     gradient: "linear-gradient(135deg, #001a33, #66ccff)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "cosmic"
   },
   {
-    id: 39,
+    id: 46,
     name: "Crashhopper",
     species: "Orthopterran",
     homePlanet: "Unknown",
@@ -1130,10 +1378,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/f/f6/Crashhopper_ov_official.png",
     color: "#66ff33",
     gradient: "linear-gradient(135deg, #001a00, #66ff33)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 40,
+    id: 47,
     name: "Ball Weevil",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1159,10 +1408,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/b/be/Ball_weevil_ov_official.png",
     color: "#66ff00",
     gradient: "linear-gradient(135deg, #001a00, #66ff00)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "fluid"
   },
   {
-    id: 41,
+    id: 48,
     name: "Walkatrout",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1188,10 +1438,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/a/ab/Walkatrout_ov_official.png",
     color: "#3399ff",
     gradient: "linear-gradient(135deg, #000a1a, #3399ff)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "fluid"
   },
   {
-    id: 42,
+    id: 49,
     name: "Pesky Dust",
     species: "Nemuina",
     homePlanet: "Unknown",
@@ -1217,10 +1468,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/e/ea/Pesky_dust_ov_official.png",
     color: "#ff66cc",
     gradient: "linear-gradient(135deg, #1a0033, #ff66cc)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 43,
+    id: 50,
     name: "Mole-Stache",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1242,14 +1494,15 @@ export const aliens = [
       "His mustache hairs can be shot like needles at opponents",
       "Despite his silly appearance, Mole-Stache has saved the day multiple times with his mustache skills"
     ],
-    image: base + "images/wiki_molestache.png",
-    cardImage: base + "images/wiki_molestache.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/7/70/Mole-Stache_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/7/70/Mole-Stache_official.png",
     color: "#8B4513",
     gradient: "linear-gradient(135deg, #1a0a00, #8B4513)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 44,
+    id: 51,
     name: "The Worst",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1275,10 +1528,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/e/e0/The_worst_ov_official.png",
     color: "#ffcc00",
     gradient: "linear-gradient(135deg, #1a1a00, #ffcc00)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 45,
+    id: 52,
     name: "Kickin Hawk",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1300,14 +1554,15 @@ export const aliens = [
       "He has a cocky, boastful personality that matches his fighting style",
       "Kickin Hawk was part of a superhero team parody called 'The Vengers'"
     ],
-    image: base + "images/wiki_kickinhawk.png",
-    cardImage: base + "images/wiki_kickinhawk.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/4/4b/Kicken_Hawk_Omniverse_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/4/4b/Kicken_Hawk_Omniverse_official.png",
     color: "#cc6600",
     gradient: "linear-gradient(135deg, #1a0a00, #cc6600)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 46,
+    id: 53,
     name: "Toepick",
     species: "Atrocian",
     homePlanet: "Atrocia 0",
@@ -1329,14 +1584,15 @@ export const aliens = [
       "Toepick's true face is never fully shown on screen, only its effects",
       "He was created by combining DNA samples from five different alien species"
     ],
-    image: base + "images/wiki_toepick.png",
-    cardImage: base + "images/wiki_toepick.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/0/0d/Toepick_art.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/0/0d/Toepick_art.png",
     color: "#884400",
     gradient: "linear-gradient(135deg, #1a0a00, #884400)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 47,
+    id: 54,
     name: "Astrodactyl",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1362,10 +1618,11 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/8/8d/Astrodactyl_ov_official.png",
     color: "#66cc00",
     gradient: "linear-gradient(135deg, #001a00, #66cc00)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 48,
+    id: 55,
     name: "Bullfrag",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1387,14 +1644,15 @@ export const aliens = [
       "He was welcomed by the Incurseans who mistook him for a mutant member of their species",
       "Bullfrag's expandable throat pouch can amplify his voice to deafening levels"
     ],
-    image: base + "images/wiki_bullfrag.png",
-    cardImage: base + "images/wiki_bullfrag.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/2/26/Bullfrag_OV_4.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/2/26/Bullfrag_OV_4.png",
     color: "#00cc44",
     gradient: "linear-gradient(135deg, #001a00, #00cc44)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 49,
+    id: 56,
     name: "Atomix",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1416,14 +1674,15 @@ export const aliens = [
       "He was used as a last resort against the Weapon XI threat in Omniverse",
       "Atomix's power output rivals that of Alien X in terms of raw destructive capability"
     ],
-    image: base + "images/wiki_atomix.png",
-    cardImage: base + "images/wiki_atomix.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/c/c5/OmniverseAtomix.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/c/c5/OmniverseAtomix.png",
     color: "#ff3300",
     gradient: "linear-gradient(135deg, #1a0000, #ff3300)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "fire"
   },
   {
-    id: 50,
+    id: 57,
     name: "Gutrot",
     species: "Unknown",
     homePlanet: "Unknown",
@@ -1445,14 +1704,15 @@ export const aliens = [
       "He was instrumental in defeating the Vladats by creating gases that countered their abilities",
       "Gutrot's internal chemistry lab can analyze and replicate any gaseous compound on contact"
     ],
-    image: base + "images/wiki_gutrot.png",
-    cardImage: base + "images/wiki_gutrot.png",
+    image: "https://static.wikia.nocookie.net/ben10/images/e/eb/Gutrot_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/e/eb/Gutrot_official.png",
     color: "#88cc00",
     gradient: "linear-gradient(135deg, #1a1a00, #88cc00)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   },
   {
-    id: 51,
+    id: 58,
     name: "Whampire",
     species: "Vladat",
     homePlanet: "Anur Vladlas",
@@ -1478,6 +1738,9 @@ export const aliens = [
     cardImage: "https://static.wikia.nocookie.net/ben10/images/5/53/Whampire_ov_official.png",
     color: "#660033",
     gradient: "linear-gradient(135deg, #1a000a, #660033)",
-    universe: "Omniverse (2012–2014)"
+    universe: "Omniverse (2012–2014)",
+    powerType: "beast"
   }
 ];
+
+

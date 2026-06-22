@@ -54,6 +54,13 @@ const alienThemes = {
   Atomix: { vibe: "fire", icon: "☢️", pattern: "radial-gradient(circle at 50% 50%, rgba(255,51,0,0.12) 0%, transparent 50%)" },
   Gutrot: { vibe: "nature", icon: "🧪", pattern: "repeating-linear-gradient(180deg, rgba(136,204,0,0.05) 0px, rgba(136,204,0,0.05) 4px, transparent 4px, transparent 8px)" },
   Whampire: { vibe: "ghost", icon: "🦇", pattern: "radial-gradient(circle at 50% 50%, rgba(102,0,51,0.12) 0%, transparent 50%)" },
+  Wildvine: { vibe: "nature", icon: "🌿", pattern: "repeating-linear-gradient(0deg, rgba(0,102,0,0.06) 0px, rgba(0,102,0,0.06) 4px, transparent 4px, transparent 10px)" },
+  Blitzwolfer: { vibe: "warrior", icon: "🐺", pattern: "radial-gradient(circle at 50% 50%, rgba(170,170,170,0.08) 0%, transparent 50%)" },
+  "Snare-oh": { vibe: "ghost", icon: "🩹", pattern: "repeating-linear-gradient(45deg, rgba(204,170,0,0.05) 0px, rgba(204,170,0,0.05) 10px, transparent 10px, transparent 20px)" },
+  Frankenstrike: { vibe: "tech", icon: "⚡", pattern: "repeating-linear-gradient(90deg, rgba(0,255,0,0.06) 0px, rgba(0,255,0,0.06) 2px, transparent 2px, transparent 8px)" },
+  Ditto: { vibe: "heroic", icon: "👥", pattern: "radial-gradient(circle at 50% 50%, rgba(255,102,0,0.08) 0%, transparent 50%)" },
+  "Eye Guy": { vibe: "warrior", icon: "👁️", pattern: "repeating-linear-gradient(135deg, rgba(102,255,51,0.05) 0px, rgba(102,255,51,0.05) 6px, transparent 6px, transparent 12px)" },
+  Lodestar: { vibe: "cosmic", icon: "🧲", pattern: "radial-gradient(circle at 50% 50%, rgba(255,204,0,0.1) 0%, transparent 50%)" },
 };
 
 const alienAttacks = {
@@ -108,6 +115,13 @@ const alienAttacks = {
   Atomix: { name: "Atomic Blast", effect: "nuclear", color: "#ff3300" },
   Gutrot: { name: "Toxic Cloud", effect: "fire", color: "#88cc00" },
   Whampire: { name: "Vampire Drain", effect: "ghost", color: "#660033" },
+  Wildvine: { name: "Vine Constrict", effect: "fire", color: "#006600" },
+  Blitzwolfer: { name: "Howl Storm", effect: "wind", color: "#aaaaaa" },
+  "Snare-oh": { name: "Bandage Bind", effect: "ghost", color: "#ccaa00" },
+  Frankenstrike: { name: "Electro Fist", effect: "electric", color: "#00ff00" },
+  Ditto: { name: "Duo Strike", effect: "speed", color: "#ff6600" },
+  "Eye Guy": { name: "Multi-Beam", effect: "crystal", color: "#66ff33" },
+  Lodestar: { name: "Magnetic Surge", effect: "cosmic", color: "#ffcc00" },
 };
 
 const AttackBurst = ({ effect, color }) => {

@@ -76,7 +76,14 @@ const alienAnimations = {
   Bullfrag:     { effect: "quake",      label: "Tongue Lash" },
   Atomix:       { effect: "nuclear",    label: "Atomic Blast" },
   Gutrot:       { effect: "fire",       label: "Toxic Cloud" },
-  Whampire:     { effect: "ghost",      label: "Vampire Drain" }
+  Whampire:     { effect: "ghost",      label: "Vampire Drain" },
+  Wildvine:     { effect: "vines",      label: "Vine Whip" },
+  Blitzwolfer:  { effect: "ripple",     label: "Howl Blast" },
+  "Snare-oh":   { effect: "ghost",      label: "Mummy Wrap" },
+  Frankenstrike: { effect: "arcs",      label: "Electro Bolt" },
+  Ditto:        { effect: "absorb",     label: "Clone Rush" },
+  "Eye Guy":    { effect: "rainbow",    label: "Eye Beam" },
+  Lodestar:     { effect: "galaxy",     label: "Magnetic Pull" }
 };
 
 const AlienCard = React.memo(({ alien, onSelect, isSelected, sectionIndex, onBeep }) => {
@@ -106,6 +113,7 @@ const AlienCard = React.memo(({ alien, onSelect, isSelected, sectionIndex, onBee
     <motion.div
       ref={cardRef}
       className={`alien-card anim-${alien.name.replace(/\s+/g, "").toLowerCase()} ${anim.effect} ${isSelected ? "selected" : ""} ${clicked ? "clicked" : ""} ${entered ? "entered" : ""}`}
+      data-power={alien.powerType || "beast"}
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}

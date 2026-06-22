@@ -1,0 +1,758 @@
+const base = import.meta.env.BASE_URL || '/';
+
+export const newAliens = [
+  {
+    id: 26,
+    name: "Wildmutt",
+    species: "Vulpimancer",
+    homePlanet: "Unknown",
+    abilities: [
+      "Enhanced senses - can track targets by scent across planetary distances",
+      "Quadrupedal speed - can run at incredible speeds on all fours",
+      "Sharp claws and teeth for close-quarters combat",
+      "Spiked tail that can be used as a flail weapon",
+      "Blind but can 'see' via scent, sound, and air current detection"
+    ],
+    weakness: "Completely blind - relies entirely on scent and sound, making him useless against odorless or silent opponents. Cannot distinguish between similar scents in polluted environments. His lack of hands limits fine manipulation and puzzle-solving.",
+    firstAppearance: "Ben 10 (2005) - Episode 4: 'And Then There Were 10'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Wildmutt is a feral, dog-like Vulpimancer with no visible eyes and a body covered in orange fur with dark stripes. He has a large mouth filled with sharp teeth, clawed hands and feet, and a long spiked tail. Wildmutt is a purely physical, instinct-driven fighter who relies on his incredible senses to track and hunt his prey across any terrain.",
+    interestingFacts: [
+      "Wildmutt is one of the original 10 aliens in the classic Omnitrix playlist",
+      "Vulpimancers have no eyes but can perceive their surroundings through enhanced smell and hearing",
+      "His species evolved on an unknown planet with perpetual fog, making sight unnecessary",
+      "Wildmutt can track a specific scent across interplanetary distances",
+      "In the original series, Wildmutt was the first alien whose DNA sample came from a non-sentient species"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/c/c5/Wildmutt_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/c/c5/Wildmutt_classic_official.png",
+    color: "#ff6600",
+    gradient: "linear-gradient(135deg, #1a0a00, #ff6600)",
+    universe: "Classic Series (2005–2008)"
+  },
+  {
+    id: 27,
+    name: "Stinkfly",
+    species: "Lepidopterran",
+    homePlanet: "Lepidopterra",
+    abilities: [
+      "Flight with four transparent wings at high maneuverability",
+      "Secretes a thick, adhesive green slime from his body",
+      "Sharp tail stinger that can pierce solid metal",
+      "Can shoot concentrated globs of slime as projectiles",
+      "Enhanced vision with multiple compound eyes offering 360-degree view"
+    ],
+    weakness: "His wings are fragile and can be damaged, grounding him. The distinctive smell of his slime makes stealth impossible. Caught easily in enclosed spaces. His slime is flammable and can be used against him.",
+    firstAppearance: "Ben 10 (2005) - Episode 1: 'And Then There Were 10'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Stinkfly is a large insect-like Lepidopterran with four translucent wings, multiple eyes, and a long tail ending in a sharp stinger. His name comes from the pungent odor he emits, and his body constantly secretes a sticky green substance. Stinkfly is Ben's primary aerial combatant in the original series, combining flight with ranged slime attacks and powerful stingers.",
+    interestingFacts: [
+      "Stinkfly's slime is non-toxic but incredibly sticky and difficult to remove",
+      "Lepidopterrans communicate through pheromones and wing vibrations",
+      "His homeworld Lepidopterra is a jungle planet with high-gravity conditions",
+      "Stinkfly was one of the original 10 aliens in the classic Omnitrix",
+      "The smell he emits is described as 'a thousand rotten eggs mixed with skunk spray'"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/f/fb/Stinkfly_classic_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/f/fb/Stinkfly_classic_official.png",
+    color: "#33cc33",
+    gradient: "linear-gradient(135deg, #001a00, #33cc33)",
+    universe: "Classic Series (2005–2008)"
+  },
+  {
+    id: 28,
+    name: "Echo Echo",
+    species: "Sonorosian",
+    homePlanet: "Sonorosia",
+    abilities: [
+      "Sonic screams that can shatter solid objects and disorient enemies",
+      "Self-duplication - can create up to dozens of identical copies",
+      "Flight via sound wave propulsion",
+      "Can merge copies back together to share memories and knowledge",
+      "Can use sound waves for echolocation and creating force fields"
+    ],
+    weakness: "His sonic attacks are useless in a vacuum where sound cannot travel. Duplicates can be eliminated individually. Loud ambient noise can disrupt his control. His small physical frame is fragile in direct combat.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 5: 'Max Out'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Echo Echo is a small, white, speaker-headed Sonorosian with the ability to generate devastating sonic waves and duplicate himself into an entire army of copies. He resembles a tiny humanoid with a head shaped like a stereo speaker with glowing blue rings. Echo Echo's duplication ability combined with his sonic attacks makes him one of the most strategically versatile aliens in Ben's roster.",
+    interestingFacts: [
+      "Echo Echo can create dozens of copies of himself, each with full independent consciousness",
+      "All Echo Echo copies share a single hive mind - if one sees something, they all know",
+      "His species Sonorosia is a planet where the atmosphere transmits sound faster than light",
+      "Echo Echo was a key player in defeating the Highbreed during the Alien Force series",
+      "In Omniverse, Echo Echo gained a redesigned, more robotic appearance"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/a/ae/Echo_echo_af_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/a/ae/Echo_echo_af_official.png",
+    color: "#ffffff",
+    gradient: "linear-gradient(135deg, #1a1a2e, #ffffff)",
+    universe: "Alien Force (2008–2010)"
+  },
+  {
+    id: 29,
+    name: "Jetray",
+    species: "Aerophibian",
+    homePlanet: "Aeropela",
+    abilities: [
+      "Supersonic flight - can reach speeds exceeding Mach 10 in atmosphere",
+      "Neuroshock blasts - fires paralyzing energy beams from his eyes",
+      "Can breathe and fly underwater as easily as in air",
+      "Aerodynamic body with wings and tail fins for extreme maneuverability",
+      "Can survive in the vacuum of space using energy-based propulsion"
+    ],
+    weakness: "Neuroshock blasts drain his energy quickly with continuous use. His long tail and wings can be grabbed by opponents. Less effective in tight enclosed spaces where he cannot build speed. Requires open airspace for maximum combat effectiveness.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 3: 'Everybody Talks About the Weather'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vengers'",
+    description: "Jetray is a sleek, manta ray-like Aerophibian with a long tail, large wings, and the ability to fly at hypersonic speeds. His body is primarily yellow with red accents and black highlights, giving him a striking appearance in flight. Jetray is Ben's fastest flying alien, capable of reaching escape velocity within seconds and firing paralyzing neuroshock blasts from his eyes.",
+    interestingFacts: [
+      "Jetray can fly at speeds fast enough to break the sound barrier without creating a sonic boom",
+      "Aerophibians evolved on Aeropela, a planet with a dense, breathable atmosphere",
+      "His neuroshock blasts can paralyze targets without causing permanent harm",
+      "Jetray can transition from outer space to underwater without any adaptation period",
+      "He was Ben's primary reconnaissance and pursuit alien during the Alien Force era"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/c/cc/Jetray_af_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/c/cc/Jetray_af_official.png",
+    color: "#ffcc00",
+    gradient: "linear-gradient(135deg, #1a1a00, #ffcc00)",
+    universe: "Alien Force (2008–2010)"
+  },
+  {
+    id: 30,
+    name: "Brainstorm",
+    species: "Cerebrocrustacean",
+    homePlanet: "Encephalonus IV",
+    abilities: [
+      "Superhuman intelligence surpassing most known species",
+      "Electrical generation - can fire powerful lightning bolts from his brain",
+      "Telekinesis - can move objects with his mind at limited capacity",
+      "Electrokinetic force fields for defense",
+      "Can interface with and control electronic systems telepathically"
+    ],
+    weakness: "Physical frailty - his crab-like body is not built for direct combat. His electrical attacks require moisture in the air to conduct. Overthinking can delay his reactions in fast-paced battles. Overuse of electricity drains his mental energy.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 10: 'Pier Pressure'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Vilgax's Revenge'",
+    description: "Brainstorm is a crustacean-like Cerebrocrustacean with an oversized head containing a super-intelligent brain that glows with electrical activity when in use. His body resembles a blue crab with large pincers, and his exposed brain crackles with electricity. Brainstorm combines genius-level intellect with powerful electrokinetic abilities, making him both a thinker and a fighter.",
+    interestingFacts: [
+      "Brainstorm's intelligence rivals that of the Galvans, though in different fields",
+      "His species Encephalonus IV has an atmosphere charged with constant electrical storms",
+      "The electricity Brainstorm generates comes from his hyperactive brain activity",
+      "He speaks in a distinctive, overly formal vocabulary that reflects his intelligence",
+      "Brainstorm once calculated the exact trajectory needed to defeat an entire Highbreed fleet"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/2/2c/Brainstorm_af_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/2/2c/Brainstorm_af_official.png",
+    color: "#0066ff",
+    gradient: "linear-gradient(135deg, #000033, #0066ff)",
+    universe: "Alien Force (2008–2010)"
+  },
+  {
+    id: 31,
+    name: "Spidermonkey",
+    species: "Arachnichimp",
+    homePlanet: "Aranhaschimmia",
+    abilities: [
+      "Organic web-slinging - shoots strong silk webbing from his tail",
+      "Wall-crawling on any surface with prehensile feet and hands",
+      "Enhanced agility, reflexes, and acrobatic abilities",
+      "Four arms with powerful grip strength",
+      "Can wrap enemies in cocoons and create web-based traps"
+    ],
+    weakness: "His webs can be dissolved by certain chemicals or extreme heat. Vulnerable to fire-based attacks that burn his fur and webs. His spider-like lower body makes him awkward on completely flat, smooth surfaces. Low stamina for prolonged web-slinging.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 12: 'Pet Project'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Color of Monster'",
+    description: "Spidermonkey is a unique fusion of spider and monkey features - a blue-furred Arachnichimp with four arms, six eyes, and a spider-like lower body that produces organic webbing from his tail. He is incredibly agile and acrobatic, swinging through urban environments with ease. Spidermonkey's combination of web powers and primate agility makes him Ben's premier urban traversal alien.",
+    interestingFacts: [
+      "Spidermonkey's species evolved on Aranhaschimmia, a jungle planet with massive vertical forests",
+      "His six eyes give him nearly 360-degree vision with exceptional depth perception",
+      "The webbing from his tail can support tons of weight before breaking",
+      "Spidermonkey has a playful, monkey-like personality that sometimes undermines serious missions",
+      "He was one of the aliens Ben used to infiltrate the Highbreed's homeworld"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/f/f3/Spidermonkey_af_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/f/f3/Spidermonkey_af_official.png",
+    color: "#3333cc",
+    gradient: "linear-gradient(135deg, #000011, #3333cc)",
+    universe: "Alien Force (2008–2010)"
+  },
+  {
+    id: 32,
+    name: "Goop",
+    species: "Polymorph",
+    homePlanet: "Viscosia",
+    abilities: [
+      "Amorphous body - can reshape his liquid form into any shape",
+      "Corrosive secretion - can dissolve most materials on contact",
+      "Can flatten into a puddle to evade attacks or slip through gaps",
+      "Regeneration - can reform from liquid state after being scattered",
+      "Can envelop enemies and objects within his gelatinous body"
+    ],
+    weakness: "Requires an anti-gravity projector to maintain his shape; destroying it leaves him helpless as a puddle. Vulnerable to extreme heat that can evaporate him. Absorption of non-compatible liquids can destabilize his form. Electricity disperses his body.",
+    firstAppearance: "Ben 10: Alien Force (2008) - Episode 13: 'Grounded'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A Fistful of Brains'",
+    description: "Goop is a translucent, green, gelatinous Polymorph who requires a hovering anti-gravity projector disc to maintain his humanoid shape. His body is composed of a viscous, semi-liquid substance that he can reshape at will. Goop is remarkably resilient - he can flatten himself, stretch his body, dissolve materials with his corrosive touch, and reform from even the smallest remaining glob.",
+    interestingFacts: [
+      "Goop's anti-gravity projector is what gives him a humanoid shape; without it he becomes a puddle",
+      "Polymorphs from Viscosia evolved in a liquid environment and have no natural skeletal structure",
+      "His body is composed of a unique organic acid that can dissolve most substances",
+      "Goop can reconstitute himself from a single drop of his liquid body",
+      "In Omniverse, Goop's design was updated with a sleeker, more fluid appearance"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/1/17/Goop_af_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/1/17/Goop_af_official.png",
+    color: "#00ff33",
+    gradient: "linear-gradient(135deg, #001a00, #00ff33)",
+    universe: "Alien Force (2008–2010)"
+  },
+  {
+    id: 33,
+    name: "AmpFibian",
+    species: "Amperi",
+    homePlanet: "Tesslos",
+    abilities: [
+      "Electricity manipulation - can generate and control massive electrical currents",
+      "Intangibility - can phase through solid objects as pure energy",
+      "Underwater breathing and high-speed swimming",
+      "Can transform into living electricity to travel through power lines",
+      "Electrokinetic flight and levitation"
+    ],
+    weakness: "Can be grounded by rubber or non-conductive materials. His energy form can be disrupted by strong magnetic fields. Water may conduct his electricity unpredictably. Prolonged intangibility drains his energy reserves.",
+    firstAppearance: "Ben 10: Ultimate Alien (2010) - Episode 28: 'The Enemy of My Frenemy'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vengers'",
+    description: "AmpFibian is a jellyfish-like Amperi with a translucent body, glowing blue energy patterns, and flowing tendrils that crackle with electricity. He can become intangible, phase through solid matter, and control immense amounts of electrical energy. AmpFibian is equally at home in water, air, or solid ground, making him one of the most versatile aliens in Ben's Ultimate Alien roster.",
+    interestingFacts: [
+      "AmpFibian was one of Ben's five 'original' aliens in the recalibrated Ultimatrix",
+      "Amperis from Tesslos are born in the electrically charged oceans of their homeworld",
+      "His intangibility works by converting his body into pure electrical energy",
+      "AmpFibian can absorb electricity from external sources to grow stronger",
+      "He was crucial in defeating the alien warlord known as 'The Aggregor'"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/0/07/Ampfibian_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/0/07/Ampfibian_ua_official.png",
+    color: "#3366ff",
+    gradient: "linear-gradient(135deg, #000a1a, #3366ff)",
+    universe: "Ultimate Alien (2010–2012)"
+  },
+  {
+    id: 34,
+    name: "Fasttrack",
+    species: "Citrakayah",
+    homePlanet: "Unknown",
+    abilities: [
+      "Superhuman speed - can run at velocities exceeding Mach speeds",
+      "Enhanced reflexes allowing perception in bullet time",
+      "Sharp claws on hands and feet for combat at high speed",
+      "Can create powerful wind vortices by running in circles",
+      "Able to run on vertical surfaces and across water"
+    ],
+    weakness: "Difficult to control on slick or unstable surfaces. His speed can cause collateral damage. Tires faster than other speed-type aliens. Momentum makes sharp turns difficult at maximum velocity.",
+    firstAppearance: "Ben 10: Ultimate Alien (2010) - Episode 30: 'Hero Time'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Cat Fight'",
+    description: "Fasttrack is a sleek, blue-furred Citrakayah with a feline-humanoid build, complete with cat-like ears, a tail, and clawed hands. His body is designed for pure speed, with aerodynamic contours and powerful leg muscles. Fasttrack is one of the fastest aliens in the Omnitrix, capable of running at incredible speeds and reacting to threats in what appears to be slow motion.",
+    interestingFacts: [
+      "Fasttrack was introduced in Ultimate Alien as a new speed-type alien alongside XLR8",
+      "Citrakayahs are an extremely rare species with very little known about their homeworld",
+      "His blue fur and white highlights give him a distinct hero-like appearance",
+      "Fasttrack's claws can extend and retract for high-speed combat maneuvers",
+      "He was part of Ben's team when facing the 'Faction' in the Ultimate Alien series"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/8/8e/Fasttrack_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/8/8e/Fasttrack_ua_official.png",
+    color: "#0033cc",
+    gradient: "linear-gradient(135deg, #000011, #0033cc)",
+    universe: "Ultimate Alien (2010–2012)"
+  },
+  {
+    id: 35,
+    name: "ChamAlien",
+    species: "Merlinisapien",
+    homePlanet: "Unknown",
+    abilities: [
+      "Perfect invisibility - can become completely transparent at will",
+      "Chameleonic camouflage - can blend into any background perfectly",
+      "Energy blasts fired from a horn on his head",
+      "Prehensile tail for grabbing and manipulation",
+      "Can extend his tongue to capture distant objects"
+    ],
+    weakness: "His invisibility can be detected by thermal sensors and motion detectors. Making any sound gives away his position. His energy blasts require charging time. Limited durability in direct confrontations.",
+    firstAppearance: "Ben 10: Ultimate Alien (2010) - Episode 26: 'The Enemy of My Frenemy'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Outbreak'",
+    description: "ChamAlien is a reptilian Merlinisapien with the ability to turn completely invisible and blend into any environment. He has a green, chameleon-like body with a large horn on his head that fires energy blasts, a long prehensile tail, and independently moving eyes. ChamAlien is Ben's dedicated stealth specialist, capable of infiltrating any location undetected.",
+    interestingFacts: [
+      "ChamAlien was one of the five aliens unlocked in Ben's recalibrated Ultimatrix",
+      "Merlinisapiens are named after the legendary wizard Merlin due to their 'magical' camouflage",
+      "His invisibility is so perfect that even thermal imaging cannot detect him",
+      "The horn on his head can fire concussive energy blasts that disorient enemies",
+      "He was an essential asset in the infiltration of Aggregor's ship"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/b/ba/Chamalien_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/b/ba/Chamalien_ua_official.png",
+    color: "#9933cc",
+    gradient: "linear-gradient(135deg, #0a001a, #9933cc)",
+    universe: "Ultimate Alien (2010–2012)"
+  },
+  {
+    id: 36,
+    name: "Eatle",
+    species: "Oryctini",
+    homePlanet: "Unknown",
+    abilities: [
+      "Can consume any matter and convert it into energy",
+      "Horn on his head can fire energy beams fueled by consumed matter",
+      "Enhanced strength proportional to how much he has eaten",
+      "Armored exoskeleton provides natural protection",
+      "Can drill through solid rock using his horn and mandibles"
+    ],
+    weakness: "His energy attacks consume stored matter; running out leaves him weak. Cannot consume intangible or energy-based matter. Overeating can slow him down. His armor has gaps at the joints that can be exploited.",
+    firstAppearance: "Ben 10: Ultimate Alien (2010) - Episode 42: 'The Ultimate Sacrifice'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vengers'",
+    description: "Eatle is a large, beetle-like Oryctini with a metallic blue exoskeleton, massive mandibles, and a powerful horn on his head. He can consume virtually any physical substance and convert it into energy that powers his strength and allows him to fire devastating energy beams from his horn. Eatle is essentially a living furnace - the more he eats, the more powerful he becomes.",
+    interestingFacts: [
+      "Eatle was originally designed as a darker counterpart to Upchuck in the Ultimate Alien series",
+      "Oryctinis have a unique digestive system that converts matter into pure energy",
+      "His horn glows with blue energy when charged from consumed matter",
+      "Eatle can drill through solid steel using the combination of his horn and mandibles",
+      "In Omniverse, Eatle received a complete redesign, becoming more insectoid in appearance"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/5/54/Eatle_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/5/54/Eatle_ua_official.png",
+    color: "#cc6600",
+    gradient: "linear-gradient(135deg, #1a0a00, #cc6600)",
+    universe: "Ultimate Alien (2010–2012)"
+  },
+  {
+    id: 37,
+    name: "Juryrigg",
+    species: "Planchaküle",
+    homePlanet: "Unknown",
+    abilities: [
+      "Master engineer - can build advanced machines from scrap in seconds",
+      "Can disassemble complex machinery instantly",
+      "Enhanced intelligence specific to mechanical and electrical systems",
+      "Small size allows infiltration into tight machine spaces",
+      "Can pilot any vehicle or operate any control system intuitively"
+    ],
+    weakness: "Extremely hyperactive with a short attention span - gets bored easily. His creations are unstable and often fall apart. Physically weak and easily injured. His tinkering often makes things worse before better. Cannot create matter from nothing.",
+    firstAppearance: "Ben 10: Ultimate Alien (2011) - Episode 35: 'Basic Training'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Outbreak'",
+    description: "Juryrigg is a small, gremlin-like Planchaküle with mechanical goggles, sharp teeth, and an incredibly hyperactive personality. He has the innate ability to assemble, disassemble, and modify any mechanical or electronic device in seconds. Juryrigg speaks in rapid, broken English and is constantly moving, tinkering, and building contraptions that are as brilliant as they are unstable.",
+    interestingFacts: [
+      "Juryrigg can build a working spaceship engine from household appliances and scrap metal",
+      "Planchaküles are natural mechanics who evolved on a junk planet of discarded technology",
+      "His hyperactive nature makes it nearly impossible for him to stay still or focus for long",
+      "Juryrigg's creations may look crude but are functionally brilliant",
+      "He was originally discovered by Azmuth as a test species for the Omnitrix's adaptability"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/b/b3/Juryrigg_ua_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/b/b3/Juryrigg_ua_official.png",
+    color: "#ff6600",
+    gradient: "linear-gradient(135deg, #1a0a00, #ff6600)",
+    universe: "Ultimate Alien (2010–2012)"
+  },
+  {
+    id: 38,
+    name: "Bloxx",
+    species: "Segmentasapien",
+    homePlanet: "Unknown",
+    abilities: [
+      "Body composed of living LEGO-like blocks that can be rearranged",
+      "Can shape-shift into any structure - walls, bridges, cages, vehicles",
+      "Enhanced strength in consolidated form",
+      "Can rebuild himself after being shattered by reassembling blocks",
+      "Can create construct weapons like hammers, shields, and battering rams"
+    ],
+    weakness: "His blocks can be scattered, requiring time to reassemble. Extreme heat can melt his plastic-like blocks. Strategic enemies can remove individual blocks to weaken his structure. Cannot create new blocks, only rearrange existing ones.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 9: 'So Long, and Thanks for All the Smoothies'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Bloxx is a massive, gorilla-like Segmentasapien made entirely of red and yellow living LEGO-style building blocks. He can reshape his body into any configuration - transforming from a gorilla into a wall, bridge, or even a battle vehicle. Bloxx is Ben's construction and defense specialist, capable of creating massive structures on the fly.",
+    interestingFacts: [
+      "Bloxx was the first new alien Ben unlocked in the Omniverse series",
+      "Segmentasapiens are made up of individual blocks that each have a limited consciousness",
+      "His blocks can separate to dodge attacks and then reassemble",
+      "Bloxx can create weapons like hammers and maces from his own body mass",
+      "He is often used for creating emergency shelters and defensive barriers"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/a/a5/Bloxx_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/a/a5/Bloxx_ov_official.png",
+    color: "#cc0000",
+    gradient: "linear-gradient(135deg, #1a0000, #cc0000)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 39,
+    name: "Gravattack",
+    species: "Galilean",
+    homePlanet: "Unknown",
+    abilities: [
+      "Gravity manipulation - can increase, decrease, and reverse gravity",
+      "Can create localized gravity wells to trap enemies",
+      "Flight through self-generated gravitational fields",
+      "Can create miniature black holes as an ultimate attack",
+      "Can levitate and hurl objects by altering their gravity"
+    ],
+    weakness: "Creating a black hole drains his energy significantly. His powers disrupt nearby electronics and can cause unintended collateral damage. Cannot affect the gravity of some ultra-dense materials. Overuse of gravity powers disorients him.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 19: 'Special Delivery'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "Gravattack is a massive, rotating Galilean who resembles a living planetoid with a rocky, cratered body and a ring system orbiting his middle. He possesses the immense power to manipulate gravity, able to crush enemies, create black holes, reverse gravitational fields, or float objects with a thought. Gravattack is a walking celestial body with the power to rewrite the physics of his surroundings.",
+    interestingFacts: [
+      "Gravattack is essentially a living planet with limited sentience",
+      "Galileans are born from the core of dying planets and achieve consciousness over millennia",
+      "The ring around his body is composed of solidified cosmic debris",
+      "Gravattack can create gravity so intense that it bends light around him",
+      "He was one of the most powerful aliens Ben used against the Incursean invasion"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/b/bd/Gravattack_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/b/bd/Gravattack_ov_official.png",
+    color: "#66ccff",
+    gradient: "linear-gradient(135deg, #001a33, #66ccff)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 40,
+    name: "Crashhopper",
+    species: "Orthopterran",
+    homePlanet: "Unknown",
+    abilities: [
+      "Superhuman jumping ability - can leap miles in a single bound",
+      "Reinforced exoskeleton legs for absorbing high-impact landings",
+      "Can use his body as a projectile, crashing into enemies at high speed",
+      "Enhanced leg strength proportional to his jumping power",
+      "Can create shockwaves upon landing"
+    ],
+    weakness: "Difficult to control mid-air trajectory. Predictable attack patterns - he must land between jumps. Vulnerable while airborne to ranged attacks. Sticky substances can trap his legs and prevent jumping.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 21: 'Tummy Trouble'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vengers'",
+    description: "Crashhopper is a grasshopper-like Orthopterran with powerful reinforced legs, a green exoskeleton, and large compound eyes. He attacks by launching himself at enemies with incredible force, using his entire body as a living projectile. Crashhopper's fighting style is pure kinetic energy - he bounces, ricochets, and crashes through battlefields with reckless abandon.",
+    interestingFacts: [
+      "Crashhopper can jump high enough to reach low orbit on some planets",
+      "Orthopterrans have legs that can withstand impact forces of several tons",
+      "His species evolved on a high-gravity planet where jumping was the primary means of travel",
+      "Crashhopper can control his trajectory mid-air using his wings as stabilizers",
+      "He has a cocky, confident personality that matches his high-impact fighting style"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/f/f6/Crashhopper_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/f/f6/Crashhopper_ov_official.png",
+    color: "#66ff33",
+    gradient: "linear-gradient(135deg, #001a00, #66ff33)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 41,
+    name: "Ball Weevil",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Can generate and roll large balls of sticky, explosive plasma",
+      "Can control the size of his plasma balls up to massive proportions",
+      "Plasma balls become more explosive the larger they grow",
+      "Can throw plasma balls as rolling or bouncing projectiles",
+      "Can use smaller plasma balls as traps or sticky obstacles"
+    ],
+    weakness: "His plasma balls can detonate prematurely if struck too hard. Cannot generate plasma without consuming energy matter first. Large plasma balls are slow to create and hard to control. Explosions can harm Ben if too close.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 20: 'Ben Again'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Something Zombozo This Way Comes'",
+    description: "Ball Weevil is a small, insect-like alien resembling a beetle with a long proboscis and antennae. His main ability is generating sticky, glowing plasma spheres that roll along surfaces and grow larger as they absorb more of his energy. The bigger the ball gets, the more explosive it becomes, making Ball Weevil a patient but devastating area-denial fighter.",
+    interestingFacts: [
+      "Ball Weevil's species classification remains unknown even to Azmuth",
+      "His plasma balls have a slightly sticky surface that picks up debris as they roll",
+      "The plasma he generates is bright neon green and glows intensely",
+      "Ball Weevil can create multiple smaller balls for tactical traps",
+      "He was discovered by Ben in an alternate dimension during the Omniverse series"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/b/be/Ball_weevil_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/b/be/Ball_weevil_ov_official.png",
+    color: "#66ff00",
+    gradient: "linear-gradient(135deg, #001a00, #66ff00)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 42,
+    name: "Walkatrout",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Extremely slippery skin - nearly impossible to grab or hold",
+      "Can breathe underwater with functional gills",
+      "Enhanced swimming speed in aquatic environments",
+      "Can survive briefly out of water due to tough scales",
+      "Small size allows escape through tiny gaps and crevices"
+    ],
+    weakness: "Universally considered the weakest alien in the Omnitrix. No offensive capabilities whatsoever. Cannot survive out of water for extended periods. Pathetically weak physically - can be defeated by a single strong opponent with ease. Completely useless in most combat situations.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 40: 'A Jolt from the Blue'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Walkatrout is a small, fish-like alien with pale blue skin, a permanent frown, and tiny fins that allow him to awkwardly 'walk' on land. He is widely considered the most useless alien in Ben's entire roster, possessing no combat abilities, no special powers, and barely any mobility on land. His only real asset is his incredibly slippery skin, which makes him hard to hold onto.",
+    interestingFacts: [
+      "Walkatrout is often ranked as the absolute worst alien in the Omnitrix",
+      "His species is so unremarkable that even Azmuth does not remember adding it to the Omnitrix",
+      "Walkatrout's 'walking' is a pathetic belly-crawl with his tiny fins",
+      "He has literally zero combat applications and is only useful for escaping capture",
+      "Despite his weakness, Walkatrout has a surprisingly resilient ego"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/a/ab/Walkatrout_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/a/ab/Walkatrout_ov_official.png",
+    color: "#3399ff",
+    gradient: "linear-gradient(135deg, #000a1a, #3399ff)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 43,
+    name: "Pesky Dust",
+    species: "Nemuina",
+    homePlanet: "Unknown",
+    abilities: [
+      "Dream manipulation - can enter and control anyone's dreams",
+      "Can induce instant sleep in targets by releasing dream dust",
+      "Flight via delicate, butterfly-like wings",
+      "Can create dream-based illusions that feel completely real",
+      "Can extract information from sleeping minds through dream interrogation"
+    ],
+    weakness: "Completely physically frail - one solid hit can incapacitate her. Dream powers are useless against beings that do not sleep or dream. Her dust can be dispersed by wind or fans. Cannot affect targets with no subconscious mind.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 23: 'Night of the Living Nightmare'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Vampire Strikes Back'",
+    description: "Pesky Dust is a tiny, fairy-like Nemuina with shimmering lavender wings, a small butterfly-like body, and the ability to release a sparkling dust that induces sleep and allows her to enter and manipulate dreams. She is Ben's psychological warfare specialist, capable of incapacitating enemies by trapping them in dream worlds or extracting information from their sleeping minds.",
+    interestingFacts: [
+      "Pesky Dust is one of the few explicitly female-coded aliens in the Omnitrix",
+      "Nemuinas feed on the dream energy of sleeping beings",
+      "She can create both pleasant dreams and terrifying nightmares at will",
+      "Pesky Dust's dream powers are considered a form of psychic manipulation",
+      "Her species was originally encountered by Azmuth on a long-forgotten research expedition"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/e/ea/Pesky_dust_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/e/ea/Pesky_dust_ov_official.png",
+    color: "#ff66cc",
+    gradient: "linear-gradient(135deg, #1a0033, #ff66cc)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 44,
+    name: "Mole-Stache",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Mustache manipulation - his handlebar mustache can extend and move like limbs",
+      "Mustache can grab objects, restrain enemies, and act as whips",
+      "Enhanced digging ability using his mustache as drills",
+      "Mustache can form protective shields and barriers",
+      "Can use mustache hairs as projectile weapons"
+    ],
+    weakness: "His mustache powers are considered ridiculous and are often not taken seriously. Mustache can be cut or singed, temporarily disabling his abilities. Lacks significant physical strength beyond his mustache. His digging is slow compared to dedicated tunneling aliens.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 33: 'Mole-Stache'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Something Zombozo This Way Comes'",
+    description: "Mole-Stache is a bizarre, mole-like alien with a massive, magnificent handlebar mustache that he can manipulate telekinetically as an extension of his body. He resembles a bipedal mole with brown fur, dark goggles, and his trademark enormous mustache. Mole-Stache uses his mustache for everything - grabbing enemies, digging tunnels, forming shields, and even attacking from a distance.",
+    interestingFacts: [
+      "Mole-Stache's mustache is fully prehensile and can lift objects many times his own weight",
+      "His species is completely unknown, even the Omnitrix has no record of his homeworld",
+      "Mole-Stache speaks with a thick, exaggerated accent and loves the word 'magnificent'",
+      "His mustache hairs can be shot like needles at opponents",
+      "Despite his silly appearance, Mole-Stache has saved the day multiple times with his mustache skills"
+    ],
+    image: base + "images/wiki_molestache.png",
+    cardImage: base + "images/wiki_molestache.png",
+    color: "#8B4513",
+    gradient: "linear-gradient(135deg, #1a0a00, #8B4513)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 45,
+    name: "The Worst",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Complete invulnerability - cannot be harmed by any physical attack",
+      "Resistant to extreme temperatures, pressure, and energy attacks",
+      "Can survive impacts that would destroy entire planets",
+      "Bouncy, rubbery body absorbs and redirects kinetic energy",
+      "Indestructible skin cannot be cut, pierced, or burned"
+    ],
+    weakness: "Possesses zero offensive capabilities - cannot attack at all. Extremely weak strength output despite being indestructible. Useless in any combat scenario. Can still be restrained, trapped, or imprisoned despite being unharmed. Often considered even worse than Walkatrout in practical terms.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 72: 'The Most Dangerous Game Show'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "The Worst is a small, pudgy, orange alien with stubby limbs and a perpetually annoyed expression. His only power is being completely and utterly indestructible - no attack, no matter how powerful, can harm him. However, this comes at the cost of having absolutely no offensive abilities, making him one of the most frustrating aliens to use in a fight.",
+    interestingFacts: [
+      "The Worst lives up to his name - he is indestructible but completely useless in combat",
+      "His species has no known designation and very little is known about them",
+      "The Worst feels no pain despite being fully conscious when attacked",
+      "He can survive in lava, the vacuum of space, and inside a black hole without injury",
+      "Despite his durability, The Worst has a surprisingly whiny and complaining personality"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/e/e0/The_worst_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/e/e0/The_worst_ov_official.png",
+    color: "#ffcc00",
+    gradient: "linear-gradient(135deg, #1a1a00, #ffcc00)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 46,
+    name: "Kickin Hawk",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Master martial artist specializing in powerful kick attacks",
+      "Enhanced leg strength for devastating roundhouse and drop kicks",
+      "Sharp talons on feet for slashing during kicks",
+      "Enhanced agility and balance for acrobatic combat",
+      "Feathers can be launched as sharp projectiles"
+    ],
+    weakness: "Primarily a close-range combatant with no ranged attacks beyond his feathers. His fighting style relies on mobility; if his legs are trapped, he is nearly helpless. Overconfidence often leads to reckless attacks. His large wingspan makes him an easier target in tight spaces.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 63: 'The Vengers'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Kickin Hawk is a tall, anthropomorphic rooster-like alien with red feathers, a yellow beak, a red comb on his head, and powerful legs ending in sharp talons. He is a master of kicking-based martial arts, using his incredible leg strength and natural agility to deliver devastating kicks from any angle. Kickin Hawk is Ben's dedicated close-quarters combat specialist in the Omniverse roster.",
+    interestingFacts: [
+      "Kickin Hawk's species is unknown, but he resembles an evolved avian from an Earth-like planet",
+      "He is a master of a martial art style called 'Hawk Fu' that focuses entirely on kicks",
+      "Kickin Hawk's talons can extend to deliver slashing kicks",
+      "He has a cocky, boastful personality that matches his fighting style",
+      "Kickin Hawk was part of a superhero team parody called 'The Vengers'"
+    ],
+    image: base + "images/wiki_kickinhawk.png",
+    cardImage: base + "images/wiki_kickinhawk.png",
+    color: "#cc6600",
+    gradient: "linear-gradient(135deg, #1a0a00, #cc6600)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 47,
+    name: "Astrodactyl",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Supersonic flight with powerful pterosaur-like wings",
+      "Energy whips - can generate glowing green energy tendrils from his wings",
+      "Can fire energy projectiles from his whip constructs",
+      "Enhanced vision and targeting from a distance",
+      "Can create energy constructs shaped like weapons"
+    ],
+    weakness: "His energy whips drain stamina with extended use. Wings can be damaged, temporarily grounding him. Energy constructs are unstable if overcharged. Less effective in enclosed environments where he cannot fly freely.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 103: 'An American Benwolf in London'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'Weapon XI: Part 2'",
+    description: "Astrodactyl is a pterosaur-like alien with a green and yellow body, a long beak, membranous wings, and a long tail. He generates powerful energy whips from his wings that he uses both as weapons and for propulsion. Astrodactyl combines the classic pterosaur aesthetic with cosmic energy manipulation, making him one of the more visually striking flying aliens in Ben's collection.",
+    interestingFacts: [
+      "Astrodactyl's species classification is unknown, even to the Omnitrix's database",
+      "The energy whips he generates can extend up to 100 feet in length",
+      "Astrodactyl can use his energy whips to swing from buildings like grappling hooks",
+      "He was introduced later in Omniverse as a replacement-style flying alien",
+      "Astrodactyl's wings produce a faint glow when he generates energy constructs"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/8/8d/Astrodactyl_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/8/8d/Astrodactyl_ov_official.png",
+    color: "#66cc00",
+    gradient: "linear-gradient(135deg, #001a00, #66cc00)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 48,
+    name: "Bullfrag",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Superhuman jumping ability from powerful frog-like legs",
+      "Prehensile tongue that can grab objects from great distances",
+      "Can secrete a slippery mucus that makes him hard to hold",
+      "Enhanced swimming speed in water",
+      "Expandable throat pouch for intimidation and vocal amplification"
+    ],
+    weakness: "His skin requires constant moisture; dehydration weakens him significantly. His tongue is vulnerable to being cut or grabbed. Predictable leaping patterns in combat. Limited offensive power beyond his physical abilities.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 99: 'The Frogs of War: Part 1'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'The Frogs of War: Part 3'",
+    description: "Bullfrag is a tall, muscular frog-like alien with green skin, a yellow underbelly, and a smooth, amphibian appearance. He has incredibly powerful legs for leaping great distances, a long sticky tongue for grabbing objects, and the ability to secrete slippery mucus. Bullfrag was specifically used by Ben to infiltrate the Incursean Empire by posing as one of their kind.",
+    interestingFacts: [
+      "Bullfrag was specifically used to infiltrate the Incursean Empire by disguising himself as an Incursean soldier",
+      "His species is amphibious and requires regular hydration to maintain peak condition",
+      "Bullfrag's tongue can extend several times his body length",
+      "He was welcomed by the Incurseans who mistook him for a mutant member of their species",
+      "Bullfrag's expandable throat pouch can amplify his voice to deafening levels"
+    ],
+    image: base + "images/wiki_bullfrag.png",
+    cardImage: base + "images/wiki_bullfrag.png",
+    color: "#00cc44",
+    gradient: "linear-gradient(135deg, #001a00, #00cc44)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 49,
+    name: "Atomix",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Nuclear energy manipulation - can generate and control atomic power",
+      "Can fire devastating nuclear energy blasts from his hands",
+      "Flight via nuclear propulsion",
+      "Can generate a nuclear force field for defense",
+      "Can create miniature nuclear explosions at will"
+    ],
+    weakness: "His nuclear powers cause massive collateral damage and endanger civilians. Cannot be used in populated areas without extreme caution. His heavy armor makes him slower than other heavy hitters. Radiation output can harm allies if they are too close.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 106: 'Weapon XI: Part 1'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Atomix is a massive, nuclear-powered alien covered in thick green and white armor resembling a nuclear reactor. His head glows with atomic energy visible through a glass dome, and his entire body radiates immense power. Atomix is one of the physically strongest and most destructive aliens in the Omnitrix, capable of generating nuclear explosions and atomic energy blasts that can level mountains.",
+    interestingFacts: [
+      "Atomix is considered one of the most powerful aliens in the entire Omnitrix",
+      "His species and homeworld remain classified even within the Omnitrix's database",
+      "Atomix's armor is designed to contain his nuclear energy, similar to NRG's suit",
+      "He was used as a last resort against the Weapon XI threat in Omniverse",
+      "Atomix's power output rivals that of Alien X in terms of raw destructive capability"
+    ],
+    image: base + "images/wiki_atomix.png",
+    cardImage: base + "images/wiki_atomix.png",
+    color: "#ff3300",
+    gradient: "linear-gradient(135deg, #1a0000, #ff3300)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 50,
+    name: "Gutrot",
+    species: "Unknown",
+    homePlanet: "Unknown",
+    abilities: [
+      "Chemical generation - can produce any known gas from his body",
+      "Can create clouds of sleeping gas, tear gas, or knockout agents",
+      "Can generate corrosive gas that dissolves materials",
+      "Can create breathable atmospheres in oxygen-deprived environments",
+      "Can generate pheromones to confuse, calm, or repel enemies"
+    ],
+    weakness: "His gases can be dispersed by wind or ventilation. Cannot generate gases in a vacuum. Some gases can affect allies if wind direction changes. Overuse of chemical generation causes dizziness. His body has no physical combat capabilities.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 78: 'The Vampire Strikes Back'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Gutrot is a tall, slender alien with a pale green body, a large cylindrical head, and a tank-like stomach area. He has the remarkable ability to synthesize and release any known chemical compound as a gas from his body. Gutrot is Ben's chemical warfare specialist, capable of creating everything from sleeping gas to corrosive fumes to breathable oxygen.",
+    interestingFacts: [
+      "Gutrot can create any gas that exists in the known universe from his chemical stomach",
+      "His species is one of the most chemically complex organisms ever catalogued by Azmuth",
+      "Gutrot can combine multiple gases for compound effects",
+      "He was instrumental in defeating the Vladats by creating gases that countered their abilities",
+      "Gutrot's internal chemistry lab can analyze and replicate any gaseous compound on contact"
+    ],
+    image: base + "images/wiki_gutrot.png",
+    cardImage: base + "images/wiki_gutrot.png",
+    color: "#88cc00",
+    gradient: "linear-gradient(135deg, #1a1a00, #88cc00)",
+    universe: "Omniverse (2012–2014)"
+  },
+  {
+    id: 51,
+    name: "Whampire",
+    species: "Vladat",
+    homePlanet: "Anur Vladlas",
+    abilities: [
+      "Hypnosis - can control the minds of others through eye contact",
+      "Flight via large bat-like wings",
+      "Can drain life force or energy from living beings",
+      "Can transform into a swarm of bats for dispersal and evasion",
+      "Enhanced strength, speed, and senses in darkness"
+    ],
+    weakness: "Extremely vulnerable to sunlight which can incapacitate or kill him. Direct sunlight causes immediate pain and weakness. Highly vulnerable to garlic and other traditional vampire repellents. His hypnosis requires direct eye contact to work. Holy symbols and crosses repel him.",
+    firstAppearance: "Ben 10: Omniverse (2012) - Episode 78: 'The Vampire Strikes Back'",
+    lastAppearance: "Ben 10: Omniverse (2014) - Episode: 'A New Dawn'",
+    description: "Whampire is a bat-like Vladat with pale grey skin, large membranous wings, sharp fangs, and glowing red eyes. He possesses all the classic vampire powers - flight, hypnosis, life-force draining, and bat transformation. Whampire is Ben's first and only true vampire alien, with all the strengths and classic weaknesses that come with being a creature of the night.",
+    interestingFacts: [
+      "Whampire is the only Vladat in the Omnitrix and one of the most dangerous species catalogued",
+      "Vladats come from Anur Vladlas, a planet in the Anur system with a permanent dark side",
+      "His hypnosis is powerful enough to control multiple minds at once",
+      "Whampire's weaknesses include sunlight, garlic, and holy symbols - classic vampire traits",
+      "He was the final alien unlocked in the original Ben 10: Omniverse series"
+    ],
+    image: "https://static.wikia.nocookie.net/ben10/images/5/53/Whampire_ov_official.png",
+    cardImage: "https://static.wikia.nocookie.net/ben10/images/5/53/Whampire_ov_official.png",
+    color: "#660033",
+    gradient: "linear-gradient(135deg, #1a000a, #660033)",
+    universe: "Omniverse (2012–2014)"
+  }
+];

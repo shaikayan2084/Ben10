@@ -20,6 +20,8 @@ const Navbar = ({ onSelectAlien, activeAlien }) => {
         <li className={!activeAlien ? "active" : ""} onClick={() => { onSelectAlien(null); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Home</li>
         <li><a href="#aliens" onClick={() => onSelectAlien(null)}>Aliens</a></li>
         <li><a href="#details">Details</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#quiz">Quiz</a></li>
       </ul>
 
 

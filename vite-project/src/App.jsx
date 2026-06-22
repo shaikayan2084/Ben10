@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AlienGrid from "./components/AlienGrid";
 import AlienDetail from "./components/AlienDetail";
+import Characters from "./components/Characters";
+import Quiz from "./components/Quiz";
 import OmnitrixTransform from "./components/OmnitrixTransform";
 import Particles from "./components/Particles";
 import { aliens } from "./data/aliens";
@@ -50,6 +52,8 @@ function App() {
         <Hero onSelectAlien={handleSelectAlien} />
         <AlienGrid onSelectAlien={handleSelectAlien} selectedAlien={selectedAlien} onBeep={playBeep} />
         {selectedAlien && <AlienDetail alien={selectedAlien} />}
+        <Characters />
+        <Quiz />
       </div>
       <OmnitrixTransform alien={transformingAlien} onComplete={handleTransformComplete} onPlayTransform={playTransform} />
     </div>
